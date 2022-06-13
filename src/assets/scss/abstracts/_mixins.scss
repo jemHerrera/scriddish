@@ -1,0 +1,59 @@
+@use 'variables' as *;
+
+@mixin flex($direction:row, $align:stretch, $justify:flex-start, $gap:0, $important:false){
+    @if $important == false{
+        display: flex;
+    }
+    @else{
+        display: flex !important;
+    }
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin grid-equal($columns:1){
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin button($color-type:1, $radius-type:1){
+    padding: 1.25em 3em;
+    box-shadow: $shadow2;
+    transition: all 150ms ease-in;
+    *{
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    @if $color-type == 1{
+        &, *{
+            background-color: $color-main;
+            color: white;
+        }
+        svg{
+            fill: white;
+        }
+    }
+    @else if $color-type == 2{
+        &, *{
+            background-color: $color-gray4;
+            color: $color-main;
+        }
+        svg{
+            fill: $color-main;
+        }
+    }
+	@if $radius-type == 1{
+        border-radius: 999em;
+    }		
+    @else {
+        border-radius: 1em;
+    }
+
+    &:active{
+        box-shadow: 1px 1px 4px #00000016;
+        transform:scale(0.99)
+    }
+}

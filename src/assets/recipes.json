@@ -1,0 +1,338 @@
+[
+    {
+        "id": "meatball-and-mushroom-stew",
+        "title": "Meatball and Mushroom Stew",
+        "image": "meatball-and-mushroom-stew.jpeg",
+        "description": "Comforting, familiar and warm. It’s a timeless dish that never goes out of fashion.",
+        "category": "featured",
+        "tags": ["beef", "western", "featured"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "ground-beef": {
+                    "name": "Ground Beef",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "russet-potato": {
+                    "name": "Russet Potato",
+                    "amount": 460,
+                    "unit": "g"
+                },
+                "mixed-mushrooms": {
+                    "name": "Mixed Mushrooms",
+                    "amount": 250,
+                    "unit": "g"
+                },
+                "mirepoix": {
+                    "name": "Mirepoix",
+                    "amount": 113,
+                    "unit": "g"
+                },
+                "green-peas": {
+                    "name": "Green Peas",
+                    "amount": 56,
+                    "unit": "g"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "cloves"
+                }
+            },
+            "Condiments & Spices":{
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 1,
+                    "unit": "tbsp"
+                },
+                "all-purpose-flour": {
+                    "name": "All Purpose Flour",
+                    "amount": 1,
+                    "unit": "tbsp"
+                },
+                "onion-powder": {
+                    "name": "Onion Powder",
+                    "amount": 1,
+                    "unit": "tbsp"
+                }
+            },
+            "Canned & Sauces": {
+                "beef-broth": {
+                    "name": "Beef Broth",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            },
+            "Eggs & Dairy": {
+                "milk": {
+                    "name": "Milk",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                "unsalted-butter": {
+                    "name": "Unsalted Butter",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "parmesan-cheese-shredded": {
+                    "name": "Parmesan Cheese, shredded",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            },
+            "Others": {
+                "breadcrumbs": {
+                    "name": "Breadcrumbs",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Peel and cut potatoes, then boil with salt",
+            "Slice mushrooms",
+            "Pre-heat oven at 450°F",
+            "Wrap garlic in foil",
+            "Combine beef, breadcrumbs, 1/2 parmesan, onion powder, S&P, in a large bowl",
+            "Roll beef mixture into balls. Bake with garlic. 8-10 mins",
+            "Large pot high heat, add 1/2 butter",
+            "Add mirepoix and mushrooms. 5-6 mins. Add soy sauce, flour, S&P",
+            "Add broth and peas. Simmer 5-6 mins",
+            "Drain potatoes. Mash garlic in. Add remaining parmesan, butter and milk",
+            "Add meatballs to the stew. 1 min",
+            "Divide mash between bowls. Top with meatball and mushroom stew."
+        ]
+    },
+    {
+        "id": "onsen-tamago",
+        "title": "Onsen Tamago",
+        "image": "onsen-tamago.jpeg",
+        "description": "Perfectly poached inside its shell. While the whites are soft and silky, the yolk comes out firm but retains the color and creamy texture of an uncooked yolk.",
+        "category": "quick-and-easy",
+        "tags": ["quick-and-easy", "eggs"],
+        "time": "15-20 mins",
+        "ingredients":{
+            "Eggs & Dairy": {
+                "eggs": {
+                    "name": "Eggs",
+                    "amount": 4,
+                    "unit": "pcs"
+                }
+            }
+        },
+        "instructions":[
+            "Only cook 4 refrigirated eggs per batch. Increasing/decreasing the number of eggs will greatly affect the result",
+            "Small/medium pot, boil 4.25 cup of water covered",
+            "Remove from heat once boiling, then add 0.75 cups of tap water. Gently submerge the eggs. cover and set timer for 17 mins."
+        ]
+    },
+    {
+        "id": "taiwanese-chicken-thighs",
+        "title": "Taiwanese Chicken Thighs",
+        "image": "taiwanese-chicken-thighs.jpg",
+        "description": "These saucy chicken thighs celebrate all of those things and more, with a side of scallion rice and crispy bok choy!",
+        "category": "asian",
+        "tags": ["chicken", "asian"],
+        "time": "30 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "chicken-thighs": {
+                    "name": "Chicken Thighs",
+                    "amount": 340,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "bok-choy": {
+                    "name": "Bok Choy",
+                    "amount": 113,
+                    "unit": "g"
+                },
+                "basil": {
+                    "name": "Basil",
+                    "amount": 7,
+                    "unit": "g"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 3,
+                    "unit": "cloves"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "sesame-oil": {
+                    "name": "Sesame Oil",
+                    "amount": 1,
+                    "unit": "tbsp"
+                },
+                "chili-flakes": {
+                    "name": "Chili Flakes",
+                    "amount": 1,
+                    "unit": "tsp"
+                },
+                "rice-vinegar": {
+                    "name": "Rice Vinegar",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "bread-crumbs": {
+                    "name": "Breadcrumbs",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                "corn-starch": {
+                    "name": "Corn Starch",
+                    "amount": 1,
+                    "unit": "tbsp"
+                },
+                "rice": {
+                    "name": "Rice",
+                    "amount": 0.75,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Debone and slice chicken in desired sizes. Pat dry. S&P",
+            "Rinse and chop Bok-choy",
+            "Cook rice. Use 1:2 water ratio. High heat, uncovered until boiling, then cover and simmer under lowest heat setting",
+            "Slice green onions. Grate garlic",
+            "Whisk together vinegar, soy, cornstartch, garlic & sugar",
+            "Large wok on med-high. Add sesame oil, then chicken. Cook for about 7-8 min",
+            "Add sauce, then add bok-choy. Cook 1-2 mins",
+            "Fluff rice and add half the green onions.",
+            "Assemble. Top with basil, chili flakes and remaining green onions"
+        ]
+    },
+    {
+        "id": "hard-boiled-eggs",
+        "title": "Hard Boiled Eggs",
+        "image": "hard-boiled-eggs.jpeg",
+        "description": "Simple way to perfectly hard-boil eggs to the desired doneness.",
+        "category": "quick-and-easy",
+        "tags": ["quick-and-easy", "eggs"],
+        "time": "15-20 mins",
+        "ingredients":{
+            "Eggs & Dairy": {
+                "eggs": {
+                    "name": "Eggs",
+                    "amount": 2,
+                    "unit": "pcs"
+                }
+            }
+        },
+        "instructions":[
+            "Refrigirated eggs to a small pot. Add water until fully covered by atleast an inch",
+            "High heat, uncovered, bring to rolling boil",
+            "Once boiling, turn off heat and set aside covered. 10-15 mins depending on desired doneness. "
+        ]
+    },
+    {
+        "id": "teriyaki-beef-meatballs",
+        "title": "Teriyaki Beef Meatballs",
+        "image": "teriyaki-beef-meatballs.jpeg",
+        "description": "Super simple and packed with delectable flavours. The colourful slaw will surprise you with its Japanese vibes and sweet crunchy veggies!",
+        "category": "featured",
+        "tags": ["beef", "asian", "featured"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "ground-beef": {
+                    "name": "Ground Beef",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "coleslaw": {
+                    "name": "Coleslaw",
+                    "amount": 170,
+                    "unit": "g"
+                },
+                "lemon": {
+                    "name": "Lemon",
+                    "amount": 1,
+                    "unit": "pcs"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "fried-garlic": {
+                    "name": "Fried Garlic",
+                    "amount": 1,
+                    "unit": "tbsp"
+                },
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "sesame-oil": {
+                    "name": "Sesame Oil",
+                    "amount": 0.5,
+                    "unit": "tbsp"
+                },
+                "hoisin-sauce": {
+                    "name": "Hoisin Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "mirin": {
+                    "name": "Mirin",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "mayo": {
+                    "name": "Mayo",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            },
+            "Others": {
+                "breadcrumbs": {
+                    "name": "Breadcrumbs",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                "rice": {
+                    "name": "Rice",
+                    "amount": 0.75,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Cook Rice in a small pot. 1 rice : 2 water ratio. First boil uncovered. Once boiling, cover and simmer at a very low heat.",
+            "Zest lemon. Slice green onions.",
+            "Preheat oven at 450°F",
+            "Make meatballs: Combine ground beef, spice blend(per serving: 1 tbsp garlic powder, 1tbsp onion powder, 0.5tbsp ginger powder), breadcrumbs and S&P. Roll into balls and arrange in a baking pan.",
+            "Once oven is pre-heated, bake the meatballs, 10-12 min",
+            "Coleslaw mix: In a large bowl, juice lemon, then whisk in mayo, 1tbsp sugar and S&P. Add coleslaw and mix",
+            "Create Teriyaki Sauce: Med pot med heat. Add in soy sauce, hoisin sauce, sesame oil, mirin and 1/4 cup water. Cook 1-2 mins",
+            "Add meatballs to the sauce. Cook 1-2 mins.",
+            "Fluff rice with 1 tbsp oil, 1/2 green onions and fried garlic.",
+            "Assemble. Top with the remaining green onions. Slaw on the side"
+        ]
+    }
+]

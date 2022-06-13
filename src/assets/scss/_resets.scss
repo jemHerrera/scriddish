@@ -1,0 +1,48 @@
+@use './abstracts' as *;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700;800;900&display=swap');
+
+body{
+    background-color: $color-gray4;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    background-color: none;
+    color: $color-gray0;
+    font-size: $font-size;
+    text-decoration: none;
+    outline: none;
+}
+
+
+input, select{
+    padding: 1.25em;
+    background-color: $color-gray4;
+    border-radius: 1em;
+    box-shadow: inset 1px 1px 3px $color-gray2, inset -1px -1px 3px white;
+
+    &::placeholder{
+        color: $color-gray2;
+    }
+    &:focus{
+        box-shadow: inset 3px 3px 5px $color-gray2, inset -3px -3px 5px white;
+    }
+}
+
+select{
+    appearance: none;
+    background-image: url('/src/assets/images/expand_more_black_24dp.svg');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2em;
+}
+
+li{
+    list-style-type: none;
+}

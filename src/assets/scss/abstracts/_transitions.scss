@@ -1,0 +1,25 @@
+// SLIDE LEFT
+.slide-left-leave-to, .slide-left-enter-active{
+  	transform: translateX(100%);
+}
+
+// FADE
+.fade-enter-from, .fade-leave-to{
+    opacity: 0;
+}
+.fade-enter-active, .fade-leave-active {
+  	transition: opacity 100ms ease-out;
+}
+
+// FADE-UP
+.fade-up-leave-to, .fade-up-enter-active{
+	transform: translateY(100%);
+	opacity: 0;
+}
+
+//LIST
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(-15px);
+}

@@ -1,0 +1,14 @@
+{
+    "featured": {
+        "name": "Featured",
+        "recipes": []
+    },
+    "quick-and-easy": {
+        "name": "Quick and Easy",
+        "recipes": []
+    },
+    "asian": {
+        "name": "Asian",
+        "recipes": []
+    }
+}
