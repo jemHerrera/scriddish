@@ -334,5 +334,31 @@
             "Fluff rice with 1 tbsp oil, 1/2 green onions and fried garlic.",
             "Assemble. Top with the remaining green onions. Slaw on the side"
         ]
+    },
+    {
+        "id": "oven-barbecue-ribs",
+        "title": "Oven Barbecue Ribs",
+        "image": "oven-barbecue-ribs.jpeg",
+        "description": "Juicy melt-in-your-mouth oven baked Barbecue Ribs are fall-off-the-bone delicious! Double up on incredible flavour with an easy to make dry rub first, then coat them in a seasoned barbecue sauce mixture so addictive you won’t stop at one!",
+        "category": "western",
+        "tags": ["pork", "western", "barbecue"],
+        "time": "3 hours",
+        "ingredients":{
+            "Meat & Seafood": {
+                "baby-back-pork-ribs": {
+                    "name": "Baby Back Pork Ribs",
+                    "amount": 500,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Heat oven to 275° Fahrenheit (135C)",
+            "If the ribs still have the thin membrane covering the back of the rack, remove it",
+            "Season both sides of the ribs with a generous amount of salt, pepper or any rub of choice. Place the ribs, meat-side up, into a large roasting pan or rimmed baking sheet.",
+            "Cover the pan or baking sheet tightly with aluminum foil, and then bake until the meat is tender or falls easily from the bones, 2 ½ to 3 ½ hours.",
+            "Remove the ribs from the oven, discard the aluminum foil and generously brush both sides with barbecue sauce of choice (optional).",
+            "Optional: Move an oven rack near the top of the oven. Turn broiler to high and broil the ribs for 3-4 minutes, just until the barbecue sauce begins to caramelize. (Keep a close eye on the ribs while they broil so the sauce does not burn.)"
+        ]
     }
 ]

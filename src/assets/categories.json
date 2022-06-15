@@ -10,5 +10,9 @@
     "asian": {
         "name": "Asian",
         "recipes": []
+    },
+    "western": {
+        "name": "Western",
+        "recipes": []
     }
 }

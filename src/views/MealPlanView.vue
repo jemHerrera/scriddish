@@ -26,6 +26,11 @@
 			})
 		return groceryList;
 	})
+
+	function viewRecipe(recipe){
+		emit('select-recipe', recipe);
+		window.location.href = "#/recipe"
+	}
 </script>
 
 <template>
@@ -39,18 +44,17 @@
 				<TransitionGroup name="list" tag="ul" class="recipe-list">
 					<li v-for="mealID in mealPlan" 
 					:key="mealID" 
-					@click="$emit('select-recipe', findRecipe(mealID))">
-						<a :style="{'background-image': `url('${getImageUrl('../../assets/images/'+findRecipe(mealID).image)}')`}"
-							href="#/recipe">
+					@click="viewRecipe(findRecipe(mealID))">
+						<div :style="{'background-image': `url('${getImageUrl('../../assets/images/'+findRecipe(mealID).image)}')`}" class="meal-inner">
 							<span class="title">{{ findRecipe(mealID).title }}</span>
 							<button class="delete-recipe" @click.stop.prevent="modalVerify = mealID"><IconDelete /></button>
-							<transition name="fade">
-								<ModalVerify 
-								v-if="modalVerify == mealID"
-								@confirm="$emit('add-to-meal-plan', mealID)"
-								@cancel="modalVerify = ''" />
-							</transition>
-						</a>
+						</div>
+						<transition name="fade">
+							<ModalVerify 
+							v-if="modalVerify == mealID"
+							@confirm="$emit('add-to-meal-plan', mealID)"
+							@cancel="modalVerify = ''" />
+						</transition>
 					</li>
 				</TransitionGroup>
 			</div>
@@ -122,16 +126,15 @@
 						list-style-type: none;
 						height: 15rem;
 						transition: all 250ms ease;
-						box-shadow: $shadow3;
+						box-shadow: $shadow;
 						border-radius: 2rem;
 
 
 						&:active{
 							box-shadow: 1px 2px 5px rgb(0 0 0 / 21%);
-							transform:scale(0.98);
 						}
 
-						a{
+						.meal-inner{
 							transition: all 250ms ease;
 							height: 100%;
 							width: 100%;
