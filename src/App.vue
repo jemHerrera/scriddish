@@ -3,7 +3,7 @@
 	import { RouterLink, RouterView } from 'vue-router'
 	import FooterNav from '@/components/FooterNav.vue'
 	import ModalRouter from '@/components/ModalRouter.vue'
-	import recipes from '@/assets/recipes.json'
+	import recipes from './assets/static/recipes.json'
 
 	const mealPlan = ref([]);
 	const customIngredients = ref([]);

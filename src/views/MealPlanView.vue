@@ -5,7 +5,7 @@
 	import IconMealPlan from '../components/icons/IconMealPlan.vue';
 	import IconDelete from '../components/icons/IconDelete.vue';
 	import IconPlus from '../components/icons/IconPlus.vue';
-	import recipes from '@/assets/recipes.json'
+	import recipes from '../assets/static/recipes.json'
     import getImageUrl from '../components/composables/getImageUrl'
 
 	let props = defineProps({mealPlan: Array, groceries: Object})
@@ -45,7 +45,7 @@
 					<li v-for="mealID in mealPlan" 
 					:key="mealID" 
 					@click="viewRecipe(findRecipe(mealID))">
-						<div :style="{'background-image': `url('${getImageUrl('../../assets/images/'+findRecipe(mealID).image)}')`}" class="meal-inner">
+						<div :style="{'background-image': `url('${getImageUrl('/'+findRecipe(mealID).image)}')`}" class="meal-inner">
 							<span class="title">{{ findRecipe(mealID).title }}</span>
 							<button class="delete-recipe" @click.stop.prevent="modalVerify = mealID"><IconDelete /></button>
 						</div>

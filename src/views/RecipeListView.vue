@@ -3,7 +3,7 @@
 	import { useRouter, useRoute } from 'vue-router'
 	import IconSearch from '../components/icons/IconSearch.vue';
 	import RecipeCard from '../components/RecipeCard.vue';
-	import categories from '@/assets/categories.json'
+	import categories from '../assets/static/categories.json'
 
 	const props = defineProps({mealPlan: Array, recipes: Object})
 	defineEmits(['add-to-meal-plan', 'select-recipe'])
@@ -23,7 +23,7 @@
 	<div class="recipes">
 		<div class="recipes-container">
 			<div class="head">
-				<img src="../assets/logo.png">
+				<img src="/logo.png">
 				<div class="title">
 					<h1>Plan your meals</h1>
 					<p>Start by adding recipes to the meal plan</p>

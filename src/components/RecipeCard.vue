@@ -15,7 +15,7 @@
 <template>
     <a class="recipe-card" :id="recipe.id" @click="$emit('view-recipe', props.recipe)" href="#/recipe">
         <div class="recipe-card-container">
-            <img :src="getImageUrl('../../assets/images/'+recipe.image)">
+            <img :src="getImageUrl('../../assets/static/'+recipe.image)">
             <div class="details">
                 <h4 class="title">{{ recipe.title }}</h4>
                 <p class="description">{{ recipe.description }}</p>
