@@ -36,7 +36,7 @@
 <template>
   <div class="recipe">
 		<div class="image-container">
-			<img :src="getImageUrl('/'+selectedRecipe.image)" alt="">
+			<img :src="getImageUrl('../../assets/static/'+selectedRecipe.image)" alt="">
 		</div>
 		<main class="recipe-container">
 			<div class="recipe-head">
