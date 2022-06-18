@@ -360,5 +360,524 @@
             "Remove the ribs from the oven, discard the aluminum foil and generously brush both sides with barbecue sauce of choice (optional).",
             "Optional: Move an oven rack near the top of the oven. Turn broiler to high and broil the ribs for 3-4 minutes, just until the barbecue sauce begins to caramelize. (Keep a close eye on the ribs while they broil so the sauce does not burn.)"
         ]
+    },
+    {
+        "id": "chinese-steamed-fish",
+        "title": "Chinese Steamed Fish",
+        "image": "chinese-steamed-fish.jpeg",
+        "description": "Cantonese steamed fish is a traditional, simple dish often served as one of the final courses in a Chinese wedding banquet",
+        "category": "asian",
+        "tags": ["fish", "asian"],
+        "time": "30 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "fish-fillet": {
+                    "name": "Fish Fillet, Haddock, Cod or Sea Bass",
+                    "amount": 2,
+                    "unit": "units"
+                }
+            },
+            "Produce": {
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 15,
+                    "unit": "grams"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "light-soy-sauce": {
+                    "name": "Light Soy Sauce",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Slice aromatics. Twine one scallion, then julliene the rest. Slice and/or julliene ginger",
+            "Add shallow water into a pot or wok. Let boil.",
+            "Place a small plate/bowl in the middle of the pot, then add twined scallion.",
+            "Add a piece of fish fillet on top of the twined scallion, then sprinkle with julliened ginger. Cover and steam for 7-8 minutes",
+            "Create Sauce: Small pot, add soy sauce, same amount of water, pinch of sugar, few slices of ginger and white part of the scallions. 1 min, then transfer to a plate.",
+            "After 8 minutes, remove the plate from heat. Discard aromatics, then pour over sauce",
+            "Create ginger oil: Heat a pan and add some oil, then fully julliened ginger. Cook till golden brown. Drizzle over ginger oil"
+        ]
+    },
+    {
+        "id": "pork-chashu",
+        "title": "Pork Chashu",
+        "image": "pork-chashu.webp",
+        "description": "Japanese have adapted the famous Chinese barbecued pork called Char Siu (叉燒) as chāshū (チャーシュー). Unlike the Chinese version which requires roasting over high heat, we prepare the meat by rolling it into a log and then braising it over low heat in a sauce seasoned with soy sauce, sake, and sugar.",
+        "category": "component-recipes",
+        "tags": ["pork", "asian", "quick-and-easy", "component-recipes"],
+        "time": "Overnight",
+        "ingredients":{
+            "Meat & Seafood": {
+                "pork-slab": {
+                    "name": "Pork Belly or Pork Shoulder",
+                    "amount": 500,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 15,
+                    "unit": "g"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                "sake": {
+                    "name": "Sake",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Prepare and season the pork slab. Roll using butcher's twine(optional)",
+            "Heat the oil in a cast-iron skillet (or regular frying pan) over high heat. Sear the pork",
+            "While the pork is searing, put all the ingredients for the seasonings in a heavy-bottomed pot that will fit the chashu.",
+            "Add water equal to the soy sauce - sake mixture. Add a good amount sugar.",
+            "Transfer the seared chashu to the pot. Bring to a boil, then lower the heat to simmer.",
+            "Put an otoshibuta (drop lid) on top to press the ingredients down and limit the evaporation. If you don’t have an otoshibuta, you can make one with aluminum foil or baking sheet",
+            "Simmer the chashu for 2 hours, turning the chashu every 30 minutes",
+            "Let it cool, then transfer chashu and sauce to a large ziplock back. Displace the air and seal. Let the meat marinate overnight",
+            "Excess sauce can be used to make Ramen Eggs (Ajitsuke Tamago)."
+        ]
+    },
+    {
+        "id": "ramen-eggs",
+        "title": "Ramen Eggs",
+        "image": "ramen-eggs.jpeg",
+        "description": "Ramen eggs are Japanese soft-boiled eggs known for its custardy jammy egg yolk and umami flavor. They are marinated overnight in a sweetened soy-based sauce. In Japan, we call these marinated eggs Ajitsuke Tamago (味付け玉子) or short for Ajitama (味玉) or Nitamago (煮玉子).",
+        "category": "component-recipes",
+        "tags": ["eggs", "asian", "quick-and-easy", "component-recipes"],
+        "time": "Overnight",
+        "ingredients":{
+            "Eggs & Dairy": {
+                "eggs": {
+                    "name": "Eggs (refrigirated)",
+                    "amount": 2,
+                    "unit": "pcs"
+                }
+            },
+            "Canned & Sauces": {
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                "sake": {
+                    "name": "Sake",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Make the marinade. The best way is to use excess sauce from the chashu recipe. Otherwise, combine all the ingredients in a small saucepan.",
+            "Add water equal to the amount of soy sauce-mirin mixture. Whisk and add 1 tbsp sugar. Boil",
+            "Once boiling, simmer for 1 min. set aside to cool off.",
+            "Make the eggs. In a small pot, boil water. Add a bit of vinegar and salt to make peeling easier later.",
+            "Once boiling, set a timer for 7 minutes, then slowly add the eggs.",
+            "After 7 minutes, immediately take out the eggs and shock them in an iced water for 15 minutes. Peel",
+            "Transfer eggs and sauce to a ziplock back. Displace the air and seal. Let the eggs marinate overnight"
+        ]
+    },
+    {
+        "id": "aroma-oil",
+        "title": "Aroma Oil",
+        "image": "aroma-oil.jpeg",
+        "description": "Ramen eggs are Japanese soft-boiled eggs known for its custardy jammy egg yolk and umami flavor. They are marinated overnight in a sweetened soy-based sauce. In Japan, we call these marinated eggs Ajitsuke Tamago (味付け玉子) or short for Ajitama (味玉) or Nitamago (煮玉子).",
+        "category": "component-recipes",
+        "tags": ["asian", "component-recipes"],
+        "time": "1 hr",
+        "ingredients":{
+            "Others": {
+                "animal-fat": {
+                    "name": "Tallow, Lard or Schmaltz",
+                    "amount": 500,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 100,
+                    "unit": "g"
+                },
+                "onions": {
+                    "name": "Onions or Green Onions",
+                    "amount": 200,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Slice garlic and onions.",
+            "All ingredients in to a pot on medium heat",
+            "Once hot, let it sit on low heat for 30 mins to 1 hour. Make sure not to burn them.",
+            "Drain the oil in to a container. Refrigiration not needed.",
+            "Collect the toasted aromatics. They can be used as toppings to almost any dish."
+        ]
+    },
+    {
+        "id": "shoyu-tare",
+        "title": "Shoyu Tare",
+        "image": "shoyu-tare.jpeg",
+        "description": "Tare is one of the most important ingredients in a good bowl of ramen. It is the concentrated base that enhances the soup by adding salt and flavor. When you go to most ramen shops, you’ll often find the ramen categorized by tare.",
+        "category": "component-recipes",
+        "tags": ["asian", "component-recipes"],
+        "time": "Overnight",
+        "ingredients":{
+            "Others": {
+                "dried-seafood": {
+                    "name": "Dried Seafood. Anchovies, Scallops, etc",
+                    "amount": 30,
+                    "unit": "g"
+                },
+                "dried-shiitake": {
+                    "name": "Shiitake mushrooms",
+                    "amount": 10,
+                    "unit": "g"
+                },
+                "konbu": {
+                    "name": "Konbu",
+                    "amount": 60,
+                    "unit": "g"
+                }
+            },
+            "Canned & Sauces": {
+                "dark-soy-sauce": {
+                    "name": "Dark Soy Sauce",
+                    "amount": 2,
+                    "unit": "cups"
+                }
+            }
+        },
+        "instructions":[
+            "Slice konbu into strips",
+            "Optional: Grind dried seafood and shiitake into chunks or powder",
+            "Put about 2.5 cups of water in a large stockpot and add the konbu. Bring it to a boil. Simmer for 2 minutes, then remove and discard the konbu.",
+            "Add the fish-and-mushroom powder to the simmering water and bring it to a boil again. When it boils, remove from the heat and strain the liquid through a paper or cloth filter (a coffee filter works well for this)",
+            "If measuring the salt by weight, measure the weight of the liquid using a kitchen scale. Mix 17% of this weight in salt.",
+            "Pour the liquid-and-salt mixture into a measuring cup, then transfer to a large bowl. Measure out the same amount of soy sauce and add it to the bowl. Mix well.",
+            "The tare will keep in an airtight container in the refrigerator for a few months."
+        ]
+    },
+    {
+        "id": "gyudon",
+        "title": "Gyudon",
+        "image": "gyudon.jpeg",
+        "description": "Thinly sliced beef and tender onions cooked in savory-sweet sauce, Gyudon, or Japanese Beef Rice Bowl, is synonymous with comfort. It has been a staple in Japanese cuisine for over 150 years! It’s a perfect quick meal for a busy weeknight!",
+        "category": "featured",
+        "tags": ["beef", "asian", "quick-and-easy", "featured"],
+        "time": "30 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "thinly-sliced-beef": {
+                    "name": "Thinly Sliced Beef",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 5,
+                    "unit": "g"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 3,
+                    "unit": "tbsp"
+                },
+                "sake": {
+                    "name": "Sake",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "mirin": {
+                    "name": "Mirin",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "dashi-stock": {
+                    "name": "Dashi Stock",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            },
+            "Others": {
+                "rice": {
+                    "name": "Rice",
+                    "amount": 0.75,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Thinly slice onions. Slice scallions diagonally. Grate ginger.",
+            "Slice meat into 3 inch pieces",
+            "In a large frying pan (do not turn on the heat yet), add the dashi, sake, mirin, soy sauce, and a pinch of sugar. Mix to combine.",
+            "Add the onion slices and spread them throughout the pan, separating the onion layers.",
+            "Add the meat on top of the onions. Separate the thin slices of beef so the meat covers the onions.",
+            "Cover the pan with a lid and start cooking over medium heat.",
+            "When the meat is cooked, skim off the scum and fat from the broth with a fine-mesh skimmer. Turn down the heat to simmer and continue cooking, covered, for 3-4 minutes.",
+            "Sprinkle the green onions on top and cook covered for another minute. If you like to add beaten eggs, you can add at this step",
+            "In a large donburi bowl, add the steamed rice and drizzle the remaining sauce on top.",
+            "Put the beef and onion mixture on top. If you’d like, drizzle the remaining sauce on top. Top with the pickled red ginger. Enjoy!"
+        ]
+    },
+    {
+        "id": "tonkotsu-ramen-broth",
+        "title": "Tonkotsu Ramen Broth",
+        "image": "tonkotsu-ramen-broth.jpeg",
+        "description": "Making tonkotsu ramen at home is truly a labour of love. This isn’t some 15 minute miracle insta-ramen recipe. This isn’t even some one day recipe. Making authentic tonkotsu ramen takes time. It takes effort. You have to be a bit crazy to go there. But it’s so good. It’s totally worth it.",
+        "category": "component-recipes",
+        "tags": ["pork", "asian", "component-recipes"],
+        "time": "12 hrs 15 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "pork-bones": {
+                    "name": "Pork Bones, Pig Trotters and/or Chicken Carcass",
+                    "amount": 1000,
+                    "unit": "g"
+                },
+                "pork-fat": {
+                    "name": "Pork Fat Back (Optional)",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 5,
+                    "unit": "g"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 6,
+                    "unit": "unit"
+                },
+                "leeks": {
+                    "name": "Leeks",
+                    "amount": 2,
+                    "unit": "unit"
+                },
+                "onion": {
+                    "name": "Large Onion",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 6,
+                    "unit": "cloves"
+                },
+                "mushrooms": {
+                    "name": "Mushrooms",
+                    "amount": 80,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Place bones in a large stockpot and cover with cold water. Boil. Remove from heat as soon as boil is reached.",
+            "While pot is heating, roughly slice aromatics. Set the green part of scallions aside for garnish. Sear the rest of the aromatics on a large pan on high heat. Set aside.",
+            "Once pot has come to a boil, dump water and wash all bones under cold running water, removing any bits of dark marrow or coagulated blood.",
+            "Return bones to pot along with charred vegetables, leeks, scallion whites, mushrooms, and pork fatback. Top up with cold water. Bring to a rolling boil over high heat, skimming off any scum that appears. Reduce heat to a bare simmer and place a heavy lid on top.",
+            "The broth should be at a slow rolling boil. If not, increase or decrease heat slightly to adjust. Remove pork fat once completely tender(about 4 hours), and refrigirate. Continue cooking until broth is opaque with the texture of light cream, about 6 to 8 hours longer, topping up as necessary.",
+            "Once broth is ready, cook over high heat until reduced to around 3 liters. Strain through a fine mesh strainer into a clean pot. Discard solids.",
+            "Finely chop cooked pork fatback and whisk into finished broth."
+        ]
+    },
+    {
+        "id": "dashi-stock",
+        "title": "Dashi Stock",
+        "image": "dashi-stock.webp",
+        "description": "Dashi is the basic Japanese soup stock used in many Japanese dishes. Learn how to make Awase Dashi at home with umami-packed ingredients like kombu (dried kelp) and katsuobushi (dried bonito flakes).",
+        "category": "component-recipes",
+        "tags": ["asian", "component-recipes"],
+        "time": "Overnight",
+        "ingredients":{
+            "Others": {
+                "katsuobushi": {
+                    "name": "Katsuobushi (Dried Bonito Flakes)",
+                    "amount": 1,
+                    "unit": "cup"
+                },
+                "konbu": {
+                    "name": "Konbu (Dried Kelp)",
+                    "amount": 60,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Prepare Konbu: Slice kombu into pieces. Cold brew kombu overnight with about 1 liter of water",
+            "Add the konbu and water to a medium saucepan. Turn on the heat to medium low and slowly bring to almost boiling, about 10 minutes.",
+            "Just before the dashi starts boiling gently, remove and discard the konbu.",
+            "Add the katsuobushi and bring it back to a boil again.",
+            "Once the dashi is boiling, reduce the heat, simmer for just 30 seconds, and turn off the heat.",
+            "Let the katsuobushi sink to the bottom, about 10 minutes.",
+            "Strain the dashi through a fine-mesh sieve over a bowl or measuring cup."
+        ]
+    },
+    {
+        "id": "butter-lobster",
+        "title": "Butter Lobster",
+        "image": "butter-lobster.jpeg",
+        "description": "With a touch of lemon, garlic, butter and oil, you’re minutes away from perfect, juicy, flavourful seared lobsters.",
+        "category": "seafood",
+        "tags": ["seafood", "western"],
+        "time": "40 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "lobsters": {
+                    "name": "Lobsters",
+                    "amount": 2,
+                    "unit": "units"
+                }
+            },
+            "Produce": {
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "parsely": {
+                    "name": "Parsely",
+                    "amount": 5,
+                    "unit": "g"
+                },
+                "lemon": {
+                    "name": "Lemon",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "thyme": {
+                    "name": "Thyme",
+                    "amount": 5,
+                    "unit": "g"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "cloves"
+                }
+            },
+            "Condiments & Spices":{
+                "paprika": {
+                    "name": "Paprika",
+                    "amount": 1,
+                    "unit": "tbsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "unsalted-butter": {
+                    "name": "Unsalted Butter",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "parmesan-cheese-shredded": {
+                    "name": "Parmesan Cheese, shredded",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            },
+            "Others": {
+                "white-wine": {
+                    "name": "White Wine",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                "sprite": {
+                    "name": "Sprite",
+                    "amount": 1,
+                    "unit": "can"
+                }
+            }
+        },
+        "instructions":[
+            "Roughly chop onions, parsely and thyme",
+            "Cook Lobster: Boil water and Sprite on a large wok. Add lobster, boild for 15 minutes.",
+            "Create sauce: Onions and butter into a pan. 1-2 mins",
+            "Add garlic and salt. 1 min",
+            "Add white wine and reduce in half",
+            "Add paprika, lemon zest and chopped herbs",
+            "Remove from heat and add lemon juice and more butter. Whisk. Grate with parmesan cheese",
+            "Assembly: Pre-heat oven at 400 F. Halve lobsters lengthwise. Deshell claws",
+            "Assemble to a baking rack meat side up, then pour over butter mixture",
+            "Bake 8-10 minutes"
+        ]
+    },
+    {
+        "id": "prawn-tempura",
+        "title": "Prawn Tempura",
+        "image": "prawn-tempura.webp",
+        "description": "Tempura is a well-known Japanese dish where vegetables or seafood are first dipped in a tempura batter and deep-fried in oil. The beautiful light and crispy golden cover is the signature look of the dish.",
+        "category": "seafood",
+        "tags": ["seafood", "asian"],
+        "time": "30 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "prawn": {
+                    "name": "Prawn",
+                    "amount": 12,
+                    "unit": "units"
+                }
+            },
+            "Condiments & Spices":{
+                "flour": {
+                    "name": "Flour",
+                    "amount": 1,
+                    "unit": "cup"
+                }
+            },
+            "Eggs & Dairy": {
+                "egg": {
+                    "name": "Eggs",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            }
+        },
+        "instructions":[
+            "Deshell prawns. Make small incisions on each side to keep them straight when cooked. Coat with flour lightly",
+            "Batter: Beat egg into a large bowl. Add flour, and for every cup of flour, add the same amount of water.",
+            "Mix the batter, but don't overmix the flour, leaving few tiny bits undissolved. Chill for 30 minutes",
+            "On a frying pan, add oil and heat to 350F.",
+            "Dip prawn in the batter one at a time, then fry. Add droplets of batter on top of the prawn to add extra crispy textures.",
+            "Tip: Make sure to keep the batter cold. Ice bath works well"
+        ]
     }
 ]

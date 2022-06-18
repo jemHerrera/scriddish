@@ -49,6 +49,9 @@
 						<option value="6">6 Servings</option>
 					</select>
 				</div>
+				<div class="recipe-description">
+					<p>{{ selectedRecipe.description }}</p>
+				</div>
 			</div>
 			<div class="recipe-body">
 				<div class="ingredients-container">
@@ -125,6 +128,14 @@
 						padding-right: 3em;
 					}
 
+				}
+				.recipe-description{
+					padding: 2rem;
+					p{
+						font-size: 1.25rem;
+						font-weight: 400;
+						color: $color-gray1;
+					}
 				}
 			}
 			.recipe-body{

@@ -14,5 +14,13 @@
     "western": {
         "name": "Western",
         "recipes": []
+    },
+    "seafood": {
+        "name": "Seafood",
+        "recipes": []
+    },
+    "component-recipes": {
+        "name": "Component Recipes",
+        "recipes": []
     }
 }
