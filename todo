@@ -1,3 +1,12 @@
+- remove margin search button
+- ellipsis on mobile
+- add button background
+- add to meal plan bug on recipe view
+- double click . meta tag, user-scalable = no
+- add ingredient bug and input visibility
+- meal plan page needs padding at the bottom
+
+
 GITHUB
 -fix modal verify bug from mealplanview
 -Figure out how to host in github pages

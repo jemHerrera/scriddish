@@ -33,6 +33,7 @@
 
 <style scoped lang="scss">
 	@use '@/assets/scss/abstracts' as *;
+    $card-size: 13em;
 
     .recipe-card{
         border-radius: 3em;
@@ -41,10 +42,10 @@
 
         .recipe-card-container{
             @include flex($align:center);
-            height: 12em;
+            height: $card-size;
 
             img{
-                width: 12em;
+                width: $card-size;
                 object-fit: cover;
                 object-position: center;
                 min-height: 100%;
