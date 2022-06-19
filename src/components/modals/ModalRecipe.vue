@@ -36,7 +36,7 @@
 <template>
   <div class="recipe">
 		<div class="image-container">
-			<img :src="'/images/'+selectedRecipe.image" alt="">
+			<img :src="'/scriddish/images/'+selectedRecipe.image" alt="">
 		</div>
 		<main class="recipe-container">
 			<div class="recipe-head">

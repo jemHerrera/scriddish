@@ -45,7 +45,7 @@
 					<li v-for="mealID in mealPlan" 
 					:key="mealID" 
 					@click="viewRecipe(findRecipe(mealID))">
-						<div :style="{'background-image': `url('/images/${findRecipe(mealID).image}')`}" class="meal-inner">
+						<div :style="{'background-image': `url('/scriddish/images/${findRecipe(mealID).image}')`}" class="meal-inner">
 							<span class="title">{{ findRecipe(mealID).title }}</span>
 							<button class="delete-recipe" @click.stop.prevent="modalVerify = mealID"><IconDelete /></button>
 						</div>

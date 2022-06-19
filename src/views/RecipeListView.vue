@@ -23,6 +23,7 @@
 	<div class="recipes">
 		<div class="recipes-container">
 			<div class="head">
+				<img src="/images/logo.png">
 				<div class="title">
 					<h1>Plan your meals</h1>
 					<p>Start by adding recipes to the meal plan</p>
