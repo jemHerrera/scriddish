@@ -86,6 +86,9 @@
 
 <style lang="scss">
 	@use '@/assets/scss/abstracts' as *;
+	body{
+		overflow: hidden;
+	}
 
 	.recipe{
 		perspective: 2px;
@@ -234,7 +237,7 @@
 		.add-to-meal-plan{
 			z-index: 2;
 			position: sticky;
-			bottom: 2rem;
+			bottom: 6rem;
 			align-self: flex-end;
 			@include button($color-type:1, $radius-type:1);
 			@include flex($align:center, $justify:center);
