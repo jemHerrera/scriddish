@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch} from 'vue'
 import ModalCategoryGroup from './modals/ModalCategoryGroup.vue'
 import ModalFlashScreen from './modals/ModalFlashScreen.vue'
 import ModalRecipe from './modals/ModalRecipe.vue'
@@ -20,13 +20,18 @@ window.addEventListener('hashchange', () => {
   currentPath.value = window.location.hash
 })
 
+//WATCH
+watch(currentPath, (currentPath) => {
+  if(currentPath) document.querySelector('body').classList.add('overflow-hidden')
+  else document.querySelector('body').classList.remove('overflow-hidden')
+})
+
 const currentView = computed(() => {
   return routes[currentPath.value.slice(1) || '/'] || NotFound
 })
 </script>
 
 <template>
-
 	<transition name="slide-left">
   <component 
   class="modal"
@@ -35,7 +40,6 @@ const currentView = computed(() => {
   :selected-recipe="selectedRecipe"
   :meal-plan="mealPlan"
   @add-to-meal-plan="$emit('add-to-meal-plan', $event)"/>
-
 	</transition>
 </template>
 
