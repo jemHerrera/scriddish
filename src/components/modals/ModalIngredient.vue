@@ -82,29 +82,28 @@
         transition: all 200ms ease-in-out;
 
         .add-ingredient-modal-container{
-            @include flex($direction:column, $gap:2rem);
-            padding: 2rem;
+            @include flex($direction:column, $gap:1rem);
+            padding: 2rem 1rem;
             border-radius: 2rem;
             background-color: $color-gray4;
             box-shadow: $shadow;
             width: 100%;
 
             h2{
-                font-size: 2rem;
+                font-size: 1.5rem;
                 font-weight: 700;
             }
 
             .input-group{
                 @include flex($direction:column);
-                gap: 1em;
+                gap: 0.5em;
 
                 label{
-                    text-transform: uppercase;
                     color: $color-gray1;
                     pointer-events: none;
                 }
                 input, select{
-                    font-size: 1.25rem;
+                    font-size: 1.1rem;
                     -webkit-appearance: none;
                 }
             }
@@ -125,7 +124,7 @@
                     @include flex($gap: 1em);
 
                     #ingredient-amount{
-                        flex-grow: 1;
+                        width: 5em;
                     }
                     #ingredient-unit{
 
@@ -137,7 +136,7 @@
                 margin-top: 1rem;
 
                 button{
-                    font-size: 1.25rem;
+                    font-size: 1.1rem;
                     
                     &.cancel{
                         @include button($color-type:2, $radius-type:2);

@@ -142,7 +142,6 @@
 						@include flex($align:center, $justify:space-between);
 
 						.category-name{
-							text-transform: uppercase;
 							color: $color-gray1;
 						}
 

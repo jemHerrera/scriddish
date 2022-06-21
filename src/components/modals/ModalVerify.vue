@@ -32,20 +32,20 @@
         overflow: hidden;
 
         .verify-container{
-            @include flex($direction:column, $gap:2rem);
-            padding: 2rem;
+            @include flex($direction:column, $gap:1rem);
+            padding: 2rem 1rem;
             border-radius: 2rem;
             background-color: $color-gray4;
             box-shadow: $shadow;
             width: 100%;
 
             h2{
-                font-size: 2rem;
+                font-size: 1.5rem;
                 font-weight: 700;
             }
 
             p{
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             .button-container{
@@ -53,7 +53,7 @@
                 margin-top: 1rem;
 
                 button{
-                    font-size: 1.25rem;
+                    font-size: 1.1rem;
                     
                     &.cancel{
                         @include button($color-type:2, $radius-type:2);

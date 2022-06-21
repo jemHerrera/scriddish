@@ -133,6 +133,7 @@
 					p{
 						font-size: 1.25rem;
 						font-weight: 400;
+						font-style: italic;
 						color: $color-gray1;
 					}
 				}

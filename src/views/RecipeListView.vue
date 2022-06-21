@@ -191,7 +191,7 @@
 
 		.authors-remark{
 			@include flex($align:center, $justify:center);
-			padding: 5rem;
+			padding: 6rem 4.5rem 10rem 4.5rem;
 			
 			p{
 				font-size: 1.25rem;
