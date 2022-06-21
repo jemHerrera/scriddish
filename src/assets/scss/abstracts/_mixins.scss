@@ -19,7 +19,7 @@
 }
 
 @mixin button($color-type:1, $radius-type:1){
-    padding: 1.25em 3em;
+    padding: 1.2em 2.5em;
     box-shadow: $shadow2;
     transition: all 150ms ease-in;
     *{

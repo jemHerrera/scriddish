@@ -138,7 +138,8 @@
 				}
 			}
 			.recipe-body{
-				padding: 2rem 1rem;
+				padding: 0 1rem;
+				margin-top: 2rem;
 				@include flex($direction: column, $gap: 3rem);
 
 				.ingredients-container{
@@ -167,7 +168,6 @@
 
 				.instructions-container{
 					@include flex($direction:column, $gap: 2rem);
-					margin-bottom: 3rem;
 
 					.instructions-title{
 						font-size: 1.5rem;
@@ -217,7 +217,7 @@
 			background: $color-gray4;
 			font-size: 1.5rem;
 			padding: 0.5em;
-			margin: 2rem;
+			margin: 0 2rem;
 			border-radius: 99rem;
 			@include flex($align:center, $justify:center);
 			box-shadow: $shadow2;
@@ -232,15 +232,13 @@
 
 		.add-to-meal-plan{
 			z-index: 2;
-			position: sticky;
-			bottom: 6rem;
-			align-self: flex-end;
-			@include button($color-type:1, $radius-type:1);
+			align-self: center;
+			@include button($color-type:1, $radius-type:2);
 			@include flex($align:center, $justify:center);
-			margin: 1rem;
-			font-size: 1.1rem;
+			margin-bottom: 4rem;
 			box-shadow: $shadow2;
-			padding-left: 2.25em;
+			padding-left: 2em;
+			font-size: 1.25rem;
 			transition: transform 300ms ease-in-out 1s;
 
 			svg{

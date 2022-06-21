@@ -130,13 +130,13 @@
 			.groceries-body{
 				padding: 1rem;
 				@include flex($direction: column);
-				gap: 1.5rem;
+				gap: 1rem;
 
 				li{list-style-type: none}
 
 				.category-group{
-					padding: 2rem;
-					border-radius: 2rem;
+					padding: 1.5rem;
+					border-radius: 1.5rem;
 					box-shadow: $shadow;
 
 					h3.category{
@@ -160,16 +160,16 @@
 						.ingredients{
 							transition: all 200ms ease-out;
 							margin-top: -200%;
-							@include flex($direction:column, $gap:1em);
+							@include flex($direction:column, $gap:0.5em);
 
 							.ingredient{
-								@include flex($align:center, $justify:space-between, $gap:1em);
-								font-size: 1.25rem;
+								@include flex($align:center, $justify:space-between, $gap:0.5em);
+								font-size: 1.15rem;
 
 								input[type="checkbox"]{
 									@include flex($align:center, $justify:center);
-									height: 2.5em;
-									width: 2.5em;
+									height: 2em;
+									width: 2em;
 									padding: 0;
 									-webkit-appearance: none;
 									background-color: $color-gray4;
@@ -231,8 +231,8 @@
 				button.add-ingredient{
 					@include button($color-type:2, $radius-type:2);
 					@include flex($align:center, $justify:center);
-					padding-left: 2.5em;
-					font-size: 1.35rem;
+					padding-left: 2em;
+					font-size: 1.25rem;
 					font-weight: 600;
 
 					svg{

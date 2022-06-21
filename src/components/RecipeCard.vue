@@ -18,7 +18,9 @@
             <img :src="'/scriddish//images/'+recipe.image">
             <div class="details">
                 <h4 class="title">{{ recipe.title }}</h4>
-                <p class="description">{{ recipe.description }}</p>
+                <div class="description-container">
+                    <p class="description">{{ recipe.description }}</p>
+                </div>
                 <div class="card-footer">
                     <p class="time">{{ recipe.time }}</p>
                     <button @click.prevent="$emit('add-to-meal-plan', recipe.id)">
@@ -52,13 +54,13 @@
             }
 
             .details{
-                padding: 1.5rem;
+                padding: 1.5rem 1.25rem 1rem 1.5rem;
                 @include flex($direction: column);
                 height: 100%;
                 
                 .title{
                     font-size: $font-size2;
-                    font-weight: 700;
+                    font-weight: 600;
                     margin-bottom: 0.5rem;
                     display: -webkit-box;
                     -webkit-line-clamp: 2;
@@ -66,17 +68,19 @@
                     -webkit-box-orient: vertical;  
                 }
 
-                .description{
-                    color: $color-gray1;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-                    -webkit-box-orient: vertical;  
+                .description-container{
+                    flex-grow:1;
+                    .description{
+                        color: $color-gray1;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;  
+                    }
                 }
 
                 .card-footer{
                     @include flex($justify:space-between, $align:flex-end);
-                    flex-grow:1;
 
                     .time{
                         color: $color-main;

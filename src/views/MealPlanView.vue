@@ -192,11 +192,11 @@
 			}
 
 			.cta-container{
-				@include flex($direction:column, $align:center, $gap:1em);
+				@include flex($direction:column, $align:center);
 				margin: 2rem 0;
 
 				.view-groceries-cta{
-					font-size: 1.35rem;
+					font-size: 1.25rem;
 					@include button($color-type:2, $radius-type:2);
 				}
 				.clear-meal-plan{

@@ -68,17 +68,17 @@
 
 				svg{
 					fill: $color-gray1;
-					width: 3rem;
-					height: 3rem;
+					width: 2.5em;
+					height: 2.5em;
 				}
 				p{
-					font-size: 0.9rem;
+					font-size: 0.8em;
 					color: $color-gray1;
 				}
 
 				.counter{
 					@include flex($align:center, $justify:center);
-					font-size: 0.9rem;
+					font-size: 0.8em;
 					position: absolute;
 					right: 0;
 					top: 0;
@@ -86,9 +86,9 @@
 					color: white;
 					font-weight: 600;
 					padding: 0.25em 0.25em;
-					height: 1.75em;
-					width: 1.75em;
-					border-radius: 1.75em;
+					height: 1.5em;
+					width: 1.5em;
+					border-radius: 1.5em;
 				}
 
 				&.router-link-active{
