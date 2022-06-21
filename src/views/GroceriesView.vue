@@ -110,7 +110,6 @@
 	
 	.groceries{
 		.groceries-container{
-			margin-bottom: 15rem;
 
 			.groceries-head{
 				@include flex($align:center, $gap:0.5rem);

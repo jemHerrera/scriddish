@@ -78,7 +78,7 @@
 		<a @click="$emit('add-to-meal-plan', selectedRecipe.id)" 
 			:class="{'on-meal-plan': onMealPlan}"
 			class="add-to-meal-plan">
-			<IconPlus v-if="!onMealPlan" /><IconCheck v-else />Add to meal plan
+			<IconPlus v-if="!onMealPlan" /><IconCheck v-else />Add<span v-if="onMealPlan">ed </span> to meal plan
 		</a>
   </div>
 </template>
@@ -211,7 +211,7 @@
 		.back{
 			z-index: 2;
 			position: sticky;
-			bottom: 90%;
+			bottom: 85%;
 			left:0;
 			width: fit-content;
 			background: $color-gray4;
@@ -256,7 +256,9 @@
 					fill: $color-gray2;
 				}
 
-				transform: translateX(150%);
+				span{
+					color: $color-gray2;
+				}
 			}
 		}
 	}
