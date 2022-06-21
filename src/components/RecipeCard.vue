@@ -33,7 +33,7 @@
 
 <style scoped lang="scss">
 	@use '@/assets/scss/abstracts' as *;
-    $card-size: 13em;
+    $card-size: 12em;
 
     .recipe-card{
         border-radius: 3em;

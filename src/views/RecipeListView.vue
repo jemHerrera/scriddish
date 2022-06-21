@@ -114,7 +114,7 @@
 				.categories-container{
 					@include flex($gap: 1rem);
 					width: max-content;
-					padding: 1rem 2rem;
+					padding: 1rem;
 					
 					.search-container{
 						list-style-type: none;

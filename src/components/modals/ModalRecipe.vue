@@ -75,7 +75,6 @@
 			</div>
 		</main>
 		<a href="javascript:history.back()" class="back"><IconArrow /></a>
-
 		<a @click="$emit('add-to-meal-plan', selectedRecipe.id)" 
 			:class="{'on-meal-plan': onMealPlan}"
 			class="add-to-meal-plan">
@@ -86,10 +85,7 @@
 
 <style lang="scss">
 	@use '@/assets/scss/abstracts' as *;
-	body{
-		overflow: hidden;
-	}
-
+	
 	.recipe{
 		perspective: 2px;
 		@include flex($direction: column);
@@ -119,11 +115,11 @@
 				h2.recipe-title{
 					font-size: 2.5rem;
 					font-weight: 700;
-					padding: 3rem 2rem 0.5rem 2rem;
+					padding: 3rem 1rem 0.5rem 1rem;
 				}
 				.recipe-sub-heading{
 					@include flex($align:center, $gap: 1em);
-					padding: 0 2rem;
+					padding: 0 1rem;
 
 					.time{color: $color-gray1}
 
@@ -133,7 +129,7 @@
 
 				}
 				.recipe-description{
-					padding: 2rem;
+					padding: 1rem;
 					p{
 						font-size: 1.25rem;
 						font-weight: 400;
@@ -142,7 +138,7 @@
 				}
 			}
 			.recipe-body{
-				padding: 2rem;
+				padding: 2rem 1rem;
 				@include flex($direction: column, $gap: 3rem);
 
 				.ingredients-container{
@@ -179,17 +175,17 @@
 					}
 
 					ol.instructions{
-						@include flex($direction:column, $gap: 1.5rem);
+						@include flex($direction:column, $gap: 1rem);
 
 						li.instruction{
-							@include flex($gap: 1.5rem);
+							@include flex($gap: 1rem);
 							box-shadow: $shadow;
-							padding: 2rem 1.5rem;
+							padding: 1.25rem;
 							border-radius: 2.5rem;
 
 							span{
 								&.index{
-									font-size: 1.5rem;
+									font-size: 1.25rem;
 									height: 2em;
 									width: 2em;
 									min-width: 2em;
@@ -201,7 +197,7 @@
 								}
 
 								&.details{
-									font-size: 1.5rem;
+									font-size: 1.25rem;
 									line-height: 1.5;
 									align-self: center;
 								}
@@ -242,9 +238,9 @@
 			@include button($color-type:1, $radius-type:1);
 			@include flex($align:center, $justify:center);
 			margin: 1rem;
-			font-size: 1.35rem;
+			font-size: 1.1rem;
 			box-shadow: $shadow2;
-			padding-left: 2.5em;
+			padding-left: 2.25em;
 			transition: transform 300ms ease-in-out 1s;
 
 			svg{
