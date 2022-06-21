@@ -67,6 +67,9 @@
 			@click="router.push('/mealplan')"
 			v-if="mealPlan.length > 0">View Meal Plan ({{mealPlan.length}})</button>
 		</transition>
+		<div class="authors-remark">
+			<p>Thank you for taking the time to check out my stuff! That's all the recipes I got for now, but I will keep an adding more as I go.</p>
+		</div>
 	</div>
 </template>
 
@@ -157,7 +160,6 @@
 
 				.recipes-container{
 					@include flex($direction:column, $gap: 3rem);
-					margin-bottom: 15rem;
 					
 					.category-group{
 						list-style-type: none;
@@ -185,6 +187,18 @@
 			bottom: 6rem;
 			right: 0;
 			margin: 0 1rem;
+		}
+
+		.authors-remark{
+			@include flex($align:center, $justify:center);
+			padding: 5rem;
+			
+			p{
+				font-size: 1.25rem;
+				font-style: italic;
+				text-align:center;
+				color: $color-gray1;
+			}
 		}
 	}
 </style>

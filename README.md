@@ -1,41 +1,8 @@
 # scriddish
 
-This template should help get you started developing with Vue 3 in Vite.
+Scriddish is a single-page front-end app made using Vue3. The aim of the project is to create a beautiful and user-friendly mock app for meal planning and grocery listing. The app includes a variety of recipes that users can view and follow, as well as add to a meal plan. For every recipe added to the meal plan, the app auto-generates a sorted grocery list for ease of grocery shopping. Front-end features include:
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Search function
+- Sorted categories navigation scroll (similar to skip the dishes)
+- Add ingredient feature
+- Use of cookies to retain meal plan for a few days

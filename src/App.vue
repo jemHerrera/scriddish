@@ -61,6 +61,7 @@
 		<transition :name="route.meta.transition || 'fade'" mode="out-in">
 			<keep-alive>
 				<component 
+				class="main-component"
 				:is="Component"
 				:key="route.meta.usePathKey ? route.path : undefined"
 				:meal-plan="mealPlan"
@@ -88,6 +89,9 @@
 	@use '@/assets/scss/abstracts' as *;
 	@use '@/assets/scss/resets';
 
+	.main-component{
+		padding-bottom: 5rem;
+	}
 </style>
 
 

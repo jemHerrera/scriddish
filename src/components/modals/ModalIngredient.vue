@@ -101,9 +101,11 @@
                 label{
                     text-transform: uppercase;
                     color: $color-gray1;
+                    pointer-events: none;
                 }
                 input, select{
                     font-size: 1.25rem;
+                    -webkit-appearance: none;
                 }
             }
 
