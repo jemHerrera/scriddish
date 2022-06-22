@@ -1,5 +1,5 @@
 <script setup>
-	import { reactive, ref } from 'vue'
+	import { reactive, ref, onMounted, watch } from 'vue'
 	import { useRouter, useRoute } from 'vue-router'
 	import IconSearch from '../components/icons/IconSearch.vue';
 	import RecipeCard from '../components/RecipeCard.vue';
@@ -17,6 +17,55 @@
 
 	const activeCategory = ref("featured");
 	const router = useRouter();
+
+	//create event listener for scroll nav feature
+	onMounted(() => {
+		const categorySections = document.querySelectorAll(".category-group");
+		window.addEventListener('scroll', navigateCategories);
+
+		function navigateCategories(){
+			// Get current scroll position
+			let scrollY = window.pageYOffset;
+			categorySections.forEach(categorySection => {
+				const sectionHeight = categorySection.offsetHeight;
+				const sectionTop = categorySection.offsetTop - 50;
+				const categorySectionId = categorySection.getAttribute("id");
+
+				if(scrollY > sectionTop - 200 && scrollY <= sectionTop + sectionHeight - 200){
+					activeCategory.value = categorySectionId;
+				}
+			});
+		}
+	})
+
+	//METHODS
+	function scrollToSection(id){
+		const categorySection = document.getElementById(id);
+		const sectionTop = categorySection.offsetTop;
+		const navHeight = document.querySelector('.categories-container').clientHeight
+
+		window.scroll({
+			top: sectionTop - navHeight,
+			behavior: 'smooth'
+		});
+	}
+
+	function scrollToCategory(id){
+		const container = document.querySelector('.category-nav');
+		const active = document.querySelector(`[category="${id}"]`);
+		const position = active.offsetLeft;
+
+		container.scroll({
+			left: position - 72,
+			behavior: 'smooth'
+		})
+	}
+
+	//WATCH
+	//scroll pills everytime activecategory changes
+	watch(activeCategory, (after, before) => {
+		scrollToCategory(after);
+	})
 </script>
 
 <template>
@@ -29,17 +78,20 @@
 					<p>Start by adding recipes to the meal plan</p>
 				</div>
 			</div>
-			<div class="category-nav">
-				<ul class="categories-container">
-					<li class="search-container">
-						<a class="search" href="#/search"><IconSearch/></a>
-					</li>
-					<li v-for="(categoryValue, categoryID) in categories" 
-					:key="categoryID" 
-					@click="activeCategory = categoryID"
-					:class="{'active': activeCategory == categoryID}"
-					class="category-pill">{{ categoryValue.name }}</li>
-				</ul>
+			<div class="recipes-nav">
+				<div class="category-nav">
+					<ul class="categories-container">
+						<li v-for="(categoryValue, categoryID) in categories" 
+						:key="categoryID" 
+						@click="scrollToSection(categoryID)"
+						:class="{'active': activeCategory == categoryID}"
+						:category="categoryID"
+						class="category-pill">{{ categoryValue.name }}</li>
+					</ul>
+				</div>
+				<div class="search-container">
+					<a class="search" href="#/search"><IconSearch/></a>
+				</div>
 			</div>
 			<div class="recipes-body">
 				<ul class="recipes-container">
@@ -106,50 +158,54 @@
 				}
 			}
 
-			.category-nav{
-				width: 100vw;
-				overflow-x: auto;
+			.recipes-nav{
+				@include flex;
 				position: sticky;
 				top: 0;
-				background: $color-gray4;
 				border-bottom: 1px solid $color-gray2;
+				background: $color-gray4;
 
-				.categories-container{
-					@include flex($gap: 1rem);
-					width: max-content;
-					padding: 1rem;
-					
-					.search-container{
-						list-style-type: none;
-						position: sticky; 
-						left: 1rem;
+				.category-nav{
+					flex-grow: 1;
+					overflow-x: auto;
 
-						.search{
-							@include flex($align:center, $justify:center);
-							border-radius: 1rem;
-							padding: 0.5rem;
+					.categories-container{
+						@include flex($gap: 1rem);
+						width: max-content;
+						padding: 1rem;
+						
+						.category-pill{
+							list-style-type: none;
+							font-size: $font-size2;
+							padding: 0.75rem 1rem;
+							color: $color-main;
 							background-color: $color-gray4;
-							box-shadow: $shadow2;
+							border-radius: 2em;
+							box-shadow: $shadow;
 
-							svg{
-								width: 2.5rem;
-								height: 2.5rem;
-								fill: $color-main;
+							&.active{
+								background-color: $color-main;
+								color: white;
 							}
 						}
 					}
-					.category-pill{
-						list-style-type: none;
-						font-size: $font-size2;
-						padding: 1rem 3rem;
-						color: $color-main;
-						background-color: $color-gray4;
-						border-radius: 2em;
-						box-shadow: $shadow;
+				}
 
-						&.active{
-							background-color: $color-main;
-							color: white;
+				.search-container{
+					@include flex($align:center, $justify:center);
+					padding: 0 1rem;
+
+					.search{
+						@include flex($align:center, $justify:center);
+						border-radius: 1rem;
+						padding: 0.5rem;
+						background-color: $color-gray4;
+						box-shadow: $shadow2;
+
+						svg{
+							width: 2.5rem;
+							height: 2.5rem;
+							fill: $color-main;
 						}
 					}
 				}
@@ -163,6 +219,7 @@
 					
 					.category-group{
 						list-style-type: none;
+						padding: 1em 0;
 
 						.category-group-name{
 							font-size: 1rem;

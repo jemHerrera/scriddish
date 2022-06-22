@@ -129,18 +129,16 @@
 
 				}
 				.recipe-description{
-					padding: 1rem;
+					padding: 2rem 1rem;
 					p{
-						font-size: 1.25rem;
+						font-size: 1.2rem;
 						font-weight: 400;
-						font-style: italic;
 						color: $color-gray1;
 					}
 				}
 			}
 			.recipe-body{
 				padding: 0 1rem;
-				margin-top: 2rem;
 				@include flex($direction: column, $gap: 3rem);
 
 				.ingredients-container{

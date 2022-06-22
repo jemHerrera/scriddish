@@ -1,18 +1,3 @@
-- add to meal plan bug on recipe view
-
-- add ingredient bug and input visibility
-
-
-- meal plan page needs padding at the bottom
-
-
-expand more svg
-
-GITHUB
--fix modal verify bug from mealplanview
--Figure out how to host in github pages
--Solve asset problems, including 
-
 RecipeView
 - More recipes on json to implement scrolling functionality better
 - scroll functionality
