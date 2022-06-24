@@ -38,7 +38,7 @@
 		<div v-if="mealPlan.length > 0" class="meal-plan-container">
 			<div class="meal-plan-head">
 				<h2>My meal plan</h2>
-				<a class="new-dish-link" @click="router.push('/')"><IconPlus />Add a new dish</a>
+				<a class="new-dish-link" @click="router.push('/')"><IconPlus />Add</a>
 			</div>
 			<div class="meal-plan-body">
 				<TransitionGroup name="list" tag="ul" class="recipe-list">
@@ -104,12 +104,12 @@
 				.new-dish-link{
 					@include flex($align:center, $gap:0.1rem);
 					color: $color-main;
-					font-size: $font-size2;
+					font-size: 1.5rem;
 					font-weight: 600;
 
 					svg{
-						width: 1.5rem;
-						height: 1.5rem;
+						width: 2em;
+						height: 2em;
 						fill: $color-main;
 					}
 				}

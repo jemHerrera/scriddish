@@ -83,6 +83,7 @@
 	:meal-plan="mealPlan"
 	:recipes="recipes"
 	@add-to-meal-plan="addToMealPlan($event)"
+	@select-recipe="selectedRecipe = $event"
 	:selected-recipe="selectedRecipe"/>
 </template>
 

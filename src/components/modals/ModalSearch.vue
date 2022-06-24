@@ -1,11 +1,13 @@
 <script setup>
 	import { ref, computed } from 'vue'
+	import { useRouter, useRoute } from 'vue-router'
   	import IconSearch from '../icons/IconSearch.vue'
   	import IconDelete from '../icons/IconDelete.vue'
 	import RecipeCard from '../RecipeCard.vue';
 
 	const props = defineProps({mealPlan: Array, recipes: Object})
-	defineEmits(['add-to-meal-plan', 'select-recipe'])
+	defineEmits(['add-to-meal-plan', 'select-recipe', 'change-path'])
+	const router = useRouter();
 
 	//REF
 	let searchQuery = ref('');
@@ -74,6 +76,12 @@
 				<div class="suggested"></div>
 			</div>
 		</div>
+
+		<transition name="fade-up">
+			<button class="view-meal-plan-cta" 
+			@click="router.push('/mealplan'); $emit('change-path', '')"
+			v-if="mealPlan.length > 0 && searchItems.length > 0">View Meal Plan ({{mealPlan.length}})</button>
+		</transition>
 	</div>
 </template>
 
@@ -145,6 +153,14 @@
 					@include flex($direction:column, $gap:1rem);
 				}
 			}
+		}
+		.view-meal-plan-cta{
+			@include button($color-type:1, $radius-type:2);
+			font-size: 1.25rem;
+			position: fixed;
+			bottom: 6rem;
+			right: 0;
+			margin: 0 1rem;
 		}
 	}
 </style>

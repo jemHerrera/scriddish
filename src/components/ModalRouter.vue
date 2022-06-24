@@ -11,7 +11,7 @@ const routes = {
 }
 
 const props = defineProps({selectedRecipe: Object, mealPlan: Array, recipes: Object})
-const emit = defineEmits(['add-to-meal-plan']);
+const emit = defineEmits(['add-to-meal-plan', 'select-recipe']);
 const currentPath = ref(window.location.hash)
 
 window.addEventListener('hashchange', () => {
@@ -31,14 +31,18 @@ const currentView = computed(() => {
 
 <template>
 	<transition name="slide-left">
-  <component 
-  class="modal"
-  v-if="currentPath" 
-  :is="currentView" 
-  :selected-recipe="selectedRecipe"
-  :recipes="recipes"
-  :meal-plan="mealPlan"
-  @add-to-meal-plan="$emit('add-to-meal-plan', $event)"/>
+    <keep-alive exclude="ModalRecipe">
+      <component 
+      class="modal"
+      v-if="currentPath" 
+      :is="currentView" 
+      :selected-recipe="selectedRecipe"
+      :recipes="recipes"
+      :meal-plan="mealPlan"
+      @select-recipe="$emit('select-recipe', $event)"
+      @change-path="currentPath = $event"
+      @add-to-meal-plan="$emit('add-to-meal-plan', $event)"/>
+    </keep-alive>
 	</transition>
 </template>
 
