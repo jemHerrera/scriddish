@@ -1,17 +1,11 @@
 
+- More recipes on json to implement scrolling functionality better
+
 Category Modal
+- Manually add recommended categories?
 - reactive "selectedCategory" in App.vue instance, then passed down as prop by ModalRouter.vue, then prop drilled to ModalRecipe.vue
 - Loop through master list and find recipes tagged with the category
 
-Search Modal
-- search function: loop through the masterfile and find matches from recipe name, categories and ingredients
-- Manually add recommended categories?
-
 Animations, transitions lazy loading
 
-Bonus Functionalities
-- put checked item at the end of the list
-- allow edits on ingredients. (need modal)
-
 Desktop version. create a pseudo iphone with disclaimer at the bottom saying that the app is designed on mobile only at the moment.
-- More recipes on json to implement scrolling functionality better

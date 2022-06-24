@@ -158,7 +158,7 @@
 			@include button($color-type:1, $radius-type:2);
 			font-size: 1.25rem;
 			position: fixed;
-			bottom: 6rem;
+			bottom: 2rem;
 			right: 0;
 			margin: 0 1rem;
 		}
