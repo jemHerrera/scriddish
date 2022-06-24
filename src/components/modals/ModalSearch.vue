@@ -8,41 +8,7 @@
 	defineEmits(['add-to-meal-plan', 'select-recipe'])
 
 	//REF
-	let searchQuery = ref('')
-
-	//METHODS
-	//get longest common substring between 2 strings
-	function commonSubstring(string1, string2){
-		let commonSubstrings = [];
-		function getAllSubstrings(string){
-			let substrings = [];
-			const stringArray = string.split('');
-
-			for(let i=0; i<stringArray.length; i++){
-				let substring = stringArray[i],
-					count = i;
-				
-				while(count < stringArray.length){
-					substrings.push(substring);
-					count++
-					substring += stringArray[count]
-				}
-			}
-			return substrings;
-		}
-
-		getAllSubstrings(string1).forEach(substring1 => {
-			getAllSubstrings(string2).forEach(substring2 => {
-				if(substring1 == substring2) commonSubstrings.push(substring1)
-			})
-		})
-
-		if(commonSubstrings.length == 0) return ""
-		return commonSubstrings.reduce((prev, current) => {
-			if(prev.length >= current.length) return prev
-			else return current
-		});
-	}
+	let searchQuery = ref('');
 
 	const searchItems = computed(() => {
 		let searchItems = [],
@@ -51,17 +17,17 @@
 		if(query.length < 3) return []
 		props.recipes.forEach(recipe => {
 			//name
-			const titleMatch = commonSubstring(recipe.title.toLowerCase(), query).length >= 3;
+			const titleMatch = recipe.title.toLowerCase().includes(query);
 			//tags
 			function tagsMatch(){
-				return recipe.tags.some(tag => commonSubstring(tag, query).length >= 3)
+				return recipe.tags.some(tag => tag.includes(query))
 			}
 			//ingredients
 			function ingredientsMatch(){
 				return Object.values(recipe.ingredients).some(category => {
 					return Object.keys(category).some(ingredientID => {
-						return commonSubstring(ingredientID, query).length >= 3 ||
-						commonSubstring(category[ingredientID].name.toLowerCase(), query).length >= 3
+						return ingredientID.includes(query) ||
+						category[ingredientID].name.toLowerCase().includes(query)
 					})
 				})
 			}
