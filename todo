@@ -1,7 +1,3 @@
-RecipeView
-- More recipes on json to implement scrolling functionality better
-- scroll functionality
-https://codepen.io/malsu/pen/VwKzoPG
 
 Category Modal
 - reactive "selectedCategory" in App.vue instance, then passed down as prop by ModalRouter.vue, then prop drilled to ModalRecipe.vue
@@ -18,3 +14,4 @@ Bonus Functionalities
 - allow edits on ingredients. (need modal)
 
 Desktop version. create a pseudo iphone with disclaimer at the bottom saying that the app is designed on mobile only at the moment.
+- More recipes on json to implement scrolling functionality better

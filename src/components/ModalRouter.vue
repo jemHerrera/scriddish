@@ -1,18 +1,16 @@
 <script setup>
 import { ref, computed, watch} from 'vue'
 import ModalCategoryGroup from './modals/ModalCategoryGroup.vue'
-import ModalFlashScreen from './modals/ModalFlashScreen.vue'
 import ModalRecipe from './modals/ModalRecipe.vue'
 import ModalSearch from './modals/ModalSearch.vue'
 
 const routes = {
-  '/loading': ModalFlashScreen,
   '/category': ModalCategoryGroup,
   '/recipe': ModalRecipe,
   '/search': ModalSearch
 }
 
-const props = defineProps({selectedRecipe: Object, mealPlan: Array})
+const props = defineProps({selectedRecipe: Object, mealPlan: Array, recipes: Object})
 const emit = defineEmits(['add-to-meal-plan']);
 const currentPath = ref(window.location.hash)
 
@@ -38,6 +36,7 @@ const currentView = computed(() => {
   v-if="currentPath" 
   :is="currentView" 
   :selected-recipe="selectedRecipe"
+  :recipes="recipes"
   :meal-plan="mealPlan"
   @add-to-meal-plan="$emit('add-to-meal-plan', $event)"/>
 	</transition>

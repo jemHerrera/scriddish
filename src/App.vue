@@ -81,6 +81,7 @@
 	/>
 	<ModalRouter 
 	:meal-plan="mealPlan"
+	:recipes="recipes"
 	@add-to-meal-plan="addToMealPlan($event)"
 	:selected-recipe="selectedRecipe"/>
 </template>

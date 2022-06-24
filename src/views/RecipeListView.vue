@@ -230,7 +230,7 @@
 						}
 
 						.category-recipes{
-							@include flex($direction:column, $gap: 1.5rem);
+							@include flex($direction:column, $gap: 1rem);
 						}
 					}
 				}

@@ -1,6 +1,5 @@
 <script setup>
 	import { ref, computed} from 'vue'
-    import getImageUrl from '../../components/composables/getImageUrl'
 	import IconArrow from '../icons/IconArrow.vue'
 	import IconPlus from '../icons/IconPlus.vue'
 	import IconCheck from '../icons/IconCheck.vue'
