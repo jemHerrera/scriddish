@@ -39,15 +39,10 @@
                 "garlic": {
                     "name": "Garlic",
                     "amount": 2,
-                    "unit": "cloves"
+                    "unit": "clove"
                 }
             },
             "Condiments & Spices":{
-                "soy-sauce": {
-                    "name": "Soy Sauce",
-                    "amount": 1,
-                    "unit": "tbsp"
-                },
                 "all-purpose-flour": {
                     "name": "All Purpose Flour",
                     "amount": 1,
@@ -64,6 +59,11 @@
                     "name": "Beef Broth",
                     "amount": 0.5,
                     "unit": "cup"
+                },
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 1,
+                    "unit": "tbsp"
                 }
             },
             "Eggs & Dairy": {
@@ -111,15 +111,15 @@
         "title": "Onsen Tamago",
         "image": "onsen-tamago.jpeg",
         "description": "Perfectly poached inside its shell. While the whites are soft and silky, the yolk comes out firm but retains the color and creamy texture of an uncooked yolk.",
-        "category": "quick-and-easy",
-        "tags": ["quick-and-easy", "eggs"],
+        "category": "component-recipes",
+        "tags": ["component-recipes", "eggs"],
         "time": "15-20 mins",
         "ingredients":{
             "Eggs & Dairy": {
                 "eggs": {
                     "name": "Eggs",
                     "amount": 4,
-                    "unit": "pcs"
+                    "unit": "unit"
                 }
             }
         },
@@ -159,20 +159,20 @@
                 "garlic": {
                     "name": "Garlic",
                     "amount": 3,
-                    "unit": "cloves"
+                    "unit": "clove"
                 },
                 "green-onions": {
                     "name": "Green Onions",
                     "amount": 2,
                     "unit": "unit"
-                }
-            },
-            "Condiments & Spices":{
+                },
                 "soy-sauce": {
                     "name": "Soy Sauce",
                     "amount": 2,
                     "unit": "tbsp"
-                },
+                }
+            },
+            "Condiments & Spices":{
                 "sesame-oil": {
                     "name": "Sesame Oil",
                     "amount": 1,
@@ -224,15 +224,15 @@
         "title": "Hard Boiled Eggs",
         "image": "hard-boiled-eggs.jpeg",
         "description": "Simple way to perfectly hard-boil eggs to the desired doneness.",
-        "category": "quick-and-easy",
-        "tags": ["quick-and-easy", "eggs"],
+        "category": "component-recipes",
+        "tags": ["component-recipes", "eggs"],
         "time": "15-20 mins",
         "ingredients":{
             "Eggs & Dairy": {
                 "eggs": {
                     "name": "Eggs",
                     "amount": 2,
-                    "unit": "pcs"
+                    "unit": "unit"
                 }
             }
         },
@@ -267,7 +267,12 @@
                 "lemon": {
                     "name": "Lemon",
                     "amount": 1,
-                    "unit": "pcs"
+                    "unit": "unit"
+                },
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
                 },
                 "green-onions": {
                     "name": "Green Onions",
@@ -279,11 +284,6 @@
                 "fried-garlic": {
                     "name": "Fried Garlic",
                     "amount": 1,
-                    "unit": "tbsp"
-                },
-                "soy-sauce": {
-                    "name": "Soy Sauce",
-                    "amount": 2,
                     "unit": "tbsp"
                 },
                 "sesame-oil": {
@@ -374,14 +374,14 @@
                 "fish-fillet": {
                     "name": "Fish Fillet, Haddock, Cod or Sea Bass",
                     "amount": 2,
-                    "unit": "units"
+                    "unit": "unit"
                 }
             },
             "Produce": {
                 "ginger": {
                     "name": "Ginger",
                     "amount": 15,
-                    "unit": "grams"
+                    "unit": "g"
                 },
                 "green-onions": {
                     "name": "Green Onions",
@@ -413,7 +413,7 @@
         "image": "pork-chashu.webp",
         "description": "Japanese have adapted the famous Chinese barbecued pork called Char Siu (叉燒) as chāshū (チャーシュー). Unlike the Chinese version which requires roasting over high heat, we prepare the meat by rolling it into a log and then braising it over low heat in a sauce seasoned with soy sauce, sake, and sugar.",
         "category": "component-recipes",
-        "tags": ["pork", "asian", "quick-and-easy", "component-recipes"],
+        "tags": ["pork", "asian", "component-recipes"],
         "time": "Overnight",
         "ingredients":{
             "Meat & Seafood": {
@@ -466,14 +466,14 @@
         "image": "ramen-eggs.jpeg",
         "description": "Ramen eggs are Japanese soft-boiled eggs known for its custardy jammy egg yolk and umami flavor. They are marinated overnight in a sweetened soy-based sauce. In Japan, we call these marinated eggs Ajitsuke Tamago (味付け玉子) or short for Ajitama (味玉) or Nitamago (煮玉子).",
         "category": "component-recipes",
-        "tags": ["eggs", "asian", "quick-and-easy", "component-recipes"],
+        "tags": ["eggs", "asian", "component-recipes"],
         "time": "Overnight",
         "ingredients":{
             "Eggs & Dairy": {
                 "eggs": {
                     "name": "Eggs (refrigirated)",
                     "amount": 2,
-                    "unit": "pcs"
+                    "unit": "unit"
                 }
             },
             "Canned & Sauces": {
@@ -566,7 +566,7 @@
                 "dark-soy-sauce": {
                     "name": "Dark Soy Sauce",
                     "amount": 2,
-                    "unit": "cups"
+                    "unit": "cup"
                 }
             }
         },
@@ -586,7 +586,7 @@
         "image": "gyudon.jpeg",
         "description": "Thinly sliced beef and tender onions cooked in savory-sweet sauce, Gyudon, or Japanese Beef Rice Bowl, is synonymous with comfort. It has been a staple in Japanese cuisine for over 150 years! It’s a perfect quick meal for a busy weeknight!",
         "category": "featured",
-        "tags": ["beef", "asian", "quick-and-easy", "featured"],
+        "tags": ["beef", "asian", "featured"],
         "time": "30 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -701,7 +701,7 @@
                 "garlic": {
                     "name": "Garlic",
                     "amount": 6,
-                    "unit": "cloves"
+                    "unit": "clove"
                 },
                 "mushrooms": {
                     "name": "Mushrooms",
@@ -765,7 +765,7 @@
                 "lobsters": {
                     "name": "Lobsters",
                     "amount": 2,
-                    "unit": "units"
+                    "unit": "unit"
                 }
             },
             "Produce": {
@@ -792,7 +792,7 @@
                 "garlic": {
                     "name": "Garlic",
                     "amount": 2,
-                    "unit": "cloves"
+                    "unit": "clove"
                 }
             },
             "Condiments & Spices":{
@@ -853,7 +853,7 @@
                 "prawn": {
                     "name": "Prawn",
                     "amount": 12,
-                    "unit": "units"
+                    "unit": "unit"
                 }
             },
             "Condiments & Spices":{
@@ -878,6 +878,891 @@
             "On a frying pan, add oil and heat to 350F.",
             "Dip prawn in the batter one at a time, then fry. Add droplets of batter on top of the prawn to add extra crispy textures.",
             "Tip: Make sure to keep the batter cold. Ice bath works well"
+        ]
+    },
+    {
+        "id": "tinola",
+        "title": "Tinola",
+        "image": "chicken-tinola.jpeg",
+        "description": "Tinola is an easy, one-pot soup from the Philippines. Chicken, chayote squash (or papaya!) and malunggay are simmered with fresh ginger in a savory broth that's often served with white rice.",
+        "category": "filipino",
+        "tags": ["filipino", "south-east-asian", "chicken"],
+        "time": "1 hour",
+        "ingredients":{
+            "Meat & Seafood": {
+                "whole-chicken": {
+                    "name": "Whole Chicken",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Produce": {
+                "chayote": {
+                    "name": "Chayote",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "malunggay-leaves": {
+                    "name": "Malunggay Leaves",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 1,
+                    "unit": "clove"
+                },
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 7,
+                    "unit": "g"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "knorr-chicken-cube": {
+                    "name": "Knorr Chicken cube",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "fish-sauce": {
+                    "name": "Fish Sauce",
+                    "amount": 1,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "rice-washing": {
+                    "name": "Rice Washing",
+                    "amount": 3,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Cut chicken into serving pieces. Pat dry",
+            "Chop onions. Grate garlic. Slice ginger into thin pieces",
+            "Saute garlic, onion and ginger. 2 minutes",
+            "Add in chicken and cook till lightly seared. 4 mins.",
+            "Add fish sauce and stir. Cook 1 mins.",
+            "Pour rice washing and let boil. Cover the pot and simmer for 45mins.",
+            "Add chayote. Cook for 5mins",
+            "Add the hot pepper leaves or malunggay leaves. Stir and cook for 1 minute.",
+            "Season with ground black pepper. Note you can also add more fish sauce or salt if needed."
+        ]
+    },
+    {
+        "id": "pork-sinigang",
+        "title": "Pork Sinigang",
+        "image": "pork-sinigang.jpeg",
+        "description": "Sinigang is a Filipino soup or stew characterized by its sour and savory taste. It is most often associated with tamarind, although it can use other sour fruits and leaves as the souring agent. It is one of the more popular dishes in Filipino cuisine.",
+        "category": "filipino",
+        "tags": ["filipino", "pork", "south-east-asian"],
+        "time": "1-2 hours",
+        "ingredients":{
+            "Meat & Seafood": {
+                "pork-neck-bones": {
+                    "name": "Pork Neck Bones",
+                    "amount": 500,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "spinach": {
+                    "name": "Spinach",
+                    "amount": 50,
+                    "unit": "g"
+                },
+                "string-beans": {
+                    "name": "String Beans",
+                    "amount": 50,
+                    "unit": "g"
+                },
+                "tomato": {
+                    "name": "Tomato",
+                    "amount": 2,
+                    "unit": "unit"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "gabi": {
+                    "name": "Gabi",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 1,
+                    "unit": "clove"
+                }
+            },
+            "Condiments & Spices":{
+                "sinigang-mix": {
+                    "name": "Sinigang Mix",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "knorr-pork-cube": {
+                    "name": "Knorr Pork Cube",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "fish-sauce": {
+                    "name": "Fish Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "rice-washing": {
+                    "name": "Rice Washing",
+                    "amount": 3,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Chop onion. Grate garlic. Quarter tomatoes. Cut string beans into 2 inch pieces.",
+            "Saute onion and garlic.",
+            "Add pork and cook till lightly seared. Add fish sauce.",
+            "Add rice washing and bring to boil. Add gabi and tomatoes then simmer for 40 minutes or until pork is tender",
+            "Add in the sinigang mix and chili",
+            "Add the string beans (and other vegetables if there are any) and simmer for 5 to 8 minutes",
+            "Add the spinach, turn off the heat, and cover the pot. Let the spinach cook using the remaining heat in the pot."
+        ]
+    },
+    {
+        "id": "beef-papaitan",
+        "title": "Beef Papaitan",
+        "image": "beef-papaitan.webp",
+        "description": "Papaitan is one of the popular Ilokano dishes and the original recipe calls for goat innards. The reason why it is called “papaitan” is because the dish is bitter by using goat bile as one of the ingredient but just enough to make it tasty. Since goat innards are not always available in the market, you can substitute it with beef innards.",
+        "category": "filipino",
+        "tags": ["beef", "south-east-asian", "filipino"],
+        "time": "3 hours",
+        "ingredients":{
+            "Meat & Seafood": {
+                "beef-innards": {
+                    "name": "Beef Innards(Tripe, Kidney, Heart, Intestines, Pancreas, Tendons)",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "clove"
+                },
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 10,
+                    "unit": "g"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "jalapeno": {
+                    "name": "Jalapeno",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "knorr-chicken-cube": {
+                    "name": "Knorr Chicken cube",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "papaitan-mix": {
+                    "name": "Papaitan Mix",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "fish-sauce": {
+                    "name": "Fish Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            }
+        },
+        "instructions":[
+            "Wash and mash the internal organs with salt to remove the musky odor. Make sure that the intestines are very clean.",
+            "Boil the internal organs on a big pot until tender. Add salt. Discard liquid then cut meat into 1/2 inch cubes. Set aside to dry.",
+            "Saute ginger, garlic and onion. Stir fry until the onions are cooked and add the internal organs.",
+            "Stir fry again until some broth comes out of the internal organs. Season with S&P and fish sauce.",
+            "Add just enough water to cover all the ingredients, then add beef cubes, jalapeno and papaitan mix. Bring to boil and simmer for 30 mins"
+        ]
+    },
+    {
+        "id": "filipino-style-spaghetti",
+        "title": "Filipino Style Spaghetti",
+        "image": "filipino-style-spaghetti.jpeg",
+        "description": "Filipino spaghetti is a Filipino adaptation of Italian spaghetti with Bolognese sauce. It has a distinctively sweet sauce, usually made from tomato sauce sweetened with brown sugar or banana ketchup. It is typically topped with sliced hot dogs or smoked longganisa sausages, giniling, and grated cheese.",
+        "category": "filipino",
+        "tags": ["pork", "filipino", "asian"],
+        "time": "40 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "ground-pork": {
+                    "name": "Ground Pork",
+                    "amount": 250,
+                    "unit": "g"
+                },
+                "hot-dogs": {
+                    "name": "Hot Dogs",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Produce": {
+                "carrots": {
+                    "name": "Carrots",
+                    "amount": 20,
+                    "unit": "g"
+                },
+                "bell-pepper": {
+                    "name": "Bell Pepper",
+                    "amount": 20,
+                    "unit": "g"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "clove"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "tomato-sauce": {
+                    "name": "Tomato Sauce",
+                    "amount": 250,
+                    "unit": "g"
+                },
+                "tomato-paste": {
+                    "name": "Tomato Paste",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            },
+            "Eggs & Dairy": {
+                "evaporated-milk": {
+                    "name": "Evaporated Milk",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                "grated-cheese": {
+                    "name": "Grated Cheese",
+                    "amount": 1,
+                    "unit": "cup"
+                }
+            },
+            "Others": {
+                "spaghetti": {
+                    "name": "Spaghetti",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Cook spaghetti according to package directions. Set aside.",
+            "Chop garlic and onions. Slice hotdogs",
+            "Place the garlic, onion, and oil in a large saucepan or skillet. Saute for 3-4 minutes or until soft and fragrant. Add the ground pork and brown the meat until it’s completely cooked.",
+            "Add the minced vegetables and hot dog pieces and stir to combine. Add 2 cups(per 2 servings) of water and allow the mixture to simmer for 10-15 minutes. Add the tomato sauce and tomato paste to the meat and continue to simmer the mixture for another 10-15 minutes. Add the evaporated milk and salt and stir until incorporated.",
+            "Combine pasta and sauce in a large pot or mixing bowl. Top with grated cheese."
+        ]
+    },
+    {
+        "id": "bulalo",
+        "title": "Bulalo",
+        "image": "bulalo.jpeg",
+        "description": "Bulalô is a beef dish from the Philippines. It is a light colored soup that is made by cooking beef shanks and bone marrow until the collagen and fat has melted into the clear broth. It typically includes leafy vegetables, corn on the cob, scallions, onions, garlic, ginger, and fish sauce.",
+        "category": "filipino",
+        "tags": ["beef", "asian", "filipino"],
+        "time": "5 hours",
+        "ingredients":{
+            "Meat & Seafood": {
+                "beef-shank": {
+                    "name": "Beef Shank with Bones",
+                    "amount": 500,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "corn-cob": {
+                    "name": "Corn Cob",
+                    "amount": 2,
+                    "unit": "unit"
+                },
+                "green-beans": {
+                    "name": "Green Beans",
+                    "amount": 125,
+                    "unit": "g"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "clove"
+                }
+            },
+            "Canned & Sauces": {
+                "fish-sauce": {
+                    "name": "Fish Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            }
+        },
+        "instructions":[
+            "In a large pot, bring water to boil, then add beef. Continue boiling until no blood is coming out of the meat and bones. Discard water and clean the meat and bones off excess scum and blood.",
+            "Roughly chop onions and garlic",
+            "Using the same pot return the meat and bones, then add water, onion, garlic, peppercorn and fish sauce. Boil then simmer on low heat for 4-5 hours until meat is tender.",
+            "Add corn and simmer for few minutes.",
+            "Add in green beans and any veggies.",
+            "Best served with white rice, together with sawsawan(mix of fish sauce, chili and lemon juice)"
+        ]
+    },
+    {
+        "id": "lomi",
+        "title": "Lomi",
+        "image": "lomi.webp",
+        "description": "Lomi or Pancit Lomi is a Filipino dish made with a variety of thick fresh egg noodles of about a quarter of an inch in diameter, soaked in lye water to give it more texture.",
+        "category": "filipino",
+        "tags": ["chicken", "pork", "asian", "filipino"],
+        "time": "45 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "pork-belly": {
+                    "name": "Pork Belly",
+                    "amount": 125,
+                    "unit": "g"
+                },
+                "chicken-liver": {
+                    "name": "Chicken Liver",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                "fish-balls": {
+                    "name": "Fish Balls",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            },
+            "Produce": {
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "clove"
+                },
+                "carrots": {
+                    "name": "Carrots",
+                    "amount": 50,
+                    "unit": "g"
+                }
+            },
+            "Condiments & Spices":{
+                "corn-starch": {
+                    "name": "Corn Starch",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            },
+            "Canned & Sauces": {
+                "fish-sauce": {
+                    "name": "Fish Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "egg": {
+                    "name": "Eggs",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Others": {
+                "crab-and-corn-soup-mix": {
+                    "name": "Crab & Corn Soup Mix",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "lomi-noodles": {
+                    "name": "Lomi Noodles",
+                    "amount": 400,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Mince onion and garlic. Julienne carrots. Slice pork belly and chicken liver into 1 inch cubes",
+            "In a pot, bring enough water to cover noodles to a boil. Add noodles and blanch for about 1 minute. Drain and rinse in cold water.",
+            "In a pan over medium heat, heat about 1 tablespoon oil. Add liver and cook until just about done. Remove from pan and keep warm.",
+            "In the same pan, add 1 more tbsp of oil, then saute onion and garlic.",
+            "Add pork belly until lightly browned. Add fish sauce and cook for another 1 min.",
+            "Add about 8 cups of water and bring to a boil. Lower heat and simmer until pork is cooked through.",
+            "Add noodles and cook for about 3 to 5 minutes or until tender yet firm to bite.",
+            "Add crab and corn soup mix and stir to dissolve. Season with salt and pepper to taste.",
+            "Add liver and carrots and cook for about 1 to 2 minutes.",
+            "In a small bowl, combine corn starch and 1/4 cup cold water and stir to dissolve. Add to the pot, stirring to combine. Continue to cook for until slightly thickened.",
+            "In the same bowl, beat eggs. Add eggs slowly in a thin stream and allow to slightly set before stirring. Serve hot."
+        ]
+    },
+    {
+        "id": "beef-pares",
+        "title": "Beef Pares",
+        "image": "beef-pares.jpeg",
+        "description": "Pares, also known as beef pares, is a term for a serving of Filipino braised beef stew with garlic fried rice, and a bowl of clear soup. It is a popular food particularly associated with specialty roadside diner-style establishments known as Pares Houses that specialize in serving these type of meals.",
+        "category": "filipino",
+        "tags": ["beef", "asian", "filipino"],
+        "time": "3 hours",
+        "ingredients":{
+            "Meat & Seafood": {
+                "beef-brisket": {
+                    "name": "Beef Brisket",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "clove"
+                },
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 5,
+                    "unit": "g"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "star-anise": {
+                    "name": "Star Anise",
+                    "amount": 2,
+                    "unit": "unit"
+                },
+                "bay-leaves": {
+                    "name": "Bay Leaves",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "brown-sugar": {
+                    "name": "Brown Sugar",
+                    "amount": 3,
+                    "unit": "tbsp"
+                },
+                "corn-starch": {
+                    "name": "Corn Starch",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            },
+            "Canned & Sauces": {
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 3,
+                    "unit": "tbsp"
+                }
+            }
+        },
+        "instructions":[
+            "Pre boil the beef: Add 8-10 cups of water in a large pot and bring to a boil. Put the beef pieces in and let boil (on medium heat) for 5 minutes. Drain and rinse the meat in cold running water until there’s no more scum. Don’t omit this step to have a better broth.",
+            "Mince onions, garlic, ginger and green onions. Set aside.",
+            "On the same pot, add half the onion, half the ginger, half the star anise and pre-boiled beef”. Add 4 cups of water, cover and bring to a boil. Once boiling, remove the floating scum then lower the heat and cook until the meat is tender. 2 hours",
+            "Set all the tender meat aside (in a bowl) and transfer the beef broth into a smaller pot. Season the broth with S&P to taste",
+            "In a large pot, saute onion and ginger in oil then add the garlic. Put in the tender beef pieces and saute for a couple of minutes. Add in the brown sugar, soy sauce, star anise and 2 cups(per 4 servings) of prepared beef broth.",
+            "Bring to a boil then combine cornstarch and water (in a small bowl) to make the slurry. Pour over the stew, stir and simmer for 2 more minutes. Adjust seasoning, if needed. Sprinkle with sliced green onions (if using) before serving.",
+            "Serve Beef Pares with garlic fried rice and a bowl of beef broth. Enjoy!"
+        ]
+    },
+    {
+        "id": "flash-fried-beef-broccoli",
+        "title": "Flash Fried Beef and Broccoli",
+        "image": "beef-broccoli.jpeg",
+        "description": "This Flash Fried Beef and Broccoli recipe has been slightly tweaked from its original form in Jeremy's first cookbook ('Chinese Unchopped') where he used venison instead of the beef - but, spoiler: it's just as good! Think classic flavours, speedy wok cooking and one helluva sizzling stir-fry dish.",
+        "category": "asian",
+        "tags": ["beef", "asian"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "rib-eye-steak": {
+                    "name": "Rib-eye Steak",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 10,
+                    "unit": "g"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                },
+                "broccoli": {
+                    "name": "Broccoli",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "corn-starch": {
+                    "name": "Corn Starch",
+                    "amount": 0.5,
+                    "unit": "tbsp"
+                }
+            },
+            "Canned & Sauces": {
+                "light-soy-sauce": {
+                    "name": "Light Soy Sauce",
+                    "amount": 1,
+                    "unit": "tbsp"
+                },
+                "rice wine": {
+                    "name": "Rice Wine",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "sesame-oil": {
+                    "name": "Sesame Oil",
+                    "amount": 1,
+                    "unit": "tsp"
+                },
+                "tamarind-concentrate": {
+                    "name": "Tamarind Concentrate",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "hoisin-sauce": {
+                    "name": "Hoisin Sauce",
+                    "amount": 1,
+                    "unit": "tbsp"
+                },
+                "kecap-manis": {
+                    "name": "Kecap Manis",
+                    "amount": 1,
+                    "unit": "tbsp"
+                },
+                "chicken-stock": {
+                    "name": "Chicken Stock",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Slice the ginger and spring onions into fine matchsticks. Chop the broccoli or kai lan stems into thirds, then blanch them in boiling water for 2 minutes. Drain and set aside.",
+            "Slice the rib eye steak into large 1–2cm chunks, put them in a mixing bowl and add light soy, rice wine and sesame oil. Using your hands, massage the ingredients into the meat pieces until they are well coated, then add the cornflour and repeat until everything is well combined. For best results, leave the meat to marinade overnight in the fridge.",
+            "In a small bowl, mix tamarind concentrate, hoisin sauce, kecap manis and chicken stock.",
+            "Heat 1 tablespoon of vegetable oil in a wok over a high heat until smoking-hot. Add the ginger and half the spring onion and stir-fry for 1 minute, until the spring onions have softened.",
+            "Push the ingredients to the side of the wok, add the remaining ½ tablespoon of oil to the centre and return to smoking point. Add the steak, cover with the ginger and spring onions and stir-fry for 1 minute.",
+            "Add the broccoli, pour over the sauce and bring to a vigorous boil. Cook, stirring, for a further 30 seconds, then spoon into a serving bowl. Scatter over the remaining spring onion and the deep-fried shallots, if using, and serve."
+        ]
+    },
+    {
+        "id": "katsudon",
+        "title": "Katsudon",
+        "image": "katsudon.jpeg",
+        "description": "Katsudon is a popular Japanese food, a bowl of rice topped with a deep-fried breaded pork cutlet, egg, vegetables, and condiments. The dish takes its name from the Japanese words tonkatsu and donburi.",
+        "category": "featured",
+        "tags": ["pork", "asian", "featured"],
+        "time": "45 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "boneless-pork-chops": {
+                    "name": "Boneless Pork Chops",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Produce": {
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "sake": {
+                    "name": "Sake",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "mirin": {
+                    "name": "Mirin",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "dashi-stock": {
+                    "name": "Dashi Stock",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            },
+            "Condiments & Spices":{
+                "all-purpose-flour": {
+                    "name": "All Purpose Flour",
+                    "amount": 4,
+                    "unit": "tbsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "egg": {
+                    "name": "Eggs",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Others": {
+                "breadcrumbs": {
+                    "name": "Breadcrumbs",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Rub a pinch of salt and pepper onto both sides of the meat. Pound the pork chops to tenderize the meat, they should be about 2cm thick.",
+            "In a bowl, whisk the egg and 1 tbsp of milk/mayo.",
+            "Prepare two plates, one with flour and one with the panko breadcrumbs. Coat meat in this order: Flour-Egg-Breadcrumbs. Make sure to press meat to the breadcrumbs.",
+            "Heat the oil in a pan to 170C (340F) If you don't have a thermometer, just drop a piece of panko into the pan. When it's sizzling, you know the oil is ready.",
+            "Carefully place the coated pork chops into the oil and cook for about 4 minutes on each side (8 minutes total) or until golden brown. When the oil stops making a crackling sound, that usually means they're ready. Using food thermometer, internal temp must be above 145 ºF.",
+            "Cut one onion into thin slices and fry in a medium heat frying pan for a minute or so.",
+            "Add dashi, soy sauce, mirin and sake and pinch of sugar.",
+            "While onions cook, beat remaining eggs to a bowl.",
+            "Cut the katsu into 2cm strips, then add to the pan of onions.",
+            "Pour in beaten eggs, evenly distributing them over the katsu and onions.Leave to cook for 1-2 minutes.",
+            "Put a lid on top and turn off the heat. Allow the eggs to steam cook for 1 minute.",
+            "Assemble over white rice. Top with green onions"
+        ]
+    },
+    {
+        "id": "chicken-and-bacon-alfredo",
+        "title": "Chicken and Bacon Alfredo",
+        "image": "chicken-bacon-alfredo.jpeg",
+        "description": "An easy-breezy dinner inspired by a restaurant classic! Italian-seasoned chicken roasts in the oven, while the indulgent Parmesan cream sauce simmers away. Yum!",
+        "category": "featured",
+        "tags": ["chicken", "western", "featured"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "chicken-breast": {
+                    "name": "Chicken Breast",
+                    "amount": 250,
+                    "unit": "g"
+                },
+                "bacon": {
+                    "name": "Bacon",
+                    "amount": 100,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "baby-spinach": {
+                    "name": "Baby Spinach",
+                    "amount": 100,
+                    "unit": "g"
+                },
+                "onions": {
+                    "name": "Onions",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "italian-seasoning": {
+                    "name": "Italian Seasoning",
+                    "amount": 0.5,
+                    "unit": "tbsp"
+                },
+                "garlic-powder": {
+                    "name": "Garlic Powder",
+                    "amount": 0.5,
+                    "unit": "tbsp"
+                }
+            },
+            "Canned & Sauces": {
+            },
+            "Eggs & Dairy": {
+                "cream": {
+                    "name": "cream",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                "parmesan-cheese-shredded": {
+                    "name": "Parmesan Cheese, shredded",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            },
+            "Others": {
+                "linguine": {
+                    "name": "Linguine",
+                    "amount": 170,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Mince onions. Chop chicken into 0.5 inch cubes. Slice bacon into 1/2 inch strips.",
+            "Preheat broiler. Add 10 cups water and 2 tsp salt in a large pot. Cover and bring to a boil over high heat. Cut bacon into 1/2-inch strips. Heat a large non-stick pan over medium-high heat. When hot, add bacon. Cook, stirring occasionally, until crispy, 5-7 min.** Remove pan from the heat. Using a slotted spoon, transfer bacon to a plate. Set aside, reserving 2 tbsp bacon fat in pan. Discard excess bacon fat..",
+            "While bacon cooks, break linguine in half and add to pot of boiling water. Cook uncovered, stirring occasionally, until tender, 10-12 min. When linguine is tender, reserve 1/2 cup pasta water, drain and return to same pot.",
+            "Pat chicken dry with paper towels. Toss chicken with Italian seasoning and 1 tbsp oil on a foil-lined baking sheet. Season with salt and pepper. Broil in the middle of the oven, stirring halfway through, until cooked through, 10-12 min.***",
+            "While chicken broils, heat the same pan (with bacon fat) over medium heat. When hot, add onions. Cook, stirring often, until caramelized. Add garlic powder and cream and simmer until sauce thickens slightly, 2-3 min.",
+            "To the pot with linguine, add cream sauce, spinach, reserved pasta water, half the parmesan and half the bacon. Stir until spinach wilts, 1 min. Season with pepper.",
+            "Divide linguine between plates. Top with chicken then sprinkle with remaining bacon and parmesan."
+        ]
+    },
+    {
+        "id": "hoisin-glazed-pork-meatballs",
+        "title": "Hoisin-Glazed Pork Meatballs",
+        "image": "hoisin-glazed-pork-meatballs.webp",
+        "description": "Flavourful hoisin and sweet chili sauce make a luscious glaze for these Asian-style meatballs. Bright and tender-crisp veggies make this meal fresh and exciting on a weeknight.",
+        "category": "featured",
+        "tags": ["pork", "featured", "asian"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "ground-beef": {
+                    "name": "Ground Pork",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "bok-choy": {
+                    "name": "Bok Choy",
+                    "amount": 226,
+                    "unit": "g"
+                },
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 30,
+                    "unit": "g"
+                },
+                "snap-peas": {
+                    "name": "Snap Peas",
+                    "amount": 113,
+                    "unit": "g"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "corn-starch": {
+                    "name": "Corn Starch",
+                    "amount": 1,
+                    "unit": "tbsp"
+                }
+            },
+            "Canned & Sauces": {
+                "hoisin-sauce": {
+                    "name": "Hoisin Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "coconut-milk": {
+                    "name": "Coconut Milk",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                "sweet-chili-sauce": {
+                    "name": "Sweet Chili Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "snap-peas": {
+                    "name": "Snap Peas",
+                    "amount": 113,
+                    "unit": "g"
+                }
+            },
+            "Others": {
+                "rice": {
+                    "name": "Rice",
+                    "amount": 0.75,
+                    "unit": "cup"
+                },
+                "breadcrumbs": {
+                    "name": "Breadcrumbs",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Before starting, preheat the oven to 450°F. Wash and dry all produce. Add 1 cup water (1 3/4 cups for 4 ppl) to a medium pot. Cover and bring to a boil over high heat. Trim, then halve snap peas. Cut bok choy into 1-inch pieces. Thinly slice green onions. Peel, then mince or grate ginger.",
+            "Add the rice and coconut milk to pot with boiling water (NOTE: Keep your eye on the pot so it doesn't boil over). Reduce the heat to medium-low. Cover and cook until the rice is tender and the liquid has been absorbed, 12-14 min.",
+            "While rice cooks, combine half the ginger and ¼ tsp salt (dbl for 4 ppl) in a medium bowl. Season with pepper. Roll mixture into 8 equal meatballs (16 for 4 ppl). Transfer meatballs to a foil-lined baking sheet. Bake in the middle of the oven, until golden-brown and cooked through, 12-14 min.**",
+            "While meatballs bake, heat a large non-stick pan over medium-high heat. When hot, add 1 tbsp oil (dbl for 4 ppl), then snap peas. Cook, stirring often, until beginning to soften, 1-2 min. Add bok choy and remaining ginger. Cook, stirring often, until tender-crisp, 2-3 min. Season with salt and pepper. Remove pan from the heat, then transfer veggies to a plate and cover to keep warm.",
+            "While veggies cook, whisk together hoisin sauce, soy sauce, sweet chili sauce, cornstarch and 3/4 cups water (dbl for 4 ppl) in another medium bowl. When veggies are done, heat the same pan over medium heat. When hot, add hoisin mixture and cook, stirring often, until slightly thickened, 2-3 min. Add meatballs to pan with sauce, toss to coat.",
+            "Fluff coconut rice with a fork. Stir in half the green onions and season with salt. Divide rice among plates. Top with veggies, meatballs and sauce from the pan. Sprinkle with remaining green onions."
         ]
     }
 ]

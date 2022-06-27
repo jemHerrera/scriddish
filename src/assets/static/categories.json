@@ -3,10 +3,6 @@
         "name": "Featured",
         "recipes": []
     },
-    "quick-and-easy": {
-        "name": "Quick and Easy",
-        "recipes": []
-    },
     "asian": {
         "name": "Asian",
         "recipes": []
@@ -17,6 +13,10 @@
     },
     "seafood": {
         "name": "Seafood",
+        "recipes": []
+    },
+    "filipino": {
+        "name": "Filipino",
         "recipes": []
     },
     "component-recipes": {
