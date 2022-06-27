@@ -5,7 +5,7 @@
         "image": "meatball-and-mushroom-stew.jpeg",
         "description": "Comforting, familiar and warm. It’s a timeless dish that never goes out of fashion.",
         "category": "featured",
-        "tags": ["beef", "western", "featured"],
+        "tags": ["beef", "western", "featured", "potato"],
         "time": "35 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -135,7 +135,7 @@
         "image": "taiwanese-chicken-thighs.jpg",
         "description": "These saucy chicken thighs celebrate all of those things and more, with a side of scallion rice and crispy bok choy!",
         "category": "asian",
-        "tags": ["chicken", "asian"],
+        "tags": ["chicken", "asian", "rice"],
         "time": "30 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -248,7 +248,7 @@
         "image": "teriyaki-beef-meatballs.jpeg",
         "description": "Super simple and packed with delectable flavours. The colourful slaw will surprise you with its Japanese vibes and sweet crunchy veggies!",
         "category": "featured",
-        "tags": ["beef", "asian", "featured"],
+        "tags": ["beef", "asian", "featured", "rice"],
         "time": "35 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -367,7 +367,7 @@
         "image": "chinese-steamed-fish.jpeg",
         "description": "Cantonese steamed fish is a traditional, simple dish often served as one of the final courses in a Chinese wedding banquet",
         "category": "asian",
-        "tags": ["fish", "asian"],
+        "tags": ["fish", "asian", "rice"],
         "time": "30 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -586,7 +586,7 @@
         "image": "gyudon.jpeg",
         "description": "Thinly sliced beef and tender onions cooked in savory-sweet sauce, Gyudon, or Japanese Beef Rice Bowl, is synonymous with comfort. It has been a staple in Japanese cuisine for over 150 years! It’s a perfect quick meal for a busy weeknight!",
         "category": "featured",
-        "tags": ["beef", "asian", "featured"],
+        "tags": ["beef", "asian", "featured", "rice"],
         "time": "30 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -886,7 +886,7 @@
         "image": "chicken-tinola.jpeg",
         "description": "Tinola is an easy, one-pot soup from the Philippines. Chicken, chayote squash (or papaya!) and malunggay are simmered with fresh ginger in a savory broth that's often served with white rice.",
         "category": "filipino",
-        "tags": ["filipino", "south-east-asian", "chicken"],
+        "tags": ["filipino", "asian", "chicken", "rice"],
         "time": "1 hour",
         "ingredients":{
             "Meat & Seafood": {
@@ -963,7 +963,7 @@
         "image": "pork-sinigang.jpeg",
         "description": "Sinigang is a Filipino soup or stew characterized by its sour and savory taste. It is most often associated with tamarind, although it can use other sour fruits and leaves as the souring agent. It is one of the more popular dishes in Filipino cuisine.",
         "category": "filipino",
-        "tags": ["filipino", "pork", "south-east-asian"],
+        "tags": ["filipino", "pork", "asian", "rice"],
         "time": "1-2 hours",
         "ingredients":{
             "Meat & Seafood": {
@@ -1048,7 +1048,7 @@
         "image": "beef-papaitan.webp",
         "description": "Papaitan is one of the popular Ilokano dishes and the original recipe calls for goat innards. The reason why it is called “papaitan” is because the dish is bitter by using goat bile as one of the ingredient but just enough to make it tasty. Since goat innards are not always available in the market, you can substitute it with beef innards.",
         "category": "filipino",
-        "tags": ["beef", "south-east-asian", "filipino"],
+        "tags": ["beef", "south-east-asian", "filipino", "rice"],
         "time": "3 hours",
         "ingredients":{
             "Meat & Seafood": {
@@ -1119,7 +1119,7 @@
         "image": "filipino-style-spaghetti.jpeg",
         "description": "Filipino spaghetti is a Filipino adaptation of Italian spaghetti with Bolognese sauce. It has a distinctively sweet sauce, usually made from tomato sauce sweetened with brown sugar or banana ketchup. It is typically topped with sliced hot dogs or smoked longganisa sausages, giniling, and grated cheese.",
         "category": "filipino",
-        "tags": ["pork", "filipino", "asian"],
+        "tags": ["pork", "filipino", "asian", "pasta"],
         "time": "40 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -1202,7 +1202,7 @@
         "image": "bulalo.jpeg",
         "description": "Bulalô is a beef dish from the Philippines. It is a light colored soup that is made by cooking beef shanks and bone marrow until the collagen and fat has melted into the clear broth. It typically includes leafy vegetables, corn on the cob, scallions, onions, garlic, ginger, and fish sauce.",
         "category": "filipino",
-        "tags": ["beef", "asian", "filipino"],
+        "tags": ["beef", "asian", "filipino", "rice"],
         "time": "5 hours",
         "ingredients":{
             "Meat & Seafood": {
@@ -1257,7 +1257,7 @@
         "image": "lomi.webp",
         "description": "Lomi or Pancit Lomi is a Filipino dish made with a variety of thick fresh egg noodles of about a quarter of an inch in diameter, soaked in lye water to give it more texture.",
         "category": "filipino",
-        "tags": ["chicken", "pork", "asian", "filipino"],
+        "tags": ["chicken", "pork", "asian", "filipino", "noodles"],
         "time": "45 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -1348,7 +1348,7 @@
         "image": "beef-pares.jpeg",
         "description": "Pares, also known as beef pares, is a term for a serving of Filipino braised beef stew with garlic fried rice, and a bowl of clear soup. It is a popular food particularly associated with specialty roadside diner-style establishments known as Pares Houses that specialize in serving these type of meals.",
         "category": "filipino",
-        "tags": ["beef", "asian", "filipino"],
+        "tags": ["beef", "asian", "filipino", "rice"],
         "time": "3 hours",
         "ingredients":{
             "Meat & Seafood": {
@@ -1426,7 +1426,7 @@
         "image": "beef-broccoli.jpeg",
         "description": "This Flash Fried Beef and Broccoli recipe has been slightly tweaked from its original form in Jeremy's first cookbook ('Chinese Unchopped') where he used venison instead of the beef - but, spoiler: it's just as good! Think classic flavours, speedy wok cooking and one helluva sizzling stir-fry dish.",
         "category": "asian",
-        "tags": ["beef", "asian"],
+        "tags": ["beef", "asian", "rice"],
         "time": "35 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -1513,7 +1513,7 @@
         "image": "katsudon.jpeg",
         "description": "Katsudon is a popular Japanese food, a bowl of rice topped with a deep-fried breaded pork cutlet, egg, vegetables, and condiments. The dish takes its name from the Japanese words tonkatsu and donburi.",
         "category": "featured",
-        "tags": ["pork", "asian", "featured"],
+        "tags": ["pork", "asian", "featured", "rice"],
         "time": "45 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -1600,7 +1600,7 @@
         "image": "chicken-bacon-alfredo.jpeg",
         "description": "An easy-breezy dinner inspired by a restaurant classic! Italian-seasoned chicken roasts in the oven, while the indulgent Parmesan cream sauce simmers away. Yum!",
         "category": "featured",
-        "tags": ["chicken", "western", "featured"],
+        "tags": ["chicken", "western", "featured", "pasta"],
         "time": "35 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -1639,8 +1639,6 @@
                     "unit": "tbsp"
                 }
             },
-            "Canned & Sauces": {
-            },
             "Eggs & Dairy": {
                 "cream": {
                     "name": "cream",
@@ -1677,7 +1675,7 @@
         "image": "hoisin-glazed-pork-meatballs.webp",
         "description": "Flavourful hoisin and sweet chili sauce make a luscious glaze for these Asian-style meatballs. Bright and tender-crisp veggies make this meal fresh and exciting on a weeknight.",
         "category": "featured",
-        "tags": ["pork", "featured", "asian"],
+        "tags": ["pork", "featured", "asian", "rice"],
         "time": "35 mins",
         "ingredients":{
             "Meat & Seafood": {
@@ -1764,5 +1762,563 @@
             "While veggies cook, whisk together hoisin sauce, soy sauce, sweet chili sauce, cornstarch and 3/4 cups water (dbl for 4 ppl) in another medium bowl. When veggies are done, heat the same pan over medium heat. When hot, add hoisin mixture and cook, stirring often, until slightly thickened, 2-3 min. Add meatballs to pan with sauce, toss to coat.",
             "Fluff coconut rice with a fork. Stir in half the green onions and season with salt. Divide rice among plates. Top with veggies, meatballs and sauce from the pan. Sprinkle with remaining green onions."
         ]
-    }
+    },
+    {
+        "id": "figgy-jam-stuffed-chicken",
+        "title": "Figgy Jam Stuffed Chicken",
+        "image": "figgy-jam-stuffed-chicken.jpeg",
+        "description": "Sweet sticky figgy goodness all wrapped up in a juicy and tender chicken breast. It's the classy weeknight dinner you've been waiting for, all that's missing is a bow!",
+        "category": "western",
+        "tags": ["chicken", "western", "potato"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "chicken-breast": {
+                    "name": "Chicken Breast",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Produce": {
+                "green-beans": {
+                    "name": "Green Beans",
+                    "amount": 170,
+                    "unit": "g"
+                },
+                "potato": {
+                    "name": "Potato",
+                    "amount": 300,
+                    "unit": "g"
+                },
+                "shallot": {
+                    "name": "Shallot",
+                    "amount": 50,
+                    "unit": "g"
+                }
+            },
+            "Canned & Sauces": {
+                "fig-jam": {
+                    "name": "Fig Jam",
+                    "amount": 3,
+                    "unit": "tbsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "sour-cream": {
+                    "name": "Sour Cream",
+                    "amount": 3,
+                    "unit": "tbsp"
+                },
+                "unsalted-butter": {
+                    "name": "Unsalted Butter",
+                    "amount": 1.5,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "dried-cranberries": {
+                    "name": "Dried Cranberries",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                "walnuts": {
+                    "name": "Walnuts",
+                    "amount": 28,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Before starting, preheat the oven to 425°F. Wash and dry all produce. Remove 2 tbsp butter (dbl for 4 ppl) from the fridge and set aside to come up to room temperature. Pat chicken dry with paper towels. Carefully slice into centre of each breast parallel to cutting board , leaving 1-inch intact on the other end. Open up each breast like a book and season with salt and pepper. Add fig jam and cranberries in a small bowl. Mash together with a fork to combine. Divide cranberry-fig filling between each breast, then fold closed. Set aside.",
+            "Cut potatoes into 1/2-inch pieces. Combine potatoes, 2 tsp salt and enough water to cover (approx. 1 inch) in a large pot. (NOTE: Use same for 4 ppl) Cover and bring to a boil over high heat. Once boiling, reduce heat to medium. Simmer, uncovered, until fork-tender, 10-12 min.",
+            "While potatoes cook, heat a large non-stick pan over medium-high heat. When hot, add 1/2 tbsp oil (dbl for 4 ppl), then chicken. Pan-fry, until golden, 2-3 min per side. Remove pan from heat. Transfer chicken to a foil-lined baking sheet. Bake in the middle of the oven, until cooked through, 12-14 min.**",
+            "While chicken cooks, wipe the pan clean. Peel, then thinly slice shallots. Finely chop walnuts. Trim beans, then halve. Heat the same pan over medium-high heat. When hot, add walnuts to dry pan. Toast, stirring often, until golden, 2-3 min. (TIP: Keep your eye on them so they don't burn!) Transfer walnuts to a plate and set aside.",
+            "Using the same pan, reduce heat to medium. Add 1/2 tbsp butter (dbl for 4 ppl), then beans, shallots and 1 tbsp water (dbl for 4 ppl). Cover and cook, stirring occasionally, until tender, 4-5 min. Meanwhile, drain and return potatoes to the same pot off heat. Using a masher, mash sour cream, 2 tbsp milk and 1 tbsp butter (dbl both for 4 ppl) into potatoes until smooth. Season with salt and pepper.",
+            "Add walnuts to the pan with beans. Season with salt and pepper. Stir together. Divide stuffed chicken, mashed potatoes and green beans between plates. Drizzle any liquid from the baking sheet over chicken."
+        ]
+    },
+    {
+        "id": "breaded-chicken-mayo",
+        "title": "Breaded Chicken Mayo",
+        "image": "breaded-chicken-mayo.jpeg",
+        "description": "Crispy breaded chicken paired with fluffy rice and honey-parsley carrots makes for a bright, delicious meal that brings a taste of summer to your table, no matter the season!",
+        "category": "featured",
+        "tags": ["chicken", "western", "featured", "rice"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "chicken-breast": {
+                    "name": "Chicken Breast",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Produce": {
+                "carrot": {
+                    "name": "Carrot",
+                    "amount": 340,
+                    "unit": "g"
+                },
+                "parsely": {
+                    "name": "Parsely",
+                    "amount": 5,
+                    "unit": "g"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 56,
+                    "uni,t": "g"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 1,
+                    "unit": "clove"
+                },
+                "lemon": {
+                    "name": "Lemon",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "chicken-broth-concentrate": {
+                    "name": "Chicken Broth Concentrate",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "honey": {
+                    "name": "Honey",
+                    "amount": 1,
+                    "unit": "tbsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "mayonnaise": {
+                    "name": "Mayonnaise",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                "unsalted-butter": {
+                    "name": "Unsalted Butter",
+                    "amount": 1,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "breadcrumbs": {
+                    "name": "Breadcrumbs",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                "rice": {
+                    "name": "Rice",
+                    "amount": 0.75,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Before starting, preheat the oven to 425 °F. Wash and dry all produce. Garlic Guide for Step 2 (dbl for 4 ppl): 1/4 tsp mild, 1/2 tsp medium and 1 tsp extra! Peel, then cut half the onion (whole onion for 4 ppl) into 1/4-inch pieces. Heat a medium pot over medium heat. When hot, add 1/2 tbsp oil (dbl for 4 ppl), then rice and onions. Cook, stirring often, until onions soften, 2-3 min. Add broth concentrate and 1 1/4 cups water (dbl for 4 ppl). Bring to a boil over high heat. Once boiling, reduce heat to low. Cover and cook until rice is tender and liquid is absorbed, 12-14 min. Remove the pot from heat. Set aside, still covered.",
+            "Meanwhile, peel, then halve carrots lengthwise, then cut into 1/2-inch half-moons. Zest, then juice lemon. Roughly chop parsley. Peel, then mince or grate garlic. Pat chicken dry with paper towels, then season with salt and pepper. Stir together mayo, half the lemon zest and 1/4 tsp garlic in a small bowl. (NOTE: Reference garlic guide.) Reserve 1 1/2 tbsp lemon mayo (dbl for 4 ppl) in a large bowl.",
+            "Add breadcrumbs to a shallow dish. Add chicken to the large bowl with lemon mayo, then toss to coat. Working with one chicken breast at a time, press both sides into breadcrumbs to coat completely. Carefully shake off any excess breadcrumbs. Heat a large non-stick pan over medium-high heat. When hot, add 1 tbsp oil, then breaded chicken. (NOTE: For 4 ppl, cook chicken in batches, using 1 tbsp oil per batch.) Pan-fry until golden-brown, 1-2 min per side.",
+            "Transfer breaded chicken to a parchment-lined baking sheet. Bake in the middle of the oven until cooked through, 12-14 min.** Meanwhile, wipe the same pan clean, then heat over medium-high.",
+            "When the pan is hot, add carrots, honey, 1/4 cup water and 1 tbsp butter (dbl both for 4 ppl). Simmer, stirring occasionally, until carrots are tender and liquid is absorbed, 9-10 min. Remove the pan from heat. Add half the parsley and 1 tsp lemon juice (dbl for 4 ppl). Season with salt and pepper, then stir to combine.",
+            "Fluff rice with a fork. Season with salt, then stir in remaining parsley and remaining lemon zest. Divide rice, chicken and honey-parsley carrots between plates. Serve lemon mayo on the side for dipping."
+        ]
+    },
+    {
+        "id": "italian-pork-meatball-minestrone",
+        "title": "Italian Pork Meatball Minestrone",
+        "image": "italian-pork-meatball-minestrone.webp",
+        "description": "Tender pork meatballs are cooked right in the flavourful broth. This wholesome and filling soup will remind you of Sunday lunch at Nonna's!",
+        "category": "western",
+        "tags": ["pork", "western", "pasta"],
+        "time": "30 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "ground-pork": {
+                    "name": "Ground Pork",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "zucchini": {
+                    "name": "Zucchini",
+                    "amount": 200,
+                    "unit": "g"
+                },
+                "baby-spinach": {
+                    "name": "Baby Spinach",
+                    "amount": 56,
+                    "unit": "g"
+                }
+            },
+            "Condiments & Spices":{
+                "italian-seasoning": {
+                    "name": "Italian Seasoning",
+                    "amount": 0.5,
+                    "unit": "tbsp"
+                }
+            },
+            "Canned & Sauces": {
+                "tomato-sauce": {
+                    "name": "Tomato Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "chickpeas": {
+                    "name": "Chicpeas",
+                    "amount": 370,
+                    "unit": "mL"
+                }
+            },
+            "Eggs & Dairy": {
+                "unsalted-butter": {
+                    "name": "Unsalted Butter",
+                    "amount": 1,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "mirepoix": {
+                    "name": "Mirepoix",
+                    "amount": 113,
+                    "unit": "g"
+                },
+                "orzo": {
+                    "name": "Orzo",
+                    "amount": 170,
+                    "unit": "g"
+                },
+                "breadcrumbs": {
+                    "name": "Breadcrumbs",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Before starting, wash and dry all produce. Heat Guide for Step 6 (dbl for 4 ppl): 1/8 tsp mild, 1/4 tsp medium and 1/2 tsp spicy! Add 6 cups water and 1 tsp salt to a medium pot (NOTE: Use same for 4 ppl.) Cover and bring to a boil over high heat. While water comes to a boil, cut zucchini into 1/2-inch pieces. Add pork and breadcrumbs to a medium bowl, then stir to combine. Roll pork mixture into 10 equal-sized meatballs (20 for 4 ppl). Transfer the meatballs to a plate. Set aside.",
+            "Add orzo to the pot of boiling water. Cook, uncovered, stirring occasionally, until tender, 8-10 min. Drain and return to the same pot, off heat. Add 1 tbsp butter (dbl for 4 ppl) and stir until butter is melted and orzo is coated.",
+            "While orzo cooks, heat a large pot over medium heat. When hot, add 1/2 tbsp oil (dbl for 4 ppl), then zucchini. Cook, stirring occasionally, until tender-crisp, 3-4 min. Season with salt and pepper. Remove pot from the heat, then transfer zucchini to a plate. Set aside.",
+            "Heat the same pot over medium heat. When hot, add 1/2 tbsp oil (dbl for 4 ppl), then mirepoix. Cook, stirring occasionally, until softened, 3-4 min. Add tomato sauce and Italian Seasoning. Cook, stirring often, until veggies are coated, 1-2 min. Add chickpeas and their liquid, broth concentrate and 2 cups water (dbl for 4 ppl). Season with salt and pepper. Bring to a boil over high heat.",
+            "Once boiling, reduce heat to medium-low and carefully add meatballs. Cover and cook until meatballs are cooked through, 8-10 min.** Add spinach and zucchini, then stir, until spinach wilts, 1 min. Season with salt and pepper.",
+            "Divide orzo between bowls. Ladle meatballs and minestrone over top, then sprinkle with 1/4 tsp chili flakes. (NOTE: Reference Heat Guide.)"
+        ]
+    },
+    {
+        "id": "garlicy-shrimp-scampi",
+        "title": "Garlicky Shrimp Scampi",
+        "image": "garlicy-shrimp-scampi.webp",
+        "description": "Garlic and shrimp aren't the only stars of this dish. We've paired them with a lemon rice pilaf stuffed full of peas, fresh tomatoes and bright parsley. Your taste buds will be singing!",
+        "category": "seafood",
+        "tags": ["seafood", "western", "rice"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "shrimp": {
+                    "name": "Shrimp",
+                    "amount": 285,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "tomato": {
+                    "name": "Tomato",
+                    "amount": 80,
+                    "unit": "g"
+                },
+                "bell-pepper": {
+                    "name": "Bell Pepper",
+                    "amount": 160,
+                    "unit": "g"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 3,
+                    "unit": "clove"
+                },
+                "green-peas": {
+                    "name": "Green Peas",
+                    "amount": 56,
+                    "unit": "g"
+                },
+                "parsely": {
+                    "name": "Parsely",
+                    "amount": 5,
+                    "unit": "g"
+                },
+                "lemon": {
+                    "name": "Lemon",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "chicken-broth-concentrate": {
+                    "name": "Chicken Broth Concentrate",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "italian-seasoning": {
+                    "name": "Italian Seasoning",
+                    "amount": 0.5,
+                    "unit": "tbsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "unsalted-butter": {
+                    "name": "Unsalted Butter",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "rice": {
+                    "name": "Rice",
+                    "amount": 0.75,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Before starting, preheat the broiler to high. Wash and dry all produce. Roughly chop parsley. Peel, then cut half the onion into 1/4-inch pieces (whole onion for 4 ppl). Core, then cut pepper into 1/2-inch pieces. Cut tomato into 1/4-inch pieces. Zest, then juice half the lemon (whole lemon for 4 ppl). Cut any remaining lemon into wedges. Peel, then mince or grate garlic. Using a strainer, drain and rinse shrimp, then pat dry with paper towels.",
+            "Heat a medium pot over medium-high heat. When hot, add 1/2 tbsp oil (dbl for 4 ppl), then onions. Cook, stirring often, until softened, 2-3 min. Add rice. Cook, stirring often, until fragrant, 1 min. Add 1 1/4 cups water (dbl for 4 ppl), peas and broth concentrates. Cover and bring to a boil. Once boiling, reduce heat to low. Cook until rice is tender and liquid is absorbed, 12-14 min. Remove the pot from heat. Set aside, still covered.",
+            "While rice cooks, add shrimp, peppers, lemon zest, half the garlic, half the Italian Seasoning and 1/2 tbsp oil (dbl for 4 ppl) to an unlined baking sheet. Season with salt and pepper, then toss to combine. Broil in the middle of the oven until shrimp just turn pink, 5-6 min.**",
+            "While shrimp and peppers broil, heat a small pot over medium-low heat. When hot, add 1 1/2 tbsp butter (dbl for 4 ppl), remaining Italian Seasoning and remaining garlic. Cook, stirring often, until butter is melted and garlic is fragrant, 2-3 min. Remove the pot from heat. Transfer garlic butter to a medium bowl. Set aside.",
+            "Fluff rice with a fork, then add tomatoes, lemon juice and half the parsley. Season with salt and pepper, then stir to combine.",
+            "Add shrimp and peppers to the bowl with garlic butter. Stir to coat. Divide rice pilaf between plates, then top with shrimp and peppers and any remaining garlic butter from the bowl. Sprinkle with remaining parsley. Squeeze over a lemon wedge, if desired."
+        ]
+    },
+    {
+        "id": "lemony-shrimp-scampi",
+        "title": "Lemony Shrimp Scampi",
+        "image": "lemony-shrimp-scampi.webp",
+        "description": "One irresistible dinner combines two Italian classics: Shrimp Scampi and Pasta all'Amatriciana! Imagine garlicky, lemony buttered shrimp and linguine in a rich tomato sauce with smoky bacon... is your mouth watering yet?",
+        "category": "seafood",
+        "tags": ["seafood", "western", "pasta"],
+        "time": "20 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "shrimp": {
+                    "name": "Shrimp",
+                    "amount": 285,
+                    "unit": "g"
+                },
+                "bacon": {
+                    "name": "Bacon",
+                    "amount": 100,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "baby-tomatoes": {
+                    "name": "Baby Tomatoes",
+                    "amount": 227,
+                    "unit": "g"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 3,
+                    "unit": "clove"
+                },
+                "baby-spinach": {
+                    "name": "Baby Spinach",
+                    "amount": 56,
+                    "unit": "g"
+                },
+                "lemon": {
+                    "name": "Lemon",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "tomato-sauce": {
+                    "name": "Tomato Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "unsalted-butter": {
+                    "name": "Unsalted Butter",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "linguine": {
+                    "name": "Linguine",
+                    "amount": 170,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Before starting, preheat the oven to 450°F. Wash and dry all produce. Add 10 cups water and 2 tsp salt to a large pot (use same for 4 ppl). Cover and bring to a boil over high heat. Heat Guide for Step 5: 1/4 tsp mild, 1/2 tsp medium and 1 tsp spicy! Add linguine to the boiling water. Cook uncovered, stirring occasionally, until tender, 10-12 min. When linguine is tender, reserve 1/4 cup pasta water (dbl for 4 ppl), then drain and return linguine to the same pot, off heat.",
+            "While linguine cooks, halve tomatoes. Puree garlic. Zest, then juice half the lemon. Cut remaining lemon into wedges. Cut 2 tbsp butter (dbl for 4 ppl) into small pieces.",
+            "Add butter and half the garlic puree to an 8x8-inch baking dish (9x13-inch for 4 ppl). Using a strainer, drain and rinse shrimp, then pat dry with paper towels. Add shrimp to the baking dish with garlic and butter. Season with salt and pepper. Roast in the middle of the oven until shrimp are cooked through, 10-12 min.**",
+            "While shrimp roast, cut bacon crosswise into 1/4-inch strips on a separate cutting board. Heat a large non-stick pan over medium-high heat. When hot, add bacon. Cook, stirring occasionally, until crispy, 5-7 min.** Reduce heat to medium.",
+            "Add tomatoes, tomato sauce base, remaining garlic puree and 1/2 tsp chili flakes to the pan with bacon. (NOTE: Reference heat guide.) Cook, stirring often, until tomatoes soften, 2-3 min. Add spinach and stir until wilted, 1-2 min. Add sauce and reserved pasta water to the large pot with linguine. Season with salt and pepper, then toss to combine.",
+            "When shrimp are done, add lemon zest and 1/2 tbsp lemon juice (dbl for 4 ppl) to the baking dish. Toss to combine. Divide linguine between plates. Top with shrimp and drizzle any remaining garlic butter from the baking dish over top. Squeeze over a lemon wedge, if desired."
+        ]
+    },
+    {
+        "id": "sweet-and-sour-pork-meatballs",
+        "title": "Sweet & Sour Pork Meatballs",
+        "image": "sweet-and-sour-pork-meatballs.jpeg",
+        "description": "Making your own sweet 'n sour sauce can be daunting, so we've done the work for you! Juicy pork meatballs and fluffy rice soak up all the sticky sweet goodness in tonight's takeout-fakeout!",
+        "category": "asian",
+        "tags": ["pork", "asian", "rice"],
+        "time": "30 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "ground-pork": {
+                    "name": "Ground Pork",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "bell-pepper": {
+                    "name": "Bell Pepper",
+                    "amount": 160,
+                    "unit": "g"
+                },
+                "snap-peas": {
+                    "name": "Snap Peas",
+                    "amount": 113,
+                    "unit": "g"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "clove"
+                },
+                "green-onions": {
+                    "name": "Green Onions",
+                    "amount": 2,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "sweet-and-sour-sauce": {
+                    "name": "Sweet and Sour Sauce",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            },
+            "Others": {
+                "breadcrumbs": {
+                    "name": "Breadcrumbs",
+                    "amount": 0.125,
+                    "unit": "cup"
+                },
+                "rice": {
+                    "name": "Rice",
+                    "amount": 0.75,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Slice onions. Make/prepare sweet & sour sauce if needed.",
+            "Before starting, preheat the oven to 425°F. Wash and dry all produce. Bring 1 1/4 cups water (dbl for 4 ppl) to a boil in a covered medium pot. Add rice to the pot of boiling water. Reduce heat to low. Cook, still covered, until rice is tender and liquid is absorbed, 12-14 min.",
+            "While the rice cooks, core, then cut the pepper into 1/2-inch pieces. Thinly slice the green onions. Trim the sugar snap peas. Peel, then mince or grate the garlic. Combine the pork, garlic, breadcrumbs, 1/8 tsp salt (dbl for 4 ppl) and season with pepper in a large bowl. Roll mixture into 8 equal-sized meatballs. (NOTE: 16 meatballs for 4 ppl.)",
+            "Arrange the meatballs on a parchment-lined baking sheet. Bake in the middle of the oven until golden and cooked through, 8-10 min.**",
+            "While the meatballs cook, heat a large non-stick pan over medium-high heat. When hot add 1/2 tbsp oil (dbl for 4 ppl), then the onions, peppers and sugar snap peas. Cook, stirring occasionally, until tender-crisp, 2-3 min. Season with salt and pepper.",
+            "Add the sweet and sour sauce and 1/4 cup water (dbl for 4 ppl) to the pan with the veggies. Reduce heat to medium. Simmer until the veggies are tender-crisp and sauce thickens slightly, 3-4 min. Remove the pan from the heat. Once the meatballs are cooked through, add them to the pan, then toss to combine.",
+            "Fluff the rice with a fork. Season with salt, then stir in half the green onions. Divide rice between bowls. Top with the sweet and sour stir-fry. Sprinkle the remaining green onions over top."
+        ]
+    },{
+        "id": "steak-spiced-pork-tenderloin",
+        "title": "Steak-Spiced Pork Tenderloin",
+        "image": "steak-spiced-pork-tenderloin.webp",
+        "description": "This elegant feast brings more flavour and less calories. The green beans are given some French flare, getting the amandine treatment with toasted almonds!",
+        "category": "western",
+        "tags": ["pork", "western", "sweet-potato"],
+        "time": "30 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "pork-tenderloin": {
+                    "name": "Pork Tenderloin",
+                    "amount": 340,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "sweet-potato": {
+                    "name": "Sweet Potato",
+                    "amount": 340,
+                    "unit": "g"
+                },
+                "green-beans": {
+                    "name": "Green Beans",
+                    "amount": 170,
+                    "unit": "g"
+                },
+                "chives": {
+                    "name": "Chives",
+                    "amount": 7,
+                    "unit": "g"
+                }
+            },
+            "Condiments & Spices":{
+                "beef-broth-concentrate": {
+                    "name": "Beef Broth Concentrate",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "steak-spice": {
+                    "name": "Steak Spice",
+                    "amount": 0.5,
+                    "unit": "tbsp"
+                }
+            },
+            "Canned & Sauces": {
+                "dijon-mustard": {
+                    "name": "Dijon Mustard",
+                    "amount": 1.5,
+                    "unit": "tsp"
+                }
+            },
+            "Eggs & Dairy": {
+                "sour-cream": {
+                    "name": "Sour Cream",
+                    "amount": 3,
+                    "unit": "tbsp"
+                }
+            },
+            "Others": {
+                "sliced-almonds": {
+                    "name": "Sliced Almonds",
+                    "amount": 28,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Make steak spice from scratch if needed. Slice almonds if needed.",
+            "Before starting, preheat the oven to 425°F. Wash and dry all produce. Peel, then cut sweet potatoes into 1/2-inch pieces. Combine sweet potatoes, 1 tsp salt (dbl for 4 ppl) and enough water to cover (approx. 1-2 inches) in a large pot. (NOTE: Use same for 4 ppl.) Cover and bring to a boil over high heat. Once boiling, reduce heat to medium. Simmer, uncovered, until fork-tender, 10-12 min. Drain and return to same pot, then cover and set aside.",
+            "While sweet potatoes cook, trim green beans. Thinly slice chives. Pat pork dry with paper towels, then cut into two equal pieces (four equal pieces for 4 ppl). Season with half the Montreal Steak Spice (use all for 4 ppl).",
+            "Heat a large non-stick pan over medium-high heat. When hot, add 1 tsp oil (dbl for 4 ppl), then pork. Sear, turning occasionally, until golden-brown on all sides, 4-6 min. Remove pan from heat. Transfer pork to a baking sheet. Roast in the middle of the oven until pork is cooked through, 12-14 min.**",
+            "Heat the same pan over medium. When hot, add almonds. Toast, stirring often, until golden-brown, 4-5 min. (TIP: Keep your eye on them so they don't burn!) Transfer to a plate. Add green beans and 1/4 cup water (dbl for 4 ppl) to the same pan. Season with salt and pepper. Cook, stirring often, until tender-crisp, 5-7 min. Remove pan from heat, then stir in almonds and 1 tsp oil (dbl for 4 ppl). Toss to combine. Transfer to a plate. Cover to keep warm and set aside.",
+            "Carefully wipe pan clean. Add 1/4 cup water (dbl for 4 ppl), broth concentrate and Dijon to the same pan. Whisk together until smooth. Cook over medium, stirring occasionally, until warmed through, 2-3 min. Remove pan from heat, then whisk in half the sour cream and season with pepper.",
+            "Using a masher, mash remaining sour cream and half the chives into sweet potatoes until smooth. Season with salt and pepper. Thinly slice pork. Divide pork, green beans amandine and sweet potato mash between plates. Drizzle sauce from the pan over pork. Sprinkle remaining chives over top."
+        ]
+    }    
 ]
