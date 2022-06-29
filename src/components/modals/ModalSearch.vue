@@ -3,10 +3,11 @@
 	import { useRouter, useRoute } from 'vue-router'
   	import IconSearch from '../icons/IconSearch.vue'
   	import IconDelete from '../icons/IconDelete.vue'
-	import RecipeCard from '../RecipeCard.vue';
+	import RecipeCard from '../RecipeCard.vue'
+	import suggested from '../../assets/static/suggested.json'
 
 	const props = defineProps({mealPlan: Array, recipes: Object})
-	defineEmits(['add-to-meal-plan', 'select-recipe', 'change-path'])
+	defineEmits(['add-to-meal-plan', 'select-recipe', 'change-path', 'select-category'])
 	const router = useRouter();
 
 	//REF
@@ -73,7 +74,19 @@
 					@view-recipe="$emit('select-recipe', $event)"
 					/>
 				</ul>
-				<div class="suggested"></div>
+			</div>
+			<div class="suggested">
+				<h2 class="suggested-title">Suggested categories</h2>
+				<ul class="main-categories">
+					<li v-for="(mainCategory, mainCategoryTitle) in suggested" :key="mainCategoryTitle" class="main-category">
+						<h3 class="main-category-title">{{ mainCategoryTitle }}</h3>
+						<ul class="sub-categories">
+							<li class="sub-category" v-for="(subCategory, subCategoryID) in mainCategory" :key="subCategoryID">
+								<a @click="$emit('select-category', [subCategoryID, subCategory.name])" href="#/category">{{ subCategory.name }}</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
 
@@ -151,6 +164,40 @@
 				}
 				.search-results{
 					@include flex($direction:column, $gap:1rem);
+				}
+			}
+
+			.suggested{
+				margin-bottom: 3rem;
+
+				h2.suggested-title{
+					font-size: 1.5rem;
+					font-weight: 700;
+					margin-bottom: 1.5rem;
+				}
+				.main-categories{
+					@include flex($direction: column, $gap:2rem);
+					.main-category{
+
+						@include flex($direction: column, $gap:1rem);
+						.main-category-title{
+							color: $color-gray1;
+							font-size: 1.25em;
+						}
+						.sub-categories{
+							@include flex($gap: 1rem);
+							flex-wrap: wrap;
+							.sub-category{
+								@include flex;
+								a{
+									@include button($color-type:2, $radius-type:1);
+									box-shadow: $shadow;
+									font-size: $font-size2;
+									padding: 0.75rem 1.5rem;
+								}
+							}
+						}
+					}
 				}
 			}
 		}

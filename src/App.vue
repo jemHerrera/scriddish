@@ -8,6 +8,7 @@
 	const mealPlan = ref([]);
 	const customIngredients = ref([]);
 	const selectedRecipe = ref({});
+	const selectedCategory = ref([]);
 
 	function addToMealPlan(recipeID){
 		// if id already exists, remove it
@@ -84,7 +85,9 @@
 	:recipes="recipes"
 	@add-to-meal-plan="addToMealPlan($event)"
 	@select-recipe="selectedRecipe = $event"
-	:selected-recipe="selectedRecipe"/>
+	@select-category="selectedCategory = $event"
+	:selected-recipe="selectedRecipe"
+	:selected-category="selectedCategory"/>
 </template>
 
 <style lang="scss">

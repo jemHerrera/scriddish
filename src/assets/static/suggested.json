@@ -1,0 +1,44 @@
+{
+    "Protein":{
+        "beef": {
+            "name": "Beef"
+        },
+        "chicken": {
+            "name": "Chicken"
+        },
+        "pork": {
+            "name": "Pork"
+        },
+        "fish": {
+            "name": "Fish"
+        },
+        "seafood":{
+            "name": "Seafood"
+        },
+        "eggs":{
+            "name": "Eggs"
+        }
+    },
+    "Carbs":{
+        "rice": {
+            "name": "Rice"
+        },
+        "potato": {
+            "name": "Potato"
+        },
+        "sweet-potato": {
+            "name": "Sweet Potato"
+        },
+        "pasta": {
+            "name": "Pasta"
+        }
+    },
+    "Cuisine": {
+        "asian": {
+            "name": "Asian"
+        },
+        "western": {
+            "name": "Western"
+        }
+    }
+}

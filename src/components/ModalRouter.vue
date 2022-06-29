@@ -10,8 +10,8 @@ const routes = {
   '/search': ModalSearch
 }
 
-const props = defineProps({selectedRecipe: Object, mealPlan: Array, recipes: Object})
-const emit = defineEmits(['add-to-meal-plan', 'select-recipe']);
+const props = defineProps({selectedRecipe: Object, selectedCategory: Array, mealPlan: Array, recipes: Object})
+const emit = defineEmits(['add-to-meal-plan', 'select-recipe', 'select-category']);
 const currentPath = ref(window.location.hash)
 
 window.addEventListener('hashchange', () => {
@@ -31,15 +31,17 @@ const currentView = computed(() => {
 
 <template>
 	<transition name="slide-left">
-    <keep-alive exclude="ModalRecipe">
+    <keep-alive exclude="ModalRecipe,ModalCategoryGroup">
       <component 
       class="modal"
       v-if="currentPath" 
       :is="currentView" 
       :selected-recipe="selectedRecipe"
+      :selected-category="selectedCategory"
       :recipes="recipes"
       :meal-plan="mealPlan"
       @select-recipe="$emit('select-recipe', $event)"
+      @select-category="$emit('select-category', $event)"
       @change-path="currentPath = $event"
       @add-to-meal-plan="$emit('add-to-meal-plan', $event)"/>
     </keep-alive>

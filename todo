@@ -2,9 +2,9 @@
 - More recipes on json to implement scrolling functionality better
 
 Category Modal
-- Manually add recommended categories?
-- reactive "selectedCategory" in App.vue instance, then passed down as prop by ModalRouter.vue, then prop drilled to ModalRecipe.vue
 - Loop through master list and find recipes tagged with the category
+
+-groceries/meal plan view should have serving option
 
 Animations, transitions lazy loading
 
