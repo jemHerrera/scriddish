@@ -10,11 +10,17 @@
 	const selectedRecipe = ref({});
 	const selectedCategory = ref([]);
 
-	function addToMealPlan(recipeID){
+	function addToMealPlan(recipe){
 		// if id already exists, remove it
-		let index = mealPlan.value.indexOf(recipeID);
+		let index = mealPlan.value.map(recipeObject => recipeObject.id).indexOf(recipe.id)
+		if(index > -1) mealPlan.value[index] = recipe;
+		else mealPlan.value.push(recipe)
+	}
+
+	function removeFromMealPlan(recipeID){
+		// if id already exists, remove it
+		let index = mealPlan.value.map(recipeObject => recipeObject.id).indexOf(recipeID)
 		if(index > -1)mealPlan.value.splice(index, 1)
-		else mealPlan.value.push(recipeID)
 	}
 
 	function addIngredient(ingredientObj){
@@ -27,18 +33,17 @@
 		
 		// iterate through meal plan and extract categories and ingredients
 		mealPlan.value.forEach(meal => {
-			const ingredients = recipes.find(recipe => recipe.id == meal).ingredients;
+			const ingredients = recipes.find(recipe => recipe.id == meal.id).ingredients;
 
 			Object.keys(ingredients).forEach(category => {
-				if(!groceries.hasOwnProperty(category)) groceries[category] = {};
+				if(!groceries[category]) groceries[category] = {};
 
 				Object.keys(ingredients[category]).forEach(ingredientID => {
-					let groceryIngredient = groceries[category][ingredientID],
-					recipesIngredient = ingredients[category][ingredientID];
-					
-					if(!groceries[category].hasOwnProperty(ingredientID)) groceries[category][ingredientID] = Object.create(ingredients[category][ingredientID]);
-					else groceryIngredient.amount += recipesIngredient.amount
-					
+					if(!groceries[category].hasOwnProperty(ingredientID)) {
+						groceries[category][ingredientID] = Object.create(ingredients[category][ingredientID]);
+						groceries[category][ingredientID].amount *= (meal.servings / 2)
+					}
+					else groceries[category][ingredientID].amount += ingredients[category][ingredientID].amount * (meal.servings /2)
 				})
 			})
 		})
@@ -69,6 +74,7 @@
 				:recipes="recipes"
 				:groceries="groceries"
 				@add-to-meal-plan="addToMealPlan($event)"
+				@remove-from-meal-plan="removeFromMealPlan($event)"
 				@clear-meal-plan="mealPlan = []"
 				@add-ingredient="customIngredients.push($event)"
 				@select-recipe="selectedRecipe = $event"

@@ -23,8 +23,11 @@
                 </div>
                 <div class="card-footer">
                     <p class="time">{{ recipe.time }}</p>
-                    <button @click.prevent="$emit('add-to-meal-plan', recipe.id)">
-                        <IconPlus class="plus" v-if="!mealPlan.includes(recipe.id)"/>
+                    <button @click.prevent="$emit('add-to-meal-plan', {
+                            'id': recipe.id,
+                            'servings': 4
+                        })">
+                        <IconPlus class="plus" v-if="!mealPlan.map(meal => meal.id).includes(recipe.id)"/>
                         <IconCheck class="check" v-else/>
                     </button>
                 </div>

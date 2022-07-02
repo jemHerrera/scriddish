@@ -1,11 +1,7 @@
-
-- More recipes on json to implement scrolling functionality better
-
-Category Modal
-- Loop through master list and find recipes tagged with the category
-
 -groceries/meal plan view should have serving option
 
 Animations, transitions lazy loading
 
 Desktop version. create a pseudo iphone with disclaimer at the bottom saying that the app is designed on mobile only at the moment.
+
+cookies

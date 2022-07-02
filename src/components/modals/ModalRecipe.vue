@@ -1,5 +1,5 @@
 <script setup>
-	import { ref, computed} from 'vue'
+	import { ref, computed, watch} from 'vue'
 	import IconArrow from '../icons/IconArrow.vue'
 	import IconPlus from '../icons/IconPlus.vue'
 	import IconCheck from '../icons/IconCheck.vue'
@@ -30,6 +30,19 @@
 	})
 
 	//METHODS
+	//change servings based on mealPlan
+	function getServings(){
+		let recipeInMealPlan = props.mealPlan.find(meal => meal.id == props.selectedRecipe.id)
+		if(recipeInMealPlan) servings.value = recipeInMealPlan.servings;
+	}
+	getServings();
+
+	watch(servings, (s) => {
+		emit('add-to-meal-plan', {
+			'id':props.selectedRecipe.id,
+			'servings': servings.value
+		}) 
+	})
 </script>
 
 <template>
@@ -43,9 +56,7 @@
 				<div class="recipe-sub-heading">
 					<p class="time">{{ selectedRecipe.time }}</p>
 					<select v-model="servings" name="servings" id="servings">
-						<option value="2">2 Servings</option>
-						<option selected value="4">4 Servings</option>
-						<option value="6">6 Servings</option>
+						<option v-for="i in 3" :value="i*2" :selected="i == servings/2" :key="i">{{ i*2 }} Servings</option>
 					</select>
 				</div>
 				<div class="recipe-description">
@@ -74,10 +85,13 @@
 			</div>
 		</main>
 		<a href="javascript:history.back()" class="back"><IconArrow /></a>
-		<a @click="$emit('add-to-meal-plan', selectedRecipe.id)" 
+		<a @click="$emit('add-to-meal-plan', {
+				'id':selectedRecipe.id,
+				'servings': servings
+			})" 
 			:class="{'on-meal-plan': onMealPlan}"
 			class="add-to-meal-plan">
-			<IconPlus v-if="!onMealPlan" /><IconCheck v-else />Add<span v-if="onMealPlan">ed </span> to meal plan
+			<IconPlus v-if="!onMealPlan" /><IconCheck v-else /><span v-if="onMealPlan">Added to meal plan</span><span v-else>Add to meal plan</span>
 		</a>
   </div>
 </template>
@@ -255,6 +269,7 @@
 				}
 
 				span{
+					background-color: $color-gray1;
 					color: $color-gray2;
 				}
 			}

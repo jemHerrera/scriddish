@@ -9,7 +9,7 @@
     import getImageUrl from '../components/composables/getImageUrl'
 
 	let props = defineProps({mealPlan: Array, groceries: Object})
-	let emit = defineEmits(['add-to-meal-plan', 'clear-meal-plan', 'select-recipe'])
+	let emit = defineEmits(['add-to-meal-plan', 'remove-from-meal-plan', 'clear-meal-plan', 'select-recipe'])
 
 	const router = useRouter();
 	function findRecipe(recipeID){
@@ -42,17 +42,17 @@
 			</div>
 			<div class="meal-plan-body">
 				<TransitionGroup name="list" tag="ul" class="recipe-list">
-					<li v-for="mealID in mealPlan" 
-					:key="mealID" 
-					@click="viewRecipe(findRecipe(mealID))">
-						<div :style="{'background-image': `url('/scriddish/images/${findRecipe(mealID).image}')`}" class="meal-inner">
-							<span class="title">{{ findRecipe(mealID).title }}</span>
-							<button class="delete-recipe" @click.stop.prevent="modalVerify = mealID"><IconDelete /></button>
+					<li v-for="meal in mealPlan" 
+					:key="meal.id" 
+					@click="viewRecipe(findRecipe(meal.id))">
+						<div :style="{'background-image': `url('/scriddish/images/${findRecipe(meal.id).image}')`}" class="meal-inner">
+							<span class="title">{{ findRecipe(meal.id).title }}</span>
+							<button class="delete-recipe" @click.stop.prevent="modalVerify = meal.id"><IconDelete /></button>
 						</div>
 						<transition name="fade">
 							<ModalVerify 
-							v-if="modalVerify == mealID"
-							@confirm="$emit('add-to-meal-plan', mealID)"
+							v-if="modalVerify == meal.id"
+							@confirm="$emit('remove-from-meal-plan', meal.id)"
 							@cancel="modalVerify = ''" />
 						</transition>
 					</li>
@@ -68,7 +68,7 @@
 					<transition name="fade">
 						<ModalVerify 
 						v-if="modalClear"
-						@confirm="$emit('clear-meal-plan', mealID)"
+						@confirm="$emit('clear-meal-plan')"
 						@cancel="modalClear = false" />
 					</transition>
 				</div>
