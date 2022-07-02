@@ -38,7 +38,7 @@
 
 <style scoped lang="scss">
 	@use '@/assets/scss/abstracts' as *;
-    $card-size: 10em;
+    $card-size: 12em;
 
     .recipe-card{
         border-radius: 3em;
@@ -57,7 +57,7 @@
             }
 
             .details{
-                padding: 1.25rem 1.5rem 1rem 1.25rem;
+                padding: 1.5rem 1.25rem 1rem 1.5rem;
                 @include flex($direction: column);
                 height: 100%;
                 
@@ -76,8 +76,7 @@
                     .description{
                         color: $color-gray1;
                         display: -webkit-box;
-                        -webkit-line-clamp: 2;
-                        line-height: 1;
+                        -webkit-line-clamp: 3;
                         overflow: hidden;
                         -webkit-box-orient: vertical;  
                     }
