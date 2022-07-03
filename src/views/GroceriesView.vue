@@ -210,11 +210,11 @@
 
 									&:checked:after {
 										content: '\2714';
-										font-size: 1.5em;
+										font-size: 1.25em;
 										width: 100%;
 										height: 100%;
 										@include flex($align:center, $justify:center);
-										color: $color-main;
+										color: $color-gray2;
 									}
 								}
 
@@ -229,7 +229,7 @@
 
 								&.checked{
 									label{
-										color: $color-gray1;
+										color: $color-gray2;
 										text-decoration: line-through;
 									}
 									.amount{

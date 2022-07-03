@@ -172,6 +172,7 @@
 				top: 0;
 				border-bottom: 1px solid $color-gray2;
 				background: $color-gray4;
+				z-index: 1;
 
 				.category-nav{
 					flex-grow: 1;

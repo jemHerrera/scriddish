@@ -67,13 +67,13 @@
 				position:relative;
 
 				svg{
-					fill: $color-gray0;
+					fill: $color-gray1;
 					width: 2.5em;
 					height: 2.5em;
 				}
 				p{
 					font-size: 0.8em;
-					color: $color-gray0;
+					color: $color-gray1;
 				}
 
 				.counter{
@@ -82,7 +82,7 @@
 					position: absolute;
 					right: 0;
 					top: 0;
-					background-color: $color-gray0;
+					background-color: $color-gray1;
 					color: white;
 					font-weight: 600;
 					padding: 0.25em 0.25em;
