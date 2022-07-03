@@ -11,7 +11,7 @@ const routes = {
 }
 
 const props = defineProps({selectedRecipe: Object, selectedCategory: Array, mealPlan: Array, recipes: Object})
-const emit = defineEmits(['add-to-meal-plan', 'select-recipe', 'select-category']);
+const emit = defineEmits(['add-to-meal-plan', 'remove-from-meal-plan', 'select-recipe', 'select-category']);
 const currentPath = ref(window.location.hash)
 
 window.addEventListener('hashchange', () => {
@@ -20,13 +20,16 @@ window.addEventListener('hashchange', () => {
 
 //WATCH
 watch(currentPath, (currentPath) => {
-  if(currentPath) document.querySelector('body').classList.add('overflow-hidden')
-  else document.querySelector('body').classList.remove('overflow-hidden')
+  let scrollableParent = ['body', '#app'];
+
+  if(currentPath) scrollableParent.forEach(element => document.querySelector(element).classList.add('overflow-hidden'));
+  else scrollableParent.forEach(element => document.querySelector(element).classList.remove('overflow-hidden'));
 })
 
 const currentView = computed(() => {
   return routes[currentPath.value.slice(1) || '/'] || NotFound
 })
+
 </script>
 
 <template>
@@ -43,7 +46,8 @@ const currentView = computed(() => {
       @select-recipe="$emit('select-recipe', $event)"
       @select-category="$emit('select-category', $event)"
       @change-path="currentPath = $event"
-      @add-to-meal-plan="$emit('add-to-meal-plan', $event)"/>
+      @add-to-meal-plan="$emit('add-to-meal-plan', $event)"
+      @remove-from-meal-plan="$emit('remove-from-meal-plan', $event)"/>
     </keep-alive>
 	</transition>
 </template>
@@ -61,5 +65,12 @@ const currentView = computed(() => {
       top:0;
       left:0;
       transition: all .2s ease-in-out;
+
+      @include tablet-portrait-up{
+          max-height: 844px;
+          max-width: 390px;
+          position: sticky;
+          bottom: 0;
+      }
   }
 </style>

@@ -6,7 +6,7 @@
 	import categories from '../assets/static/categories.json'
 
 	const props = defineProps({mealPlan: Array, recipes: Object})
-	defineEmits(['add-to-meal-plan', 'select-recipe'])
+	defineEmits(['add-to-meal-plan', 'select-recipe', 'remove-from-meal-plan'])
 
 	// populate categories with recipes
 	props.recipes.forEach(recipe => {
@@ -18,14 +18,21 @@
 	const activeCategory = ref("featured");
 	const router = useRouter();
 
-	//create event listener for scroll nav feature
+	//For nav scroll feature: on non-mobile devices, scrollable parent is the #app not the window
+	let scrollableParent = window;
+	if(window.innerWidth > 600) scrollableParent = document.querySelector('#app');
+
+
+	//scroll nav feature: create event listener
 	onMounted(() => {
 		const categorySections = document.querySelectorAll(".category-group");
-		window.addEventListener('scroll', navigateCategories);
 
+		scrollableParent.addEventListener('scroll', navigateCategories);
+
+		// Get current scroll position, and check if section is in within the viewport
 		function navigateCategories(){
-			// Get current scroll position
-			let scrollY = window.pageYOffset;
+			let scrollY = scrollableParent.scrollY || scrollableParent.scrollTop;
+
 			categorySections.forEach(categorySection => {
 				const sectionHeight = categorySection.offsetHeight;
 				const sectionTop = categorySection.offsetTop - 50;
@@ -44,7 +51,7 @@
 		const sectionTop = categorySection.offsetTop;
 		const navHeight = document.querySelector('.categories-container').clientHeight
 
-		window.scroll({
+		scrollableParent.scroll({
 			top: sectionTop - navHeight,
 			behavior: 'smooth'
 		});
@@ -107,6 +114,7 @@
 							:meal-plan="mealPlan"
 							:recipe="recipes.find(i => i.id == recipe)"
 							@add-to-meal-plan="$emit('add-to-meal-plan', $event)"
+							@remove-from-meal-plan="$emit('remove-from-meal-plan', $event)"
 							@view-recipe="$emit('select-recipe', $event)"
 							/>
 						</ul>
@@ -182,10 +190,16 @@
 							background-color: $color-gray4;
 							border-radius: 2em;
 							box-shadow: $shadow;
+							cursor: pointer;
 
 							&.active{
 								background-color: $color-main;
 								color: white;
+							}
+
+							transition: all 100ms ease-in-out;
+							&:hover{
+								box-shadow: $shadow3;
 							}
 						}
 					}
@@ -193,7 +207,7 @@
 
 				.search-container{
 					@include flex($align:center, $justify:center);
-					padding: 0 1rem;
+					padding: 0 1rem 0 0;
 
 					.search{
 						@include flex($align:center, $justify:center);
@@ -206,6 +220,11 @@
 							width: 2.5rem;
 							height: 2.5rem;
 							fill: $color-main;
+						}
+						
+						transition: all 100ms ease-in-out;
+						&:hover{
+							box-shadow: $shadow3;
 						}
 					}
 				}
@@ -244,6 +263,12 @@
 			bottom: 6rem;
 			right: 0;
 			margin: 0 1rem;
+
+			@include tablet-portrait-up{
+				position: sticky;
+				left: 100%;
+				cursor: pointer;
+			}
 		}
 
 		.authors-remark{

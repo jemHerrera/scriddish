@@ -5,7 +5,7 @@
 	import IconCheck from '../icons/IconCheck.vue'
 
 	const props = defineProps({selectedRecipe: Object, mealPlan: Array})
-	const emit = defineEmits(['add-to-meal-plan'])
+	const emit = defineEmits(['add-to-meal-plan', 'remove-from-meal-plan'])
 
 	//REFS
 	const servings = ref(4);
@@ -26,7 +26,7 @@
 	})
 
 	const onMealPlan = computed(() => {
-		return props.mealPlan.includes(props.selectedRecipe.id)
+		return props.mealPlan.some(item => props.selectedRecipe.id == item.id)
 	})
 
 	//METHODS
@@ -35,7 +35,13 @@
 		let recipeInMealPlan = props.mealPlan.find(meal => meal.id == props.selectedRecipe.id)
 		if(recipeInMealPlan) servings.value = recipeInMealPlan.servings;
 	}
-	getServings();
+    function toggleFromMealPlan(){
+        if(onMealPlan.value) emit('remove-from-meal-plan', props.selectedRecipe.id);
+        else emit('add-to-meal-plan', {
+            'id': props.selectedRecipe.id,
+            'servings': 4
+        })
+    }
 
 	watch(servings, (s) => {
 		emit('add-to-meal-plan', {
@@ -43,6 +49,9 @@
 			'servings': servings.value
 		}) 
 	})
+
+	//EXEC
+	getServings();
 </script>
 
 <template>
@@ -84,15 +93,12 @@
 				</div>
 			</div>
 		</main>
-		<a href="javascript:history.back()" class="back"><IconArrow /></a>
-		<a @click="$emit('add-to-meal-plan', {
-				'id':selectedRecipe.id,
-				'servings': servings
-			})" 
+		<a @click="toggleFromMealPlan()" 
 			:class="{'on-meal-plan': onMealPlan}"
 			class="add-to-meal-plan">
 			<IconPlus v-if="!onMealPlan" /><IconCheck v-else /><span v-if="onMealPlan">Added to meal plan</span><span v-else>Add to meal plan</span>
 		</a>
+		<a href="javascript:history.back()" class="back"><IconArrow /></a>
   </div>
 </template>
 
@@ -240,6 +246,12 @@
 				width: 2em;
 				fill: $color-main;
 			}
+
+			cursor: pointer;
+			transition: all 150ms ease-in-out;
+			&:hover{
+				transform: translateX(-3px);
+			}
 		}
 
 		.add-to-meal-plan{
@@ -247,7 +259,7 @@
 			align-self: center;
 			@include button($color-type:1, $radius-type:2);
 			@include flex($align:center, $justify:center);
-			margin-bottom: 4rem;
+			margin: 2rem 0 4rem 0;
 			box-shadow: $shadow2;
 			padding-left: 2em;
 			font-size: 1.25rem;
@@ -272,6 +284,13 @@
 					background-color: $color-gray1;
 					color: $color-gray2;
 				}
+			}
+
+			cursor: pointer;
+			transition: all 100ms ease-in-out;
+			&:hover{
+				box-shadow: $shadow4;
+				transform: translateY(-3px);
 			}
 		}
 	}

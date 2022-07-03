@@ -87,13 +87,6 @@
 
 			<div class="add-ingredient-container">
 				<button @click="newIngredientModal = true" class="add-ingredient"><IconPlus /> Add Ingredient</button>
-				<transition name="fade">
-					<ModalIngredient 
-					v-if="newIngredientModal" 
-					@cancel="newIngredientModal = false"
-					@add-ingredient="$emit('add-ingredient', $event)"
-					/>
-				</transition>
 			</div>
 		</div>
 		<div v-else class="empty-groceries-container">
@@ -102,6 +95,14 @@
 			<p>Start by choosing recipes that you plan to cook for the next few days.</p>
 			<button @click="router.push('/')" class="see-recipes">See Recipes</button>
 		</div>
+
+		<transition name="fade">
+			<ModalIngredient 
+			v-if="newIngredientModal" 
+			@cancel="newIngredientModal = false"
+			@add-ingredient="$emit('add-ingredient', $event)"
+			/>
+		</transition>
 	</div>
 </template>
 
@@ -109,21 +110,37 @@
 	@use '@/assets/scss/abstracts' as *;
 	
 	.groceries{
+		min-height: 100vh;
+		@include tablet-portrait-up{
+			min-height: 844px;
+		}
+		
 		.groceries-container{
-
 			.groceries-head{
 				@include flex($align:center, $gap:0.5rem);
 				padding: 3rem 1rem 1rem 1rem;
+				cursor: pointer;
 
 				svg{
 					fill: $color-gray0;
 					width: 3rem;
 					height: 3rem;
+					transition: all 200ms ease-out;
 				}
 
 				h2{
 					font-size: 2.5rem;
 					font-weight: 700;
+					transition: all 200ms ease-out;
+				}
+
+				&:hover{
+					svg{
+						transform: translateX(-3px);
+					}
+					h2{
+						transform: translateX(3px);
+					}
 				}
 			}
 			.groceries-body{
@@ -151,6 +168,19 @@
 								transform: rotate(0deg);
 							}
 						}
+
+						cursor:pointer;
+						&:hover{
+							.category-name{
+								color: $color-gray0;
+							}
+
+							.expand-button{
+								svg{
+									fill: $color-gray0;
+								}
+							}
+						}
 					}
 					.ingredients-container{
 						overflow: hidden;
@@ -163,6 +193,7 @@
 							.ingredient{
 								@include flex($align:center, $justify:space-between, $gap:0.5em);
 								font-size: 1.15rem;
+								cursor: pointer;
 
 								input[type="checkbox"]{
 									@include flex($align:center, $justify:center);
@@ -229,14 +260,22 @@
 				button.add-ingredient{
 					@include button($color-type:2, $radius-type:2);
 					@include flex($align:center, $justify:center);
+					box-shadow: $shadow;
 					padding-left: 2em;
 					font-size: 1.25rem;
 					font-weight: 600;
+					cursor: pointer;
 
 					svg{
 						height: 2rem;
 						width: 2rem;
 						margin-right: 0.5em;
+					}
+
+					transition: all 100ms ease-in-out;
+					&:hover{
+						box-shadow: $shadow4;
+						transform: translateY(-3px);
 					}
 				}
 			}
@@ -273,6 +312,13 @@
 				width: 100%;
 				color: white;
 				box-shadow: $shadow2;
+				cursor: pointer;
+
+				transition: all 100ms ease-in-out;
+				&:hover{
+					box-shadow: $shadow4;
+					transform: translateY(-3px);
+				}
 			}
 		}
 	}

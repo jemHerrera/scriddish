@@ -1,5 +1,11 @@
 <script setup>
+    import { onMounted, onUnmounted } from 'vue'
 	defineEmits(['confirm', 'cancel'])
+
+    //prevent background from scrolling when mounted
+    let scrollableParent = ['body', '#app'];
+    onMounted(() => scrollableParent.forEach(element => document.querySelector(element).classList.add('overflow-hidden')))
+    onUnmounted(() => scrollableParent.forEach(element => document.querySelector(element).classList.remove('overflow-hidden')))
 </script>
 
 <template>
@@ -31,6 +37,10 @@
         transition: all 200ms ease-in-out;
         overflow: hidden;
 
+        @include tablet-portrait-up{
+            position: absolute;
+        }
+
         .verify-container{
             @include flex($direction:column, $gap:1rem);
             padding: 2rem 1rem;
@@ -61,6 +71,13 @@
 
                     &.confirm{
                         @include button($color-type:1, $radius-type:2);
+                    }
+
+                    cursor: pointer;
+                    transition: all 100ms ease-in-out;
+                    &:hover{
+                        box-shadow: $shadow4;
+                        transform: translateY(-3px);
                     }
                 }
             }

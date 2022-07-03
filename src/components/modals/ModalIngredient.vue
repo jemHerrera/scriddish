@@ -1,5 +1,5 @@
 <script setup>
-    import { reactive } from 'vue';
+    import { reactive, onMounted, onUnmounted } from 'vue';
 	const emit = defineEmits(['add-ingredient', 'cancel']);
 
     const newIngredient = reactive({
@@ -22,6 +22,11 @@
         emit('add-ingredient', ingredient);
         clear();
     }
+
+    //prevent background from scrolling when mounted
+    let scrollableParent = ['body', '#app'];
+    onMounted(() => scrollableParent.forEach(element => document.querySelector(element).classList.add('overflow-hidden')))
+    onUnmounted(() => scrollableParent.forEach(element => document.querySelector(element).classList.remove('overflow-hidden')))
     
 </script>
 
@@ -80,6 +85,14 @@
         padding: 1rem;
         background: rgba(240, 240, 240, 0.95);
         transition: all 200ms ease-in-out;
+
+
+        @include tablet-portrait-up{
+          height: 844px;
+          width: 390px;
+          position: sticky;
+          bottom: 0;
+        }
 
         .add-ingredient-modal-container{
             @include flex($direction:column, $gap:1rem);
@@ -149,6 +162,13 @@
                             pointer-events: none;
                             opacity: 0.1;
                         }
+                    }
+
+                    cursor: pointer;
+                    transition: all 100ms ease-in-out;
+                    &:hover{
+                        box-shadow: $shadow4;
+                        transform: translateY(-3px);
                     }
                 }
             }

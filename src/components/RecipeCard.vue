@@ -9,7 +9,17 @@
         mealPlan: Array
     })
 
-    const emit = defineEmits(['view-recipe', 'add-to-meal-plan'])
+    const emit = defineEmits(['view-recipe', 'add-to-meal-plan', 'remove-from-meal-plan'])
+
+    function toggleFromMealPlan(){
+        let inMealPlan = props.mealPlan.some(item => props.recipe.id == item.id);
+
+        if(inMealPlan) emit('remove-from-meal-plan', props.recipe.id);
+        else emit('add-to-meal-plan', {
+            'id': props.recipe.id,
+            'servings': 4
+        })
+    }
 </script>
 
 <template>
@@ -23,10 +33,7 @@
                 </div>
                 <div class="card-footer">
                     <p class="time">{{ recipe.time }}</p>
-                    <button @click.prevent="$emit('add-to-meal-plan', {
-                            'id': recipe.id,
-                            'servings': 4
-                        })">
+                    <button @click.prevent="toggleFromMealPlan()">
                         <IconPlus class="plus" v-if="!mealPlan.map(meal => meal.id).includes(recipe.id)"/>
                         <IconCheck class="check" v-else/>
                     </button>
@@ -44,6 +51,7 @@
         border-radius: 3em;
         box-shadow: $shadow;
         overflow: hidden;
+        
 
         .recipe-card-container{
             @include flex($align:center);
@@ -91,7 +99,8 @@
                     }
                     button{
                         @include flex($align:flex-end);
-
+                        cursor: pointer;
+                        
                         svg{
                             border-radius: 2em;
                             border: 2px solid $color-main;
@@ -103,13 +112,23 @@
                                 fill: white;
                                 background: $color-main;
                                 box-shadow: $shadow;
+
+                                &:hover{
+                                    box-shadow: $shadow3;
+                                }
                             }
                             &.check{
                                 background-color: $color-gray4;
                                 border: none;
                                 box-shadow: inset 2px 2px 4px $color-gray2, inset -2px -2px 4px white;
                                 fill: $color-gray2;
+                                
+                                &:hover{
+                                box-shadow: inset 2px 2px 4px $color-gray3, inset -2px -2px 4px white;
+                                }
                             }
+
+							transition: all 100ms ease-in-out;
                         }
                     }
                 }
@@ -119,6 +138,12 @@
         &:active{
             box-shadow: 1px 1px 4px #00000016, -2px -2px 5px white;
             transform:scale(0.99)
+        }
+
+        transition: all 100ms ease-in-out;
+        &:hover{
+            box-shadow: $shadow4;
+            transform: translateY(-3px);
         }
     }
 </style>

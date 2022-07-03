@@ -51,7 +51,7 @@
 	@use '@/assets/scss/abstracts' as *;
 
 	footer{
-		position:fixed;
+		position:sticky;
 		bottom:0;
 		left:0;
 		width: 100%;
@@ -67,13 +67,13 @@
 				position:relative;
 
 				svg{
-					fill: $color-gray1;
+					fill: $color-gray0;
 					width: 2.5em;
 					height: 2.5em;
 				}
 				p{
 					font-size: 0.8em;
-					color: $color-gray1;
+					color: $color-gray0;
 				}
 
 				.counter{
@@ -82,7 +82,7 @@
 					position: absolute;
 					right: 0;
 					top: 0;
-					background-color: $color-gray1;
+					background-color: $color-gray0;
 					color: white;
 					font-weight: 600;
 					padding: 0.25em 0.25em;

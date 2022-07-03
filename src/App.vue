@@ -62,47 +62,44 @@
 </script>
 
 <template>
-	<RouterView 
-	v-slot="{ Component, route}" >
-		<transition :name="route.meta.transition || 'fade'" mode="out-in">
-			<keep-alive>
-				<component 
-				class="main-component"
-				:is="Component"
-				:key="route.meta.usePathKey ? route.path : undefined"
-				:meal-plan="mealPlan"
-				:recipes="recipes"
-				:groceries="groceries"
-				@add-to-meal-plan="addToMealPlan($event)"
-				@remove-from-meal-plan="removeFromMealPlan($event)"
-				@clear-meal-plan="mealPlan = []"
-				@add-ingredient="customIngredients.push($event)"
-				@select-recipe="selectedRecipe = $event"
-				/>
-			</keep-alive>
-	  	</transition>
-	</RouterView>
-	<FooterNav 
-	:meal-plan="mealPlan"
-	:groceries="groceries"
-	/>
-	<ModalRouter 
-	:meal-plan="mealPlan"
-	:recipes="recipes"
-	@add-to-meal-plan="addToMealPlan($event)"
-	@select-recipe="selectedRecipe = $event"
-	@select-category="selectedCategory = $event"
-	:selected-recipe="selectedRecipe"
-	:selected-category="selectedCategory"/>
+		<RouterView 
+		v-slot="{ Component, route}" >
+			<transition :name="route.meta.transition || 'fade'" mode="out-in">
+				<keep-alive>
+					<component 
+					class="main-component"
+					:is="Component"
+					:key="route.meta.usePathKey ? route.path : undefined"
+					:meal-plan="mealPlan"
+					:recipes="recipes"
+					:groceries="groceries"
+					@add-to-meal-plan="addToMealPlan($event)"
+					@remove-from-meal-plan="removeFromMealPlan($event)"
+					@clear-meal-plan="mealPlan = []"
+					@add-ingredient="customIngredients.push($event)"
+					@select-recipe="selectedRecipe = $event"
+					/>
+				</keep-alive>
+			</transition>
+		</RouterView>
+		<FooterNav 
+		:meal-plan="mealPlan"
+		:groceries="groceries"
+		/>
+		<ModalRouter 
+		:meal-plan="mealPlan"
+		:recipes="recipes"
+		@add-to-meal-plan="addToMealPlan($event)"
+		@remove-from-meal-plan="removeFromMealPlan($event)"
+		@select-recipe="selectedRecipe = $event"
+		@select-category="selectedCategory = $event"
+		:selected-recipe="selectedRecipe"
+		:selected-category="selectedCategory"/>
 </template>
 
 <style lang="scss">
 	@use '@/assets/scss/abstracts' as *;
 	@use '@/assets/scss/resets';
-
-	.main-component{
-		padding-bottom: 5rem;
-	}
 </style>
 
 

@@ -88,6 +88,12 @@
 	@use '@/assets/scss/abstracts' as *;
 
 	.meal-plan{
+		min-height: 100vh;
+		@include tablet-portrait-up{
+			min-height: 844px;
+		}
+
+		
 		.meal-plan-container{
 			@include flex($direction: column);
 			gap: 1.5rem;
@@ -106,6 +112,7 @@
 					color: $color-main;
 					font-size: 1.5rem;
 					font-weight: 600;
+					cursor: pointer;
 
 					svg{
 						width: 2em;
@@ -128,7 +135,7 @@
 						transition: all 250ms ease;
 						box-shadow: $shadow;
 						border-radius: 2rem;
-
+						cursor: pointer;
 
 						&:active{
 							box-shadow: 1px 2px 5px rgb(0 0 0 / 21%);
@@ -178,6 +185,13 @@
 								svg{
 									fill: $color-main;
 								}
+
+								cursor: pointer;
+								transition: all 100ms ease-in-out;
+								&:hover{
+									box-shadow: $shadow3;
+									transform: translateY(-3px);
+								}
 							}
 						}
 
@@ -198,6 +212,13 @@
 				.view-groceries-cta{
 					font-size: 1.25rem;
 					@include button($color-type:2, $radius-type:2);
+
+					cursor: pointer;
+					transition: all 100ms ease-in-out;
+					&:hover{
+						box-shadow: $shadow4;
+						transform: translateY(-3px);
+					}
 				}
 				.clear-meal-plan{
 					color: $color-gray1;
@@ -208,6 +229,11 @@
 						font-size: inherit;
 						color: $color-gray1;
 						font-weight: 700;
+						cursor: pointer;
+						transition: all 100ms ease-in-out;
+						&:hover{
+							color: $color-gray0;
+						}
 					}
 				}
 			}
@@ -245,6 +271,13 @@
 				width: 100%;
 				color: white;
 				box-shadow: $shadow2;
+				cursor: pointer;
+
+				transition: all 100ms ease-in-out;
+				&:hover{
+					box-shadow: $shadow4;
+					transform: translateY(-3px);
+				}
 			}
 		}
 	}
