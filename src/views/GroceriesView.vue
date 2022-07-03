@@ -114,7 +114,7 @@
 		@include tablet-portrait-up{
 			min-height: 844px;
 		}
-		
+
 		.groceries-container{
 			.groceries-head{
 				@include flex($align:center, $gap:0.5rem);

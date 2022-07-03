@@ -100,6 +100,10 @@
 <style lang="scss">
 	@use '@/assets/scss/abstracts' as *;
 	@use '@/assets/scss/resets';
+
+	#app{
+		background-color: $color-gray4;
+	}
 </style>
 
 
