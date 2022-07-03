@@ -1,5 +1,5 @@
 <script setup>
-	import { reactive, ref, computed } from 'vue'
+	import { reactive, ref, computed, watch } from 'vue'
 	import { RouterLink, RouterView } from 'vue-router'
 	import FooterNav from '@/components/FooterNav.vue'
 	import ModalRouter from '@/components/ModalRouter.vue'
@@ -9,9 +9,13 @@
 	const customIngredients = ref([]);
 	const selectedRecipe = ref({});
 	const selectedCategory = ref([]);
+	const groceryStates = reactive({
+		ingredients: {},
+		categories: {}
+	})
 
+	//MEAL PLAN CONTROLS
 	function addToMealPlan(recipe){
-		// if id already exists, remove it
 		let index = mealPlan.value.map(recipeObject => recipeObject.id).indexOf(recipe.id)
 		if(index > -1) mealPlan.value[index] = recipe;
 		else mealPlan.value.push(recipe)
@@ -23,10 +27,49 @@
 		if(index > -1)mealPlan.value.splice(index, 1)
 	}
 
-	function addIngredient(ingredientObj){
-		console.log(ingredientObj);
+	//Populate groceryStates.ingredients and groceryStates.categories (used oncreated and in groceries(prop) watcher)
+	function populateStates(){
+		Object.keys(groceries.value).forEach(category => {
+			// Populate groceryStates.categories
+			if(!groceryStates.categories[category]) groceryStates.categories[category] = true;
+			Object.keys(groceries.value[category]).forEach(ingredientID => {
+				// Populate groceryStates.ingredients
+				if(!groceryStates.ingredients[ingredientID]) {
+					groceryStates.ingredients[ingredientID] = false;
+				}
+			})
+		})
 	}
 
+	function clearMealPlan(){
+		mealPlan.value = [];
+		customIngredients.value = [];
+	}
+	function writeCookies(){
+		function bake_cookie(name, value) {
+			var cookie = [name, '=', JSON.stringify(value)].join('');
+			document.cookie = cookie;
+		}
+
+		bake_cookie('mealPlan', mealPlan.value);
+		bake_cookie('customIngredients', customIngredients.value);
+		bake_cookie('groceryStates', groceryStates);
+	}
+
+	function getCookies(){
+		function read_cookie(name) {
+			var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
+			result && (result = JSON.parse(result[1]));
+			return result;
+		}
+
+		if(read_cookie('mealPlan')) mealPlan.value = read_cookie('mealPlan');
+		if(read_cookie('customIngredients'))customIngredients.value = read_cookie('customIngredients')
+		if(read_cookie('groceryStates')) {
+			groceryStates.categories = read_cookie('groceryStates').categories;
+			groceryStates.ingredients = read_cookie('groceryStates').ingredients;
+		}
+	}
 	// Computed: combine all ingredients of every recipe in the meal plan + custom ingredients
 	const groceries = computed(() => {
 		let groceries = {};
@@ -59,6 +102,18 @@
 		return groceries
 	})
 
+	//WATCH
+	watch(groceries, (g) => {
+		populateStates();
+		writeCookies();
+	})
+
+	watch(groceryStates, (i) => {
+		writeCookies();
+	})
+
+	getCookies();
+
 </script>
 
 <template>
@@ -73,11 +128,13 @@
 					:meal-plan="mealPlan"
 					:recipes="recipes"
 					:groceries="groceries"
+					:grocery-states="groceryStates"
 					@add-to-meal-plan="addToMealPlan($event)"
 					@remove-from-meal-plan="removeFromMealPlan($event)"
-					@clear-meal-plan="mealPlan = []"
+					@clear-meal-plan="clearMealPlan()"
 					@add-ingredient="customIngredients.push($event)"
 					@select-recipe="selectedRecipe = $event"
+					@change-grocery-state="groceryStates[$event[0]][$event[1]] = $event[2]"
 					/>
 				</keep-alive>
 			</transition>

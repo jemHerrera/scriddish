@@ -7,16 +7,12 @@
 	import IconChevron from '../components/icons/IconChevron.vue';
 	import IconGroceries from '../components/icons/IconGroceries.vue';
 
-	defineEmits(['add-ingredient']);
-	const props = defineProps({groceries: Object})
+	const emit = defineEmits(['add-ingredient', 'change-grocery-state']);
+	const props = defineProps({groceries: Object, groceryStates: Object})
 	const router = useRouter();
 
 	//REFS
 	const groceryRef = ref(props.groceries);
-	const states = reactive({
-		ingredients: {},
-		categories: {}
-	})
 	const newIngredientModal = ref(false);
 
 	//COMPUTED
@@ -27,31 +23,13 @@
 		Object.keys(groceryCount).forEach(category => {
 			let count = 0;
 			Object.keys(groceryCount[category]).forEach(ingredientID => {
-				if(!states.ingredients[ingredientID]) count++;
+				if(!props.groceryStates.ingredients[ingredientID]) count++;
 			})
 			groceryCount[category] = count;
 		})
 
 		return groceryCount;
 	})
-	//METHODS
-	//Populate states.ingredients and states.categories (used oncreated and in groceries(prop) watcher)
-	function populateStates(){
-		Object.keys(props.groceries).forEach(category => {
-			// Populate states.categories
-			if(!states.categories[category]) states.categories[category] = true;
-			Object.keys(props.groceries[category]).forEach(ingredientID => {
-				// Populate states.ingredients
-				if(!states.ingredients[ingredientID]) states.ingredients[ingredientID] = false;
-			})
-		})
-	}
-	//WATCH
-	watch(groceryRef, (g) => populateStates())
-
-	//SETUP FUNCTIONS
-	populateStates()
-	
 </script>
 
 <template>
@@ -66,16 +44,18 @@
 				class="category-group" 
 				v-for="(ingredients, category) in groceries" 
 				:key="category" 
-				:class="{'expanded': states.categories[category]}">
-					<h3 class="category" @click="states.categories[category] = !states.categories[category]">
+				:class="{'expanded': groceryStates.categories[category]}">
+					<h3 class="category" @click="$emit('change-grocery-state', ['categories', category, !groceryStates.categories[category]])">
 						<span class="category-name">{{ category }} ({{ groceryCount[category] }})</span>
 						<span class="expand-button"><IconChevron/></span>
 					</h3>
 					<div class="ingredients-container">
 						<ul class="ingredients">
 							<template v-for="(ingredientItem, ingredientID) in ingredients" :key="ingredientID">
-								<li :class="{'checked': states.ingredients[ingredientID]}" class="ingredient">
-									<input type="checkbox" :id="ingredientID" v-model="states.ingredients[ingredientID]" />
+								<li :class="{'checked': groceryStates.ingredients[ingredientID]}" class="ingredient">
+									<input type="checkbox" :id="ingredientID" 
+									:value="groceryStates.ingredients[ingredientID]" :checked="groceryStates.ingredients[ingredientID]"
+									@click="$emit('change-grocery-state', ['ingredients', ingredientID, !groceryStates.ingredients[ingredientID]])" />
 									<label :for="ingredientID" class="name">{{ ingredientItem.name }}</label>
 									<span class="amount">{{ ingredientItem.amount }} {{ ingredientItem.unit }}</span>
 								</li>
