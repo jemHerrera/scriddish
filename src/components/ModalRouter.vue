@@ -58,7 +58,6 @@ const currentView = computed(() => {
       z-index:999;
       height: 100vh;
       width: 100vw;
-      padding-bottom: 5rem;
       overflow: hidden auto;
       background: $color-gray4;
       position:fixed;
