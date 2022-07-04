@@ -177,7 +177,8 @@
 								font-size: $font-size2;
 								&.quantity{
 									color: $color-gray1;
-									font-weight: 500;
+									font-size: $font-size;
+									font-weight: 400;
 								}
 							}
 						}
