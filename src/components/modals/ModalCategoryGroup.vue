@@ -77,7 +77,7 @@
 				}
 			}
 			.category-group-body{
-				padding: 1rem 1rem 10rem 1rem;
+				padding: 1rem 1rem 15rem 1rem;
 				.category-recipes{
 					@include flex($direction:column, $gap: 1rem);
 				}
