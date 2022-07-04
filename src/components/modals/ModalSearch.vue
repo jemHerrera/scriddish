@@ -145,7 +145,7 @@
 			}
 		}
 		.body{
-			padding: 1rem;
+			padding: 1rem 1rem 5rem 1rem;
 			@include flex($direction: column, $gap:2rem);
 
 			.search-results-container{
