@@ -256,10 +256,9 @@
 
 		.add-to-meal-plan{
 			z-index: 2;
-			align-self: center;
 			@include button($color-type:1, $radius-type:2);
 			@include flex($align:center, $justify:center);
-			margin: 2rem 0 4rem 0;
+			margin: 2rem 1rem 4rem 1rem;
 			box-shadow: $shadow2;
 			padding-left: 2em;
 			font-size: 1.25rem;
