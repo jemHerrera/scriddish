@@ -46,14 +46,17 @@
 		customIngredients.value = [];
 	}
 	function writeCookies(){
-		function bake_cookie(name, value) {
-			var cookie = [name, '=', JSON.stringify(value)].join('');
+		function bake_cookie(name, value, lifesplanInSeconds) {
+			let now = new Date();
+			now.setTime(now.getTime() + 1 * lifesplanInSeconds * 1000);
+			
+			let cookie = [name, '=', JSON.stringify(value), '; expires=', now.toUTCString()].join('');
 			document.cookie = cookie;
 		}
 
-		bake_cookie('mealPlan', mealPlan.value);
-		bake_cookie('customIngredients', customIngredients.value);
-		bake_cookie('groceryStates', groceryStates);
+		bake_cookie('mealPlan', mealPlan.value, 604800);
+		bake_cookie('customIngredients', customIngredients.value, 604800);
+		bake_cookie('groceryStates', groceryStates, 604800);
 	}
 
 	function getCookies(){
