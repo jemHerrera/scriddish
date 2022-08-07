@@ -2320,5 +2320,97 @@
             "Carefully wipe pan clean. Add 1/4 cup water (dbl for 4 ppl), broth concentrate and Dijon to the same pan. Whisk together until smooth. Cook over medium, stirring occasionally, until warmed through, 2-3 min. Remove pan from heat, then whisk in half the sour cream and season with pepper.",
             "Using a masher, mash remaining sour cream and half the chives into sweet potatoes until smooth. Season with salt and pepper. Thinly slice pork. Divide pork, green beans amandine and sweet potato mash between plates. Drizzle sauce from the pan over pork. Sprinkle remaining chives over top."
         ]
+    },
+    {
+        "id": "pinakbet",
+        "title": "Pinakbet",
+        "image": "pinakbet.jpeg",
+        "description": "Pakbet or pinakbet is a popular vegetable dish that originated from one of the northern provinces of the Philippines, Ilocos. The vegetables used on this dish are usually grown in the back yard of every villager and are available almost all year long. Bitter Melon, eggplant, okra, and string beans are just some of the vegetables that make-up this delightful dish.  Pakbet is cooked in a clay pot called “Palayok” and  Anchovy sauce (bagoong isda) is used to add flavor.",
+        "category": "filipino",
+        "tags": ["filipino", "pork", "asian", "rice"],
+        "time": "1-2 hours",
+        "ingredients":{
+            "Meat & Seafood": {
+                "pork-belly": {
+                    "name": "Pork Belly",
+                    "amount": 150,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "eggplant": {
+                    "name": "Eggplant",
+                    "amount": 25,
+                    "unit": "g"
+                },
+                "squash": {
+                    "name": "Squash",
+                    "amount": 75,
+                    "unit": "g"
+                },
+                "string-beans": {
+                    "name": "String Beans",
+                    "amount": 25,
+                    "unit": "g"
+                },
+                "bitter-melon": {
+                    "name": "Bitter Melon",
+                    "amount": 25,
+                    "unit": "g"
+                },
+                "tomato": {
+                    "name": "Tomato",
+                    "amount": 2,
+                    "unit": "unit"
+                },
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "okra": {
+                    "name": "Okra",
+                    "amount": 25,
+                    "unit": "g"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 1,
+                    "unit": "clove"
+                },
+                "ginger": {
+                    "name": "Ginger",
+                    "amount": 10,
+                    "unit": "g"
+                }
+            },
+            "Condiments & Spices":{
+                "knorr-shrimp-cube": {
+                    "name": "Knorr Shrimp Cube",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "fish-sauce": {
+                    "name": "Fish Sauce",
+                    "amount": 2,
+                    "unit": "tbsp"
+                },
+                "bagoong": {
+                    "name": "Bagoong",
+                    "amount": 2,
+                    "unit": "tbsp"
+                }
+            }
+        },
+        "instructions":[
+            "Wash and chop all veggies into bite sized pieces. Chop aromatics",
+            "Saute onion, ginger and garlic.",
+            "Add pork and cook till lightly seared.",
+            "Add 1 cup of water(per 2 servings) and and bring to boil. Add shrimp cube, tomato and bagoong. Simmer and let pork tenderize.",
+            "Add squash and cook for 10 minutes.",
+            "Add all the other veggies. Cover and cook for 5 mins. Season with S&P"
+        ]
     }    
 ]
