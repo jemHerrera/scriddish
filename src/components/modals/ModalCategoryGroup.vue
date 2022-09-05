@@ -1,13 +1,18 @@
 <script setup>
 	import { ref, computed} from 'vue'
 	import { useRouter, useRoute } from 'vue-router'
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '../../components/stores/mainStore';
 	import IconArrow from '../icons/IconArrow.vue';
 	import RecipeCard from '../../components/RecipeCard.vue';
 	import suggested from '../../assets/static/suggested.json';
   
-	const props = defineProps({selectedCategory: Array, mealPlan: Array, recipes: Array})
-	const emit = defineEmits(['add-to-meal-plan', 'remove-from-meal-plan', 'select-recipe', 'change-path'])
+	// PROPS, EMITS, STORE
+	const props = defineProps({selectedCategory: Array, recipes: Array})
+	const emit = defineEmits(['select-recipe', 'change-path'])
 	const router = useRouter();
+    const store = useMainStore();
+    const { mealPlan } = storeToRefs(store);
 
 	//create recipe list
 	let categoryRecipes = computed(() => {
@@ -27,10 +32,7 @@
 				<RecipeCard
 				v-for="recipe in categoryRecipes" 
 				:key="recipe.id"
-				:meal-plan="mealPlan"
 				:recipe="recipe"
-				@add-to-meal-plan="$emit('add-to-meal-plan', $event)"
-				@remove-from-meal-plan="$emit('remove-from-meal-plan', $event)"
 				@view-recipe="$emit('select-recipe', $event)"
 				/>
 			</div>

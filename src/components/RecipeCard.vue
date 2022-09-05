@@ -1,21 +1,24 @@
 <script setup>
     import { ref } from 'vue'
+    import { useMainStore } from '../components/stores/mainStore';
+	import { storeToRefs } from 'pinia';
     import IconPlus from '../components/icons/IconPlus.vue'
     import IconCheck from '../components/icons/IconCheck.vue'
     import getImageUrl from '../components/composables/getImageUrl'
 
-    const props = defineProps({
-        recipe: Object,
-        mealPlan: Array
-    })
+    //PROPS, EMITS, STORE
+    const props = defineProps({recipe: Object})
+    const emit = defineEmits(['view-recipe']);
+    const store = useMainStore();
+    const { mealPlan } = storeToRefs(store);
 
-    const emit = defineEmits(['view-recipe', 'add-to-meal-plan', 'remove-from-meal-plan'])
+    //METHODS
+    function toggleMeal(){
+        let inMealPlan = mealPlan.value.some(item => props.recipe.id == item.id);
 
-    function toggleFromMealPlan(){
-        let inMealPlan = props.mealPlan.some(item => props.recipe.id == item.id);
-
-        if(inMealPlan) emit('remove-from-meal-plan', props.recipe.id);
-        else emit('add-to-meal-plan', {
+        if(inMealPlan) return store.removeFromMealPlan(props.recipe.id);
+            
+        store.addToMealPlan({
             'id': props.recipe.id,
             'servings': 4
         })
@@ -33,7 +36,7 @@
                 </div>
                 <div class="card-footer">
                     <p class="time">{{ recipe.time }}</p>
-                    <button @click.prevent="toggleFromMealPlan()">
+                    <button @click.prevent="toggleMeal()">
                         <IconPlus class="plus" v-if="!mealPlan.map(meal => meal.id).includes(recipe.id)"/>
                         <IconCheck class="check" v-else/>
                     </button>

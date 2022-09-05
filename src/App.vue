@@ -1,11 +1,17 @@
 <script setup>
 	import { reactive, ref, computed, watch } from 'vue'
 	import { RouterLink, RouterView } from 'vue-router'
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '@/components/stores/mainStore';
 	import FooterNav from '@/components/FooterNav.vue'
 	import ModalRouter from '@/components/ModalRouter.vue'
 	import recipes from './assets/static/recipes.json'
 
-	const mealPlan = ref([]);
+	// STORE
+    const store = useMainStore();
+    const { mealPlan } = storeToRefs(store);
+
+	// REACTIVE STATES
 	const customIngredients = ref([]);
 	const selectedRecipe = ref({});
 	const selectedCategory = ref([]);
@@ -14,18 +20,6 @@
 		categories: {}
 	})
 
-	//MEAL PLAN CONTROLS
-	function addToMealPlan(recipe){
-		let index = mealPlan.value.map(recipeObject => recipeObject.id).indexOf(recipe.id)
-		if(index > -1) mealPlan.value[index] = recipe;
-		else mealPlan.value.push(recipe)
-	}
-
-	function removeFromMealPlan(recipeID){
-		// if id already exists, remove it
-		let index = mealPlan.value.map(recipeObject => recipeObject.id).indexOf(recipeID)
-		if(index > -1)mealPlan.value.splice(index, 1)
-	}
 
 	//Populate groceryStates.ingredients and groceryStates.categories (used oncreated and in groceries(prop) watcher)
 	function populateStates(){
@@ -41,10 +35,6 @@
 		})
 	}
 
-	function clearMealPlan(){
-		mealPlan.value = [];
-		customIngredients.value = [];
-	}
 	function writeCookies(){
 		function bake_cookie(name, value, lifesplanInSeconds) {
 			let now = new Date();

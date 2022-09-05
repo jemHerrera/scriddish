@@ -1,6 +1,8 @@
 <script setup>
 	import { ref, computed } from 'vue'
 	import { useRouter, useRoute } from 'vue-router'
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '../components/stores/mainStore';
 	import ModalVerify from '../components/modals/ModalVerify.vue'
 	import IconMealPlan from '../components/icons/IconMealPlan.vue';
 	import IconDelete from '../components/icons/IconDelete.vue';
@@ -8,8 +10,12 @@
 	import recipes from '../assets/static/recipes.json'
     import getImageUrl from '../components/composables/getImageUrl'
 
-	let props = defineProps({mealPlan: Array, groceries: Object})
-	let emit = defineEmits(['add-to-meal-plan', 'remove-from-meal-plan', 'clear-meal-plan', 'select-recipe'])
+
+	// PROPS, EMITS, STORE
+	let props = defineProps({groceries: Object})
+	let emit = defineEmits(['clear-meal-plan', 'select-recipe'])
+    const store = useMainStore();
+    const { mealPlan } = storeToRefs(store);
 
 	const router = useRouter();
 	function findRecipe(recipeID){
@@ -52,7 +58,7 @@
 						<transition name="fade">
 							<ModalVerify 
 							v-if="modalVerify == meal.id"
-							@confirm="$emit('remove-from-meal-plan', meal.id)"
+							@confirm="store.removeFromMealPlan(meal.id)"
 							@cancel="modalVerify = ''" />
 						</transition>
 					</li>
@@ -68,7 +74,7 @@
 					<transition name="fade">
 						<ModalVerify 
 						v-if="modalClear"
-						@confirm="$emit('clear-meal-plan')"
+						@confirm="store.clearMealPlan()"
 						@cancel="modalClear = false" />
 					</transition>
 				</div>

@@ -1,12 +1,17 @@
 <script setup>
-	import { reactive, ref, onMounted, watch } from 'vue'
-	import { useRouter, useRoute } from 'vue-router'
+	import { reactive, ref, onMounted, watch } from 'vue';
+	import { useRouter, useRoute } from 'vue-router';
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '../components/stores/mainStore';
 	import IconSearch from '../components/icons/IconSearch.vue';
 	import RecipeCard from '../components/RecipeCard.vue';
-	import categories from '../assets/static/categories.json'
+	import categories from '../assets/static/categories.json';
 
-	const props = defineProps({mealPlan: Array, recipes: Object})
-	defineEmits(['add-to-meal-plan', 'select-recipe', 'remove-from-meal-plan'])
+	// PROPS, EMITS, STORE
+	const props = defineProps({ recipes: Object })
+	defineEmits(['select-recipe']);
+    const store = useMainStore();
+    const { mealPlan } = storeToRefs(store);
 
 	// populate categories with recipes
 	props.recipes.forEach(recipe => {
@@ -111,10 +116,7 @@
 							<RecipeCard
 							v-for="recipe in categoryValue.recipes" 
 							:key="recipe"
-							:meal-plan="mealPlan"
 							:recipe="recipes.find(i => i.id == recipe)"
-							@add-to-meal-plan="$emit('add-to-meal-plan', $event)"
-							@remove-from-meal-plan="$emit('remove-from-meal-plan', $event)"
 							@view-recipe="$emit('select-recipe', $event)"
 							/>
 						</ul>

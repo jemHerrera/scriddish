@@ -10,8 +10,8 @@ const routes = {
   '/search': ModalSearch
 }
 
-const props = defineProps({selectedRecipe: Object, selectedCategory: Array, mealPlan: Array, recipes: Object})
-const emit = defineEmits(['add-to-meal-plan', 'remove-from-meal-plan', 'select-recipe', 'select-category']);
+const props = defineProps({selectedRecipe: Object, selectedCategory: Array, recipes: Object})
+const emit = defineEmits(['select-recipe', 'select-category']);
 const currentPath = ref(window.location.hash)
 
 window.addEventListener('hashchange', () => {
@@ -42,12 +42,9 @@ const currentView = computed(() => {
       :selected-recipe="selectedRecipe"
       :selected-category="selectedCategory"
       :recipes="recipes"
-      :meal-plan="mealPlan"
       @select-recipe="$emit('select-recipe', $event)"
       @select-category="$emit('select-category', $event)"
-      @change-path="currentPath = $event"
-      @add-to-meal-plan="$emit('add-to-meal-plan', $event)"
-      @remove-from-meal-plan="$emit('remove-from-meal-plan', $event)"/>
+      @change-path="currentPath = $event"/>
     </keep-alive>
 	</transition>
 </template>

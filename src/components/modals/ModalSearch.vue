@@ -1,14 +1,19 @@
 <script setup>
 	import { ref, computed} from 'vue'
 	import { useRouter, useRoute } from 'vue-router'
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '../../components/stores/mainStore';
   	import IconSearch from '../icons/IconSearch.vue'
   	import IconDelete from '../icons/IconDelete.vue'
 	import RecipeCard from '../RecipeCard.vue'
 	import suggested from '../../assets/static/suggested.json'
 
-	const props = defineProps({mealPlan: Array, recipes: Object})
-	defineEmits(['add-to-meal-plan', 'remove-from-meal-plan', 'select-recipe', 'change-path', 'select-category'])
+	// PROPS, EMITS, STORE
+	const props = defineProps({recipes: Object})
+	defineEmits(['select-recipe', 'change-path', 'select-category'])
 	const router = useRouter();
+    const store = useMainStore();
+    const { mealPlan } = storeToRefs(store);
 
 	//REF
 	let searchQuery = ref('');
@@ -68,10 +73,7 @@
 					<RecipeCard
 					v-for="recipe in searchItems" 
 					:key="recipe"
-					:meal-plan="mealPlan"
 					:recipe="recipes.find(i => i.id == recipe)"
-					@add-to-meal-plan="$emit('add-to-meal-plan', $event)"
-					@remove-from-meal-plan="$emit('remove-from-meal-plan', $event)"
 					@view-recipe="$emit('select-recipe', $event)"
 					/>
 				</ul>

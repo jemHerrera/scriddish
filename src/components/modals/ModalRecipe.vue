@@ -1,11 +1,15 @@
 <script setup>
 	import { ref, computed, watch} from 'vue'
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '../../components/stores/mainStore';
 	import IconArrow from '../icons/IconArrow.vue'
 	import IconPlus from '../icons/IconPlus.vue'
 	import IconCheck from '../icons/IconCheck.vue'
 
-	const props = defineProps({selectedRecipe: Object, mealPlan: Array})
-	const emit = defineEmits(['add-to-meal-plan', 'remove-from-meal-plan'])
+	// PROPS, EMITS, STORE
+	const props = defineProps({selectedRecipe: Object})
+    const store = useMainStore();
+    const { mealPlan } = storeToRefs(store);
 
 	//REFS
 	const servings = ref(4);
@@ -25,33 +29,35 @@
 		return ingredientList
 	})
 
-	const onMealPlan = computed(() => {
-		return props.mealPlan.some(item => props.selectedRecipe.id == item.id)
+	const inMealPlan = computed(() => {
+		return mealPlan.value.some(item => props.selectedRecipe.id == item.id)
 	})
 
 	//METHODS
-	//change servings based on mealPlan
-	function getServings(){
-		let recipeInMealPlan = props.mealPlan.find(meal => meal.id == props.selectedRecipe.id)
+	function matchServings(){
+		let recipeInMealPlan = mealPlan.value.find(meal => meal.id == props.selectedRecipe.id)
 		if(recipeInMealPlan) servings.value = recipeInMealPlan.servings;
 	}
-    function toggleFromMealPlan(){
-        if(onMealPlan.value) emit('remove-from-meal-plan', props.selectedRecipe.id);
-        else emit('add-to-meal-plan', {
-            'id': props.selectedRecipe.id,
-            'servings': 4
-        })
+
+    function toggleMeal(){
+        if(inMealPlan.value) return store.removeFromMealPlan(props.selectedRecipe.id);
+
+        store.addToMealPlan({
+			'id': props.selectedRecipe.id,
+			'servings': 4
+		})
     }
 
+	//WATCH
 	watch(servings, (s) => {
-		emit('add-to-meal-plan', {
+        store.addToMealPlan({
 			'id':props.selectedRecipe.id,
-			'servings': servings.value
-		}) 
+			'servings': s
+		})
 	})
 
 	//EXEC
-	getServings();
+	matchServings();
 </script>
 
 <template>
@@ -93,10 +99,10 @@
 				</div>
 			</div>
 		</main>
-		<a @click="toggleFromMealPlan()" 
-			:class="{'on-meal-plan': onMealPlan}"
+		<a @click="toggleMeal()" 
+			:class="{'on-meal-plan': inMealPlan}"
 			class="add-to-meal-plan">
-			<IconPlus v-if="!onMealPlan" /><IconCheck v-else /><span v-if="onMealPlan">Added to meal plan</span><span v-else>Add to meal plan</span>
+			<IconPlus v-if="!inMealPlan" /><IconCheck v-else /><span v-if="inMealPlan">Added to meal plan</span><span v-else>Add to meal plan</span>
 		</a>
 		<a href="javascript:history.back()" class="back"><IconArrow /></a>
   </div>

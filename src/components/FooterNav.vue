@@ -1,10 +1,15 @@
 <script setup>
 	import { computed } from 'vue'
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '../components/stores/mainStore';
 	import IconRecipes from '../components/icons/IconRecipes.vue';
 	import IconGroceries from '../components/icons/IconGroceries.vue';
 	import IconMealPlan from '../components/icons/IconMealPlan.vue';
 
-	let props = defineProps({mealPlan: Array, groceries: Object})
+	// PROPS, EMITS, STORE
+	let props = defineProps({groceries: Object});
+    const store = useMainStore();
+    const { mealPlan } = storeToRefs(store);
 
 	const groceryList = computed(() => {
 		let groceryList = [];
