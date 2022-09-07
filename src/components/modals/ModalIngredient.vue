@@ -1,6 +1,12 @@
 <script setup>
     import { reactive, onMounted, onUnmounted } from 'vue';
-	const emit = defineEmits(['add-ingredient', 'cancel']);
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '../../components/stores/mainStore';
+
+	// PROPS, EMITS, STORE
+    const store = useMainStore();
+    const { customIngredients } = storeToRefs(store);
+	const emit = defineEmits(['cancel']);
 
     const newIngredient = reactive({
         name: '',
@@ -19,7 +25,7 @@
 
     function addIngredient(){
         let ingredient = Object.assign({}, newIngredient);
-        emit('add-ingredient', ingredient);
+        customIngredients.value.push(ingredient);
         clear();
     }
 

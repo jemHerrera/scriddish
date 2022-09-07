@@ -1,34 +1,41 @@
 <script setup>
 	import { ref, reactive, computed, watch} from 'vue';
 	import { useRouter, useRoute } from 'vue-router';
+	import { storeToRefs } from 'pinia';
+    import { useMainStore } from '../components/stores/mainStore';
 	import ModalIngredient from '../components/modals/ModalIngredient.vue'
 	import IconArrow from '../components/icons/IconArrow.vue';
 	import IconPlus from '../components/icons/IconPlus.vue';
 	import IconChevron from '../components/icons/IconChevron.vue';
 	import IconGroceries from '../components/icons/IconGroceries.vue';
 
-	const emit = defineEmits(['add-ingredient', 'change-grocery-state']);
-	const props = defineProps({groceries: Object, groceryStates: Object})
+	// SETUP: PROPS, EMITS, STORE, ROUTER
 	const router = useRouter();
+    const store = useMainStore();
+    const { mealPlan, groceries, groceryStates, recipes } = storeToRefs(store);
 
 	//REFS
-	const groceryRef = ref(props.groceries);
+	const groceryRef = ref(groceries.value);
 	const newIngredientModal = ref(false);
 
 	//COMPUTED
-	const hasGroceries = computed(() => Object.keys(props.groceries).length > 0)
+	const hasGroceries = computed(() => Object.keys(groceries.value).length > 0)
 	const groceryCount = computed(() => {
-		let groceryCount = Object.assign({}, props.groceries);
+		let groceryCount = Object.assign({}, groceries.value);
 
 		Object.keys(groceryCount).forEach(category => {
 			let count = 0;
 			Object.keys(groceryCount[category]).forEach(ingredientID => {
-				if(!props.groceryStates.ingredients[ingredientID]) count++;
+				if(!groceryStates.value.ingredients[ingredientID]) count++;
 			})
 			groceryCount[category] = count;
 		})
 
 		return groceryCount;
+	})
+
+	watch(groceryStates.value, (i) => {
+		store.writeCookies();
 	})
 </script>
 
@@ -44,18 +51,18 @@
 				class="category-group" 
 				v-for="(ingredients, category) in groceries" 
 				:key="category" 
-				:class="{'expanded': groceryStates.categories[category]}">
-					<h3 class="category" @click="$emit('change-grocery-state', ['categories', category, !groceryStates.categories[category]])">
+				:class="{'expanded': groceryStates['categories'][category]}">
+					<h3 class="category" @click="groceryStates['categories'][category] = !groceryStates['categories'][category]">
 						<span class="category-name">{{ category }} ({{ groceryCount[category] }})</span>
 						<span class="expand-button"><IconChevron/></span>
 					</h3>
 					<div class="ingredients-container">
 						<ul class="ingredients">
 							<template v-for="(ingredientItem, ingredientID) in ingredients" :key="ingredientID">
-								<li :class="{'checked': groceryStates.ingredients[ingredientID]}" class="ingredient">
+								<li :class="{'checked': groceryStates['ingredients'][ingredientID]}" class="ingredient">
 									<input type="checkbox" :id="ingredientID" 
-									:value="groceryStates.ingredients[ingredientID]" :checked="groceryStates.ingredients[ingredientID]"
-									@click="$emit('change-grocery-state', ['ingredients', ingredientID, !groceryStates.ingredients[ingredientID]])" />
+									:value="groceryStates['ingredients'][ingredientID]" :checked="groceryStates['ingredients'][ingredientID]"
+									@click="groceryStates['ingredients'][ingredientID] = !groceryStates['ingredients'][ingredientID]" />
 									<label :for="ingredientID" class="name">{{ ingredientItem.name }}</label>
 									<span class="amount">{{ ingredientItem.amount }} {{ ingredientItem.unit }}</span>
 								</li>
@@ -80,7 +87,6 @@
 			<ModalIngredient 
 			v-if="newIngredientModal" 
 			@cancel="newIngredientModal = false"
-			@add-ingredient="$emit('add-ingredient', $event)"
 			/>
 		</transition>
 	</div>

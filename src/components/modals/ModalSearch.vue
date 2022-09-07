@@ -9,11 +9,10 @@
 	import suggested from '../../assets/static/suggested.json'
 
 	// PROPS, EMITS, STORE
-	const props = defineProps({recipes: Object})
-	defineEmits(['select-recipe', 'change-path', 'select-category'])
+	defineEmits(['change-path'])
 	const router = useRouter();
     const store = useMainStore();
-    const { mealPlan } = storeToRefs(store);
+    const { mealPlan, recipes, selectedCategory } = storeToRefs(store);
 
 	//REF
 	let searchQuery = ref('');
@@ -23,7 +22,7 @@
 			query = searchQuery.value.toLowerCase()
 
 		if(query.length < 3) return []
-		props.recipes.forEach(recipe => {
+		recipes.value.forEach(recipe => {
 			//name
 			const titleMatch = recipe.title.toLowerCase().includes(query);
 			//tags
@@ -74,7 +73,6 @@
 					v-for="recipe in searchItems" 
 					:key="recipe"
 					:recipe="recipes.find(i => i.id == recipe)"
-					@view-recipe="$emit('select-recipe', $event)"
 					/>
 				</ul>
 			</div>
@@ -85,7 +83,7 @@
 						<h3 class="main-category-title">{{ mainCategoryTitle }}</h3>
 						<ul class="sub-categories">
 							<li class="sub-category" v-for="(subCategory, subCategoryID) in mainCategory" :key="subCategoryID">
-								<a @click="$emit('select-category', [subCategoryID, subCategory.name])" href="#/category">{{ subCategory.name }}</a>
+								<a @click="selectedCategory = [subCategoryID, subCategory.name]" href="#/category">{{ subCategory.name }}</a>
 							</li>
 						</ul>
 					</li>

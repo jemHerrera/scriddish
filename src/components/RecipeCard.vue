@@ -8,9 +8,8 @@
 
     //PROPS, EMITS, STORE
     const props = defineProps({recipe: Object})
-    const emit = defineEmits(['view-recipe']);
     const store = useMainStore();
-    const { mealPlan } = storeToRefs(store);
+    const { mealPlan, selectedRecipe } = storeToRefs(store);
 
     //METHODS
     function toggleMeal(){
@@ -26,7 +25,7 @@
 </script>
 
 <template>
-    <a class="recipe-card" :id="recipe.id" @click="$emit('view-recipe', props.recipe)" href="#/recipe">
+    <a class="recipe-card" :id="recipe.id" @click="selectedRecipe = recipe" href="#/recipe">
         <div class="recipe-card-container">
             <img :src="'/scriddish//images/'+recipe.image">
             <div class="details">

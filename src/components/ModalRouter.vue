@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch} from 'vue'
+import { ref, computed, watch} from 'vue';
 import ModalCategoryGroup from './modals/ModalCategoryGroup.vue'
 import ModalRecipe from './modals/ModalRecipe.vue'
 import ModalSearch from './modals/ModalSearch.vue'
@@ -10,8 +10,6 @@ const routes = {
   '/search': ModalSearch
 }
 
-const props = defineProps({selectedRecipe: Object, selectedCategory: Array, recipes: Object})
-const emit = defineEmits(['select-recipe', 'select-category']);
 const currentPath = ref(window.location.hash)
 
 window.addEventListener('hashchange', () => {
@@ -39,11 +37,6 @@ const currentView = computed(() => {
       class="modal"
       v-if="currentPath" 
       :is="currentView" 
-      :selected-recipe="selectedRecipe"
-      :selected-category="selectedCategory"
-      :recipes="recipes"
-      @select-recipe="$emit('select-recipe', $event)"
-      @select-category="$emit('select-category', $event)"
       @change-path="currentPath = $event"/>
     </keep-alive>
 	</transition>

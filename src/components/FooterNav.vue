@@ -7,13 +7,12 @@
 	import IconMealPlan from '../components/icons/IconMealPlan.vue';
 
 	// PROPS, EMITS, STORE
-	let props = defineProps({groceries: Object});
     const store = useMainStore();
-    const { mealPlan } = storeToRefs(store);
+    const { mealPlan, groceries } = storeToRefs(store);
 
 	const groceryList = computed(() => {
 		let groceryList = [];
-			Object.values(props.groceries).forEach(category => {
+			Object.values(groceries.value).forEach(category => {
 				Object.keys(category).forEach(ingredient => {
 					groceryList.push(ingredient);
 				})

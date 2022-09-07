@@ -8,15 +8,14 @@
 	import suggested from '../../assets/static/suggested.json';
   
 	// PROPS, EMITS, STORE
-	const props = defineProps({selectedCategory: Array, recipes: Array})
-	const emit = defineEmits(['select-recipe', 'change-path'])
+	const emit = defineEmits(['change-path'])
 	const router = useRouter();
     const store = useMainStore();
-    const { mealPlan } = storeToRefs(store);
+    const { mealPlan, recipes, selectedCategory } = storeToRefs(store);
 
 	//create recipe list
 	let categoryRecipes = computed(() => {
-		return props.recipes.filter(recipe => recipe.tags.includes(props.selectedCategory[0]));
+		return recipes.value.filter(recipe => recipe.tags.includes(selectedCategory.value[0]));
 	})
 </script>
 
@@ -33,7 +32,6 @@
 				v-for="recipe in categoryRecipes" 
 				:key="recipe.id"
 				:recipe="recipe"
-				@view-recipe="$emit('select-recipe', $event)"
 				/>
 			</div>
 			<transition name="fade-up">

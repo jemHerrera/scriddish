@@ -7,9 +7,8 @@
 	import IconCheck from '../icons/IconCheck.vue'
 
 	// PROPS, EMITS, STORE
-	const props = defineProps({selectedRecipe: Object})
     const store = useMainStore();
-    const { mealPlan } = storeToRefs(store);
+    const { mealPlan, selectedRecipe } = storeToRefs(store);
 
 	//REFS
 	const servings = ref(4);
@@ -18,7 +17,7 @@
 	const ingredientList = computed(() => {
 		let ingredientList = [];
 
-		Object.values(props.selectedRecipe.ingredients).forEach(ingredientGroup => {
+		Object.values(selectedRecipe.value.ingredients).forEach(ingredientGroup => {
 			Object.values(ingredientGroup).forEach(ingredient => {
 				let newIngredient = Object.assign({}, ingredient);
 				newIngredient.amount = ingredient.amount * (servings.value/2);
@@ -30,20 +29,20 @@
 	})
 
 	const inMealPlan = computed(() => {
-		return mealPlan.value.some(item => props.selectedRecipe.id == item.id)
+		return mealPlan.value.some(item => selectedRecipe.value.id == item.id)
 	})
 
 	//METHODS
 	function matchServings(){
-		let recipeInMealPlan = mealPlan.value.find(meal => meal.id == props.selectedRecipe.id)
+		let recipeInMealPlan = mealPlan.value.find(meal => meal.id == selectedRecipe.value.id)
 		if(recipeInMealPlan) servings.value = recipeInMealPlan.servings;
 	}
 
     function toggleMeal(){
-        if(inMealPlan.value) return store.removeFromMealPlan(props.selectedRecipe.id);
+        if(inMealPlan.value) return store.removeFromMealPlan(selectedRecipe.value.id);
 
         store.addToMealPlan({
-			'id': props.selectedRecipe.id,
+			'id': selectedRecipe.value.id,
 			'servings': 4
 		})
     }
@@ -51,7 +50,7 @@
 	//WATCH
 	watch(servings, (s) => {
         store.addToMealPlan({
-			'id':props.selectedRecipe.id,
+			'id':selectedRecipe.value.id,
 			'servings': s
 		})
 	})

@@ -8,13 +8,11 @@
 	import categories from '../assets/static/categories.json';
 
 	// PROPS, EMITS, STORE
-	const props = defineProps({ recipes: Object })
-	defineEmits(['select-recipe']);
     const store = useMainStore();
-    const { mealPlan } = storeToRefs(store);
+    const { mealPlan, recipes } = storeToRefs(store);
 
 	// populate categories with recipes
-	props.recipes.forEach(recipe => {
+	recipes.value.forEach(recipe => {
 		let category = recipe.category;
 		if(!category in categories) return
 		if(!categories[category].recipes.includes(recipe.id)) categories[category].recipes.push(recipe.id)
@@ -26,7 +24,6 @@
 	//For nav scroll feature: on non-mobile devices, scrollable parent is the #app not the window
 	let scrollableParent = window;
 	if(window.innerWidth > 600) scrollableParent = document.querySelector('#app');
-
 
 	//scroll nav feature: create event listener
 	onMounted(() => {
@@ -117,7 +114,6 @@
 							v-for="recipe in categoryValue.recipes" 
 							:key="recipe"
 							:recipe="recipes.find(i => i.id == recipe)"
-							@view-recipe="$emit('select-recipe', $event)"
 							/>
 						</ul>
 					</li>

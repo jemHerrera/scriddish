@@ -7,34 +7,31 @@
 	import IconMealPlan from '../components/icons/IconMealPlan.vue';
 	import IconDelete from '../components/icons/IconDelete.vue';
 	import IconPlus from '../components/icons/IconPlus.vue';
-	import recipes from '../assets/static/recipes.json'
     import getImageUrl from '../components/composables/getImageUrl'
 
-
-	// PROPS, EMITS, STORE
-	let props = defineProps({groceries: Object})
-	let emit = defineEmits(['clear-meal-plan', 'select-recipe'])
+	// SETUP: PROPS, EMITS, STORE, ROUTER
     const store = useMainStore();
-    const { mealPlan } = storeToRefs(store);
-
 	const router = useRouter();
+    const { mealPlan, groceries, recipes, selectedRecipe } = storeToRefs(store);
+
 	function findRecipe(recipeID){
-		return recipes.find(recipe => recipeID == recipe.id)
+		return recipes.value.find(recipe => recipeID == recipe.id)
 	}
 	const modalVerify = ref('');
 	const modalClear = ref(false);
-	const groceryList = computed(() => {
+
+	const groceryCount = computed(() => {
 		let groceryList = [];
-			Object.values(props.groceries).forEach(category => {
+			Object.values(groceries).forEach(category => {
 				Object.keys(category).forEach(ingredient => {
 					groceryList.push(ingredient);
 				})
 			})
-		return groceryList;
+		return groceryList.length;
 	})
 
 	function viewRecipe(recipe){
-		emit('select-recipe', recipe);
+		selectedRecipe.value = recipe;
 		window.location.href = "#/recipe"
 	}
 </script>
@@ -67,7 +64,7 @@
 			<div class="cta-container">
 				<button @click="router.push('/groceries')" class="view-groceries-cta">
 					<span>View Groceries </span>
-					<span>({{ groceryList.length }})</span>
+					<span>({{ groceryCount }})</span>
 				</button>
 				<div class="clear-meal-plan-container">
 					<p class="clear-meal-plan">Want to start over? <span class="clear-button" @click="modalClear = true">Clear Meal Plan</span></p>
@@ -95,11 +92,11 @@
 
 	.meal-plan{
 		min-height: 100vh;
+
 		@include tablet-portrait-up{
 			min-height: 844px;
 		}
 
-		
 		.meal-plan-container{
 			@include flex($direction: column);
 			gap: 1.5rem;
