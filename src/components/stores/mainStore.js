@@ -72,17 +72,18 @@ export const useMainStore = defineStore('main', {
         },
         
         writeCookies(){
-            function bake_cookie(name, value, lifesplanInSeconds) {
+            function bake_cookie(name, value, lifespaninSeconds) {
                 let now = new Date();
-                now.setTime(now.getTime() + 1 * lifesplanInSeconds * 1000);
+                now.setTime(now.getTime() + 1 * lifespaninSeconds * 1000);
                 
                 let cookie = [name, '=', JSON.stringify(value), '; expires=', now.toUTCString()].join('');
                 document.cookie = cookie;
             }
 
-            bake_cookie('mealPlan', this.mealPlan, 604800);
-            bake_cookie('customIngredients', this.customIngredients, 604800);
-            bake_cookie('groceryStates', this.groceryStates, 604800);
+            let cookieLifespanInSeconds = 604800;
+            bake_cookie('mealPlan', this.mealPlan, cookieLifespanInSeconds);
+            bake_cookie('customIngredients', this.customIngredients, cookieLifespanInSeconds);
+            bake_cookie('groceryStates', this.groceryStates, cookieLifespanInSeconds);
         },
 
         getCookies(){
