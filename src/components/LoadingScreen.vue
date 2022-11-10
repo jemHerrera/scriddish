@@ -19,13 +19,14 @@
     @use '@/assets/scss/abstracts' as *;
 
     .loading-screen{
-        position: sticky;
+        position: fixed;
+        top:0;
+        left:0;
         height: 100%;
         width: 100%;
         bottom:0;
         z-index: 999;
         background-color: $color-main;
-
         @include flex($align:center, $justify: center);
 
         img.loading-logo{
@@ -45,6 +46,11 @@
             100%{
                 transform: scale(1);
             }
+        }
+
+        @include tablet-portrait-up{
+            position: sticky;
+            bottom:0;
         }
     }
 
