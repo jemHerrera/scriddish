@@ -11,7 +11,8 @@ export const useMainStore = defineStore('main', {
             categories: {}
         },
         selectedRecipe: {},
-        selectedCategory: []
+        selectedCategory: [],
+        loading: true
     }),
     getters: {
         groceries(){

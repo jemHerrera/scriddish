@@ -1,11 +1,12 @@
 <script setup>
 	import { reactive, ref, computed, watch } from 'vue'
 	import { RouterLink, RouterView } from 'vue-router'
-	import { storeToRefs } from 'pinia';
+	import { mapState, storeToRefs } from 'pinia';
     import { useMainStore } from '@/components/stores/mainStore';
-	import FooterNav from '@/components/FooterNav.vue'
-	import ModalRouter from '@/components/ModalRouter.vue'
-	import recipes from './assets/static/recipes.json'
+	import FooterNav from '@/components/FooterNav.vue';
+	import ModalRouter from '@/components/ModalRouter.vue';
+	import recipes from './assets/static/recipes.json';
+	import LoadingScreen from '@/components/LoadingScreen.vue';
 
 	// STORE
     const store = useMainStore();
@@ -19,6 +20,10 @@
 
 	store.updateGroceryStates();
 	store.getCookies();
+
+	//release loading
+	let loadTimeMilliseconds = 2000;
+	setTimeout(()=>store.loading = false, loadTimeMilliseconds)
 
 </script>
 
@@ -39,6 +44,8 @@
 		<FooterNav/>
 
 		<ModalRouter/>
+
+		<LoadingScreen/>
 </template>
 
 <style lang="scss">

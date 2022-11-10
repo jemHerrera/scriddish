@@ -2244,7 +2244,8 @@
             "Add the sweet and sour sauce and 1/4 cup water (dbl for 4 ppl) to the pan with the veggies. Reduce heat to medium. Simmer until the veggies are tender-crisp and sauce thickens slightly, 3-4 min. Remove the pan from the heat. Once the meatballs are cooked through, add them to the pan, then toss to combine.",
             "Fluff the rice with a fork. Season with salt, then stir in half the green onions. Divide rice between bowls. Top with the sweet and sour stir-fry. Sprinkle the remaining green onions over top."
         ]
-    },{
+    },
+    {
         "id": "steak-spiced-pork-tenderloin",
         "title": "Steak-Spiced Pork Tenderloin",
         "image": "steak-spiced-pork-tenderloin.webp",
@@ -2411,6 +2412,152 @@
             "Add 1 cup of water(per 2 servings) and and bring to boil. Add shrimp cube, tomato and bagoong. Simmer and let pork tenderize.",
             "Add squash and cook for 10 minutes.",
             "Add all the other veggies. Cover and cook for 5 mins. Season with S&P"
+        ]
+    },
+    {
+        "id": "carbonara",
+        "title": "Carbonara",
+        "image": "carbonara.webp",
+        "description": "Humble ingredients—eggs, noodles, cheese, and pork—combine to create glossy, glorious pasta carbonara. It's the no-food-in-the-house dinner of our dreams.",
+        "category": "featured",
+        "tags": ["pork", "western", "featured"],
+        "time": "35 mins",
+        "ingredients":{
+            "Meat & Seafood": {
+                "bacon": {
+                    "name": "Guanciale/Pancetta/Bacon",
+                    "amount": 100,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "mushrooms": {
+                    "name": "Mushrooms",
+                    "amount": 80,
+                    "unit": "g"
+                },
+                "green-peas": {
+                    "name": "Green Peas",
+                    "amount": 56,
+                    "unit": "g"
+                },
+                "parsely": {
+                    "name": "Parsely",
+                    "amount": 5,
+                    "unit": "g"
+                }
+            },
+            "Condiments & Spices":{
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "clove"
+                }
+            },
+            "Eggs & Dairy": {
+                "parmesan-cheese-shredded": {
+                    "name": "Parmesan Cheese, shredded",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                "egg-yolks": {
+                    "name": "Egg Yolks",
+                    "amount": 3,
+                    "unit": "unit"
+                },
+                "cream":{
+                    "name": "Cream",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            },
+            "Others": {
+                "spaghetti": {
+                    "name": "Spaghetti",
+                    "amount": 170,
+                    "unit": "g"
+                }
+            }
+        },
+        "instructions":[
+            "Boil water. Add pasta once boiling. 7-9 minutes.",
+            "Prepare egg yolks. Chop meat into bite sized cubes. Slice mushrooms. Lightly chop parsely.",
+            "Add meat into a pan. Sear and render the fat. Remove excess fat. S&P",
+            "Thinly slice garlic. Add to the pan.",
+            "Add mushrooms to the pan. S&P. Cook for few minutes until ingredients are lightly toasted.",
+            "Combine egg yolks, cream and half the parmesan. Mix well.",
+            "Add peas to the pan. Add some pasta water.",
+            "Once pasta is cooked, drain and reserve some pasta water. Mix the spaghetti and pasta water into the sauce pan.",
+            "Low heat, add the egg yolk mixture.",
+            "Add in parsely and serve with the remaining parmesan."
+        ]
+    },
+    {
+        "id": "pork-adobo",
+        "title": "Pork Adobo",
+        "image": "pork-adobo.jpeg",
+        "description": "Pork Adobo made with succulent pork belly braised in vinegar, soy sauce, garlic, and onions.  A delicious balance of salty and savory, this hearty stew is Philippine’s national dish for a good reason!",
+        "category": "filipino",
+        "tags": ["filipino", "pork", "asian", "rice"],
+        "time": "1 hour",
+        "ingredients":{
+            "Meat & Seafood": {
+                "pork-shoulder": {
+                    "name": "Pork Shoulder",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 1,
+                    "unit": "clove"
+                }
+            },
+            "Condiments & Spices":{
+                "bay-leaves": {
+                    "name": "Bay Leaves",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "brown-sugar": {
+                    "name": "Brown Sugar",
+                    "amount": 3,
+                    "unit": "tbsp"
+                },
+                "knorr-pork-cube": {
+                    "name": "Knorr Pork Cube",
+                    "amount": 1,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "soy-sauce": {
+                    "name": "Soy Sauce",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                "vinegar": {
+                    "name": "Vinegar",
+                    "amount": 0.5,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Slice pork into bite sized pieces. Chop onion. Grate garlic. ",
+            "In a bowl, combine pork, onions, garlic, bay leaves, salt, and pepper. Place in the refrigerator and marinate for about 30 minutes.",
+            "In a wide, heavy-bottomed skillet over medium heat, heat oil. Add meat mixture and cook, turning occasionally, until pork is lightly browned.",
+            "Add vinegar and allow to boil, uncovered and without stirring, for about 3 to 5 minutes. ",
+            "Add soy sauce, pork cube, and water and stir to combine. Allow to a boil for another 3 to 5 minutes.",
+            "Add the string beans (and other vegetables if there are any) and simmer for 5 to 8 minutes",
+            "Lower heat, cover, and simmer for about 40 to 50 minutes or until meat is fork-tender and sauce is reduced. Serve hot."
         ]
     }    
 ]
