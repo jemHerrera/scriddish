@@ -2559,5 +2559,149 @@
             "Add the string beans (and other vegetables if there are any) and simmer for 5 to 8 minutes",
             "Lower heat, cover, and simmer for about 40 to 50 minutes or until meat is fork-tender and sauce is reduced. Serve hot."
         ]
-    }    
+    },    
+    {
+        "id": "beef-stew",
+        "title": "Beef Stew",
+        "image": "beef-stew.jpeg",
+        "description": "This classic French beef stew is the ultimate cold weather comfort food. After a few hours in the oven, the meat becomes meltingly tender and enveloped in a rich wine sauce.",
+        "category": "western",
+        "tags": ["beef", "western"],
+        "time": "3 hours",
+        "ingredients":{
+            "Meat & Seafood": {
+                "beef-brisket": {
+                    "name": "Beef Brisket",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "garlic": {
+                    "name": "Garlic",
+                    "amount": 2,
+                    "unit": "clove"
+                },
+                "carrots": {
+                    "name": "Carrots",
+                    "amount": 1,
+                    "unit": "unit"
+                },
+                "potatoes": {
+                    "name": "potatoes",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "bay-leaves": {
+                    "name": "Bay Leaves",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "sugar": {
+                    "name": "Sugar",
+                    "amount": 3,
+                    "unit": "tbsp"
+                },
+                "thyme": {
+                    "name": "Thyme",
+                    "amount": 0.25,
+                    "unit": "tsp"
+                }
+            },
+            "Canned & Sauces": {
+                "beef-broth": {
+                    "name": "Beef Broth",
+                    "amount": 1,
+                    "unit": "cup"
+                },
+                "tomato-paste": {
+                    "name": "Tomato Paste",
+                    "amount": 0.75,
+                    "unit": "tbsp"
+                },
+                "red-wine": {
+                    "name": "Red Wine",
+                    "amount": 1,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Chop onion and garlic. Slice carrots and potatoes into bite sized pieces. Slice beef into bite sized cubes",
+            "In a large pot, sear the beef until brown on all sides.",
+            "Remove the meat from the pot, and add onion and garlic. Saute for 1-2 mins",
+            "Optional: add a small amount of balsamic vinegar & tomato paste, mix for a minute, then and flour",
+            "Add the wine, broth, water, thyme, bay leaves, and sugar.",
+            "Bring to a boil, then braise for 2 hours",
+            "Add carrots and potatoes. Cook for another 20 minutes until carrots are tender."
+        ]
+    },    
+    {
+        "id": "yellow-curry.jpeg",
+        "title": "Yellow Curry",
+        "image": "yellow-curry.jpeg",
+        "description": "Super creamy and lush, thanks to the coconut cream, level the spice just where you want it and then let your Thai-inspired yellow curry dreams come true. Impeccably savory with a teensy bit of sweet, scooped over a bed of steamy rice. Yes, yes please right now.",
+        "category": "asian",
+        "tags": ["chicken", "asian"],
+        "time": "1 hour",
+        "ingredients":{
+            "Meat & Seafood": {
+                "chicken-thighs": {
+                    "name": "Chicken Thighs",
+                    "amount": 250,
+                    "unit": "g"
+                }
+            },
+            "Produce": {
+                "onion": {
+                    "name": "Onion",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "potatoes": {
+                    "name": "potatoes",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Condiments & Spices":{
+                "curry-paste": {
+                    "name": "Curry Paste",
+                    "amount": 0.5,
+                    "unit": "unit"
+                },
+                "sugar": {
+                    "name": "Sugar",
+                    "amount": 3,
+                    "unit": "tbsp"
+                },
+                "cilantro": {
+                    "name": "Cilantro",
+                    "amount": 0.5,
+                    "unit": "unit"
+                }
+            },
+            "Canned & Sauces": {
+                "coconut-milk": {
+                    "name": "Coconut Milk",
+                    "amount": 1,
+                    "unit": "cup"
+                }
+            }
+        },
+        "instructions":[
+            "Chop onion. Slice potatoes into bite sized pieces. Slice chicken into bite sized cubes",
+            "Saute onions, then add chicken. Cook for 1-2 mins",
+            "Add in curry paste and potatoes.",
+            "Add coconut cream and water. Cook until potatoes are tender. 15-20 mins",
+            "Optional: Add fish sauce and sugar"
+        ]
+    }
 ]
